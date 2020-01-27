@@ -1,0 +1,117 @@
+
+// Museo font
+@font-face {
+    font-family: 'museo_sans_cyrl500';
+    src: url('../../fonts/museosanscyrl-500-webfont.woff2') format('woff2'),
+         url('../../fonts/museosanscyrl-500-webfont.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans_cyrl700';
+    src: url('../../fonts/museosanscyrl-700-webfont.woff2') format('woff2'),
+         url('../../fonts/museosanscyrl-700-webfont.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'museo_sans_cyrl300';
+    src: url('../../fonts/museosanscyrl-300-webfont.woff2') format('woff2'),
+         url('../../fonts/museosanscyrl-300-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+body, html {
+    width: 100%;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: auto;
+    min-height: 100vh;
+    // overflow-x: hidden;
+    position: relative;
+    flex-direction: column;
+}
+
+body.active {
+    overflow: hidden;
+}
+
+// ::-webkit-scrollbar {
+//     width: 0;
+//     background: transparent;
+// }
+
+// ::-webkit-scrollbar-thumb {
+//     width: 0;
+//     background: transparent;
+// }
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    width: 100%;
+}
+
+input, select, textarea {
+    padding: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    outline: none;
+    line-height: normal;
+}
+
+// --------------------
+
+body {
+    font-family: $font-main;
+    color: $color-main;
+    font-size: $size-main;
+    background: #fff;
+}
+
+.title {
+    font-family: $font-corm;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 58px;
+    text-align: center;
+    letter-spacing: -0.006em;
+
+    color: #494949;
+}
+
+// Validate
+
+label.input_error {
+    position: absolute;
+    z-index: 1;
+    bottom: -40px;
+    right: 0;
+    font-size: 14px;
+    display: inline-block;
+    padding: 5px;
+    color: #20262D !important;
+    background: #FEDF01;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 2px; }
+
+label.input_error:before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 10%;
+    margin-left: -5px;
+    -webkit-box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 10px 35px 0px rgba(0, 0, 0, 0.06);
+    border-width: 5px;
+    border-style: solid;
+    border-color: transparent transparent #FEDF01 transparent; }

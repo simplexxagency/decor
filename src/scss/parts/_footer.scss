@@ -1,0 +1,40 @@
+.footer {
+    margin-bottom: 23px;
+    
+
+    &__container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__copyrights {
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: #ABABAB;
+    }
+
+    &__rights {
+
+        a {
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            color: #ABABAB;
+            border-bottom: 1px solid #ABABAB;
+        }
+        
+    }
+}
+
+@media all and (max-width: 577px) {
+    .footer {
+
+        &__container {
+            flex-direction: column;
+        }
+
+        &__copyrights {
+            margin-bottom: 20px;
+        }
+    }
+}
