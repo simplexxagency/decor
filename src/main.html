@@ -26,7 +26,7 @@
 
     <!-- Header -->
     <header class="header">
-        <div class="container-fluid">
+        <div class="container">
             <div class="header__wrapper">
                 <div class="header__container">
                     <div class="header__left">
@@ -97,12 +97,13 @@
                         </div>
                         <div class="header__right-log d-none d-sm-flex">
                             <div class="header__right-logout active">
-                                <div class="header__right-enter">
-                                    <a href="javascript:void(0)">Вход</a>
-                                </div>
                                 <div class="header__right-reg">
                                     <a href="javascript:void(0)">Регистрация</a>
                                 </div>
+                                <div class="header__right-enter">
+                                    <a href="javascript:void(0)">Вход</a>
+                                </div>
+                                
                             </div>
                             <div class="header__right-login">
                                 <div class="header__login">
@@ -110,7 +111,7 @@
                                         <img src="img/main-img-avatar.jpg" alt="avatar">
                                     </div>
                                     <div class="header__login-name">
-                                        <span>Виктория</span>
+                                        <!-- <span>Виктория</span> -->
                                         <div class="header__login-arrow">
                                             <img src="img/main-arrow.svg" alt="icon">
                                         </div>
@@ -163,6 +164,11 @@
                     <div class="header__mobile-nav">
                         <ul class="header__left-nav">
                             <li class="header__left-item">
+                                <div class="header__right-add mobile">
+                                    <a href="javascript:void(0)">+ Добавить изделие</a>
+                                </div>
+                            </li>
+                            <li class="header__left-item">
                                 <a href="javascript:void(0)" class="header__left-link">Каталог специалистов</a>
                             </li>
                             <li class="header__left-item">
@@ -174,12 +180,13 @@
                             <li class="header__left-item d-flex d-sm-none">
                                 <div class="header__right-log">
                                     <div class="header__right-logout active">
-                                        <div class="header__right-enter">
-                                            <a href="javascript:void(0)">Вход</a>
-                                        </div>
                                         <div class="header__right-reg">
                                             <a href="javascript:void(0)">Регистрация</a>
                                         </div>
+                                        <div class="header__right-enter">
+                                            <a href="javascript:void(0)">Вход</a>
+                                        </div>
+                                        
                                     </div>
                                     <div class="header__right-login">
                                         <div class="header__login">
@@ -187,7 +194,7 @@
                                                 <img src="img/main-img-avatar.jpg" alt="avatar">
                                             </div>
                                             <div class="header__login-name">
-                                                <span>Виктория</span>
+                                                <!-- <span>Виктория</span> -->
                                                 <div class="header__login-arrow">
                                                     <img src="img/main-arrow.svg" alt="icon">
                                                 </div>
@@ -228,6 +235,7 @@
                                     </div>
                                 </div>
                             </li>
+                            
                         </ul>
                     </div>
                 </div>
@@ -319,7 +327,7 @@
                         gravida dolor sit amet lacus accumsan et viverra justo commodo. Proin sodales pulvinar sic
                         tempor.
                     </div>
-                    <div class="example__bottom-button">
+                    <div class="example__bottom-button button">
                         <a href="javascript:void(0)">Подробнее</a>
                     </div>
                 </div>
@@ -563,7 +571,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="cataloge__button">
+                    <div class="cataloge__button button">
                         <a href="javascript:void(0)">
                             Все специалисты
                         </a>
@@ -684,7 +692,7 @@
                             </a>
                         </div>
                     </div>
-                    <div class="story__button">
+                    <div class="story__button button">
                         <a href="javascript:void(0)">Все истории</a>
                     </div>
                 </div>
@@ -737,8 +745,8 @@
                                 <div class="popup__enter-logitem">
                                     <input type="password" name="password1" id="password1" placeholder="Пароль">
                                     <div class="popup__enter-passicon">
-                                        <img class="active" src="img/cabinet-icon-closeeye.svg" alt="icon">
-                                        <img src="img/cabinet-icon-openeye.svg" alt="icon">
+                                        <img class="active" src="img/popup-icon-eye-close.svg" alt="icon">
+                                        <img src="img/popup-icon-eye-open.svg" alt="icon">
                                     </div>
                                 </div>
                                 <div class="popup__enter-forgot">
@@ -752,21 +760,24 @@
                         </div>
                         <div class="popup__enter-logbottom">
                             <span>Нет учетной записи?</span>
-                            <a href="#">Зарегестрироваться</a>
+                            <a href="#">Зарегистрироваться</a>
                         </div>
                     </div>
                     <div class="popup__forgot-pass">
-                        <form action="#" id="validate2">
-                            <div class="popup__forgot-mail">
-                                <input type="email" name="email2" id="email2" placeholder="E-mail">
+                        <div class="popup__forgot-box">
+                            <form action="#" id="validate2">
+                                <div class="popup__forgot-mail">
+                                    <input type="email" name="email2" id="email2" placeholder="E-mail">
+                                </div>
+                                <div class="popup__forgot-submit">
+                                    <input type="submit" value="Восстановить пароль">
+                                </div>
+                            </form>
+                            <div class="popup__forgot-remember">
+                                <a href="javascript:void(0)">Вспомнили пароль?</a>
                             </div>
-                            <div class="popup__forgot-submit">
-                                <input type="submit" value="Восстановить пароль">
-                            </div>
-                        </form>
-                        <div class="popup__forgot-remember">
-                            <a href="javascript:void(0)">Вспомнили пароль?</a>
                         </div>
+                        
                         <div class="popup__forgot-bottom">
                             Нет учетной записи? <a href="javascript:void(0)">Зарегистрироваться</a>
                         </div>
@@ -801,8 +812,8 @@
                                 <div class="popup__reg-inputitem popup__reg-password">
                                     <input type="password" name="password3" id="password3" placeholder="Пароль">
                                     <div class="popup__reg-passicon">
-                                        <img class="active" src="img/cabinet-icon-closeeye.svg" alt="icon">
-                                        <img src="img/cabinet-icon-openeye.svg" alt="icon">
+                                        <img class="active" src="img/popup-icon-eye-close.svg" alt="icon">
+                                        <img src="img/popup-icon-eye-open.svg" alt="icon">
                                     </div>
                                 </div>
                             </div>
@@ -817,9 +828,10 @@
                             Регистрируясь, вы подтверждаете согласие
                             с <a href="javascript:void(0)">политикой конфиденциальности</a>
                         </div>
-                        <div class="popup__reg-bottom">
-                            У вас уже есть аккаунт? <a href="javascript:void(0)">Войти</a>
-                        </div>
+                        
+                    </div>
+                    <div class="popup__reg-bottom">
+                        У вас уже есть аккаунт? <a href="javascript:void(0)">Войти</a>
                     </div>
                 </div>
             </div>

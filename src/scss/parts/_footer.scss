@@ -21,6 +21,11 @@
             letter-spacing: 0.04em;
             color: #ABABAB;
             border-bottom: 1px solid #ABABAB;
+
+            &:hover {
+                color: #3d3d3d;
+                border-bottom: 1px solid #3d3d3d;
+            }
         }
         
     }

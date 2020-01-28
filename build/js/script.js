@@ -99,8 +99,8 @@ $(document).ready(function () {
 
     // Show menu in Header 
     $('.header__login').on('click', function () {
-        $('.header__login-menu').addClass('active');
-        $('.header__login-arrow').addClass('active');
+        $('.header__login-menu').toggleClass('active');
+        $('.header__login-arrow').toggleClass('active');
     });
 
     $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -115,6 +115,7 @@ $(document).ready(function () {
     $('.header__login-exitbtn').on('click', function () {
         $('.header__right-logout').addClass('active');
         $('.header__right-login').removeClass('active');
+        $('.header__right-add').removeClass('active');
     });
 
     // Mobile Menu in Header
@@ -138,7 +139,7 @@ $(document).ready(function () {
     $("#validate1").validate({
         errorClass: "input_error",
         rules: {
-            emeil1: {
+            email1: {
                 required: true,
                 email: true
             },
@@ -201,6 +202,7 @@ $(document).ready(function () {
             $('body, html').removeClass('active');
             $('.header__right-logout').removeClass('active');
             $('.header__right-login').addClass('active');
+            $('.header__right-add').addClass('active');
         }
     });
 

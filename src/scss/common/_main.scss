@@ -115,3 +115,15 @@ label.input_error:before {
     border-width: 5px;
     border-style: solid;
     border-color: transparent transparent #FEDF01 transparent; }
+
+.button {
+
+    a {
+        background: #FD9590;
+
+        &:hover {
+            background: #E96963;
+        }
+    }
+    
+}

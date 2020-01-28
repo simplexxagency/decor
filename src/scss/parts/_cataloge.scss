@@ -20,9 +20,28 @@
 
         a {
             display: block;
+
+            &:hover {
+
+                .cataloge__item-title {
+                    color: #FD9590;
+                }
+            }
         }
 
         &-img {
+            position: relative;
+
+            &:after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;   
+                bottom: 0;
+                background: linear-gradient(180deg, rgba(248, 214, 184, 0.2) 0%, rgba(245, 168, 165, 0.5) 100%);
+            }
 
             img {
                 height: 340px;
@@ -106,7 +125,6 @@
             letter-spacing: 0.04em;
             text-transform: uppercase;
             color: #FFFFFF;
-            background: #FD9590;
         }
     }
 }
@@ -159,6 +177,7 @@
         &__banner {
 
             &-desc {
+                width: 80%;
                 white-space: normal;
                 font-size: 30px;
             }

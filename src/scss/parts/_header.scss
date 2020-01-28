@@ -59,6 +59,10 @@
             text-transform: uppercase;
 
             color: #3D3D3D;
+
+            &:hover {
+                color: rgba(61, 61, 61, 0.5);
+            }
         }
     }
 
@@ -80,6 +84,10 @@
                 letter-spacing: 0.04em;
 
                 color: #56C47C;
+
+                &:hover {
+                    color: #008830;
+                }
             }
 
             &.active {
@@ -99,6 +107,10 @@
 
             color: #ABABAB;
             border-bottom: 1px dashed rgba(146, 146, 146, 0.5);
+
+            &:hover {
+                color: #3D3D3D;
+            }
         }
 
         &-citytooltip {
@@ -133,6 +145,20 @@
         }
 
         &-enter {
+            
+
+            a {
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #ABABAB;
+
+                &:hover {
+                    color: #3d3d3d;
+                }
+            }
+        }
+
+        &-reg {
             margin-right: 40px;
             position: relative;
 
@@ -140,7 +166,7 @@
                 content: '';
                 display: block;
                 position: absolute;
-                right: -24px;
+                right: -22px;
                 top: 7px;
                 width: 5px;
                 height: 5px;
@@ -152,15 +178,10 @@
                 font-size: 14px;
                 letter-spacing: 0.04em;
                 color: #ABABAB;
-            }
-        }
 
-        &-reg {
-
-            a {
-                font-size: 14px;
-                letter-spacing: 0.04em;
-                color: #ABABAB;
+                &:hover {
+                    color: #3d3d3d;
+                }
             }
         }
 
@@ -205,6 +226,10 @@
                 border: 1px solid #e0e0e0;
                 border-radius: 10px;
 
+                &:focus {
+                    border: 1px solid #56C37C;
+                }
+
                 &::placeholder {
                     color: $color-grey;
                 }
@@ -227,8 +252,21 @@
         &-avatar {
             position: relative;
             margin-right: 10px;
+            flex-shrink: 0;
+            cursor: pointer;
+
+            &:hover {
+
+                &:after {
+                    content: '';
+                    background: #56C37C;
+                    transition: all ease 0.5s;
+                }
+            }
 
             img {
+                position: relative;
+                z-index: 1;
                 object-fit: cover;
                 width: 32px;
                 height: 32px;
@@ -246,6 +284,7 @@
                 height: 40px;
                 border-radius: 50%;
                 border: 1px solid #56C47C;
+                
             }
         }
 
@@ -271,6 +310,7 @@
             display: none;
             position: absolute;
             top: 50px;
+            right: 0;
             z-index: 2;
             border: 1px solid #DFDFDF;
 
@@ -304,6 +344,14 @@
                 display: flex;
                 align-items: flex-end;
                 color: #56C37C;
+
+                &:hover {
+                    color: #008830;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(25%) sepia(55%) saturate(5606%) hue-rotate(141deg) brightness(93%) contrast(101%);
+                    }
+                }
             }
         }
 
@@ -320,6 +368,8 @@
     &__mobile {
         display: none;
         justify-content: center;
+        padding-bottom: 20px;
+        margin-top: 100px;
 
         &.active {
             display: flex;
@@ -372,6 +422,7 @@
 
 @media all and (max-width: 1199px) {
     .header {
+        padding: 20px 20px 0;
 
         &__container {
             margin-bottom: 20px;
@@ -380,7 +431,7 @@
         &__right {
 
             &-log {
-                margin-right: 20px;
+                margin-right: 30px;
             }
         }
     }
@@ -396,29 +447,19 @@
         &__container {
             margin-bottom: 20px;
         }
-    }
-}
-
-@media all and (max-width: 577px) {
-    .header {
-        padding: 20px;
-
-        &__container {
-            margin-bottom: 20px;
-        }
-
-        &__logo {
-            margin-right: 10px;
-        }
 
         &__right {
 
-            &-log {
+            &-add {
                 margin-right: 0;
-            }
+                
+                &.active {
+                    display: none;
 
-            &-city {
-                margin-right: 20px;
+                    &.mobile {
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -436,5 +477,31 @@
                 }
             }
         }
+    }
+}
+
+@media all and (max-width: 577px) {
+    .header {
+
+        &__container {
+            margin-bottom: 20px;
+        }
+
+        &__logo {
+            margin-right: 10px;
+        }
+
+        &__right {
+
+            &-log {
+                margin-right: 0;
+            }
+
+            &-city {
+                margin-right: 30px;
+            }
+        }
+
+        
     }
 }
