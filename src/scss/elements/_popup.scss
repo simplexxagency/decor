@@ -322,6 +322,11 @@
                 }
             }
 
+            label {
+                font-size: 12px;
+                white-space: nowrap;
+            }
+
             input[type=checkbox], input[type=radio] {display: none;}
 
             input[type=radio] + label:before {
@@ -534,6 +539,8 @@
             &-main {
                 padding-top: 50px;
                 width: 100%;
+                overflow: auto;
+                height: 500px;
             }
         }
 

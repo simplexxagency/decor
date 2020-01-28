@@ -369,7 +369,7 @@
         display: none;
         justify-content: center;
         padding-bottom: 20px;
-        margin-top: 100px;
+        // margin-top: 100px;
 
         &.active {
             display: flex;
@@ -422,7 +422,7 @@
 
 @media all and (max-width: 1199px) {
     .header {
-        padding: 20px 20px 0;
+        padding: 20px 0 0;
 
         &__container {
             margin-bottom: 20px;
@@ -500,8 +500,19 @@
             &-city {
                 margin-right: 30px;
             }
+
+            &-citytooltip {
+                width: 300px;
+                right: -60px;
+            }
         }
 
-        
+        &__tooltip {
+
+            &-item {
+                width: 48%;
+            }
+            
+        }
     }
 }
