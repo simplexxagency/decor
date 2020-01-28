@@ -939,7 +939,8 @@ label.input_error:before {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-bottom: 20px; }
+    padding-bottom: 20px;
+    margin-top: 20px; }
     .header__mobile.active {
       display: -webkit-box;
       display: -ms-flexbox;
