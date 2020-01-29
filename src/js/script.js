@@ -3,6 +3,7 @@
 $(document).ready(function () {
 
 
+
     // Header scroll
     let $header = $('.header');
 
@@ -54,7 +55,7 @@ $(document).ready(function () {
         $('.js-enter-reg').removeClass('active');
     });
 
-    $('.header__right-reg a').on('click', function(){
+    $('.header__right-reg a').on('click', function () {
         $('.popup__enter').removeClass('passive');
         $('body, html').addClass('active');
         $('.js-trigger-enter').removeClass('active');
@@ -122,18 +123,18 @@ $(document).ready(function () {
     let $btn = $('.header__mobile-line');
     let $navMenu = $('.header__mobile');
 
-  $('.header__right-btn').on('click', function () {
-    if (!($btn.hasClass('active'))) {
-      $btn.addClass('active');
-      $navMenu.addClass('active');
-      $('body').addClass('active');
-    } else {
-      $btn.removeClass('active');
-      $navMenu.removeClass('active');
-      $('body').removeClass('active');
-    }
+    $('.header__right-btn').on('click', function () {
+        if (!($btn.hasClass('active'))) {
+            $btn.addClass('active');
+            $navMenu.addClass('active');
+            $('body').addClass('active');
+        } else {
+            $btn.removeClass('active');
+            $navMenu.removeClass('active');
+            $('body').removeClass('active');
+        }
 
-  });
+    });
 
     // Validate form in popup Enter
     $("#validate1").validate({
@@ -237,4 +238,222 @@ $(document).ready(function () {
         $(this).find('img').toggleClass('active');
         $thisField.attr('type', type);
     });
+
+
+    // ------------Cataloge---------
+
+    // Slick slider in section Spec
+    function slickifySpec(id, idArrLeft, idArrRight) {
+        $('#' + id).slick({
+
+            arrows: true,
+            // mobileFirst: true,
+            slidesToShow: 5,
+            slidesToScroll: 1,
+            autoplay: true,
+            swipe: true,
+            infinite: false,
+            nextArrow: ($('#' + idArrRight)),
+            prevArrow: ($('#' + idArrLeft)),
+            responsive: [
+                {
+                    breakpoint: 1199,
+                    settings: {
+                        slidesToShow: 4,
+                    }
+                },
+                {
+                    breakpoint: 991,
+                    settings: {
+                        slidesToShow: 3,
+                    }
+                },
+                {
+                    breakpoint: 767,
+                    settings: {
+                        slidesToShow: 1,
+                    }
+                },
+            ]
+        });
+
+        // $('#' + id).slick('slickGoTo', 1,  true);
+    };
+
+    function sliderInit() {
+        let $specItem = $('.spec__item');
+
+        $specItem.each(function (index) {
+            let $sliderItemLength = $(this).find('.spec__slider-item').length;
+            let $sliderId = $(this).find('.spec__slider').attr('id', ('spec-slider' + index));
+            let $sliderArrowLeftId = $(this).find('.spec__arrows-left').attr('id', ('spec-arr-left' + index));
+            let $sliderArrowRightId = $(this).find('.spec__arrows-right').attr('id', ('spec-arr-right' + index));
+
+            // Перебираю все аккаунты специалистов, нахожу в них количество фотографий,
+            //  и, в зависимости от количества, инициализирую слайдер или даю класс самому слайдеру
+            if ($sliderItemLength === 0) {
+                $(this).find('.spec__slider').addClass('empty').text('К сожалению, пока нет портфолио...');
+
+            } else if ($sliderItemLength > 5) {
+
+
+                slickifySpec($sliderId.attr('id'), $sliderArrowLeftId.attr('id'), $sliderArrowRightId.attr('id'));
+
+            } else if ( $sliderItemLength === 5) {
+                let $smallItemFour = $(this).find('.spec__slider').addClass('active');
+
+                $(window).on('load resize orientationchange', function () {
+
+                    if ($(window).width() > 1199) {
+                        if ($smallItemFour.hasClass('slick-initialized')) {
+                            $smallItemFour.slick('unslick');
+                        }
+                    }
+                    else {
+                        if (!$smallItemFour.hasClass('slick-initialized')) {
+                            $smallItemFour.slick({
+                                slidesToShow: 4,
+                                slidesToScroll: 1,
+                                infinite: false,
+                                nextArrow: ($('#' + $sliderArrowRightId.attr('id'))),
+                                prevArrow: ($('#' + $sliderArrowLeftId.attr('id'))),
+                                responsive: [
+                                    {
+                                        breakpoint: 991,
+                                        settings: {
+                                            slidesToShow: 3,
+                                        }
+                                    },
+                                    {
+                                        breakpoint: 767,
+                                        settings: {
+                                            slidesToShow: 1,
+                                        }
+                                    }
+                                ]
+                            });
+                        }
+                    }
+                });
+            } else if ( $sliderItemLength === 4 ) {
+                let $smallItemFour = $(this).find('.spec__slider').addClass('active');
+
+                $(window).on('load resize orientationchange', function () {
+
+                    if ($(window).width() > 991) {
+                        if ($smallItemFour.hasClass('slick-initialized')) {
+                            $smallItemFour.slick('unslick');
+                        }
+                    }
+                    else {
+                        if (!$smallItemFour.hasClass('slick-initialized')) {
+                            $smallItemFour.slick({
+                                slidesToShow: 3,
+                                slidesToScroll: 1,
+                                nextArrow: ($('#' + $sliderArrowRightId.attr('id'))),
+                                prevArrow: ($('#' + $sliderArrowLeftId.attr('id'))),
+                                responsive: [
+                                    {
+                                        breakpoint: 767,
+                                        settings: {
+                                            slidesToShow: 1,
+                                        }
+                                    }
+                                ]
+                            });
+                        }
+                    }
+                });
+            } else {
+                let $smallItem = $(this).find('.spec__slider').addClass('active');
+
+                $(window).on('load resize orientationchange', function () {
+
+                    if ($(window).width() > 767) {
+                        if ($smallItem.hasClass('slick-initialized')) {
+                            $smallItem.slick('unslick');
+                        }
+                    }
+                    else {
+                        if (!$smallItem.hasClass('slick-initialized')) {
+                            $smallItem.slick({
+                                slidesToShow: 1,
+                                slidesToScroll: 1,
+                                mobileFirst: true,
+                                nextArrow: ($('#' + $sliderArrowRightId.attr('id'))),
+                                prevArrow: ($('#' + $sliderArrowLeftId.attr('id'))),
+                            });
+                        }
+                    }
+                });
+               
+            }
+        })
+    };
+
+    sliderInit();
+
+
+
+    //   Изменение селекта в секции Spec
+    function selectAllChange() {
+        $("#spec-select-all").change(function () {
+            specFilter();
+        });
+    };
+
+    function selectCityChange() {
+        $("#spec-select-city").change(function () {
+            specFilter();
+        });
+    };
+
+    function specFilter() {
+        $('.spec__item').each(function () {
+            let $itemDataSpec = $(this).data('spec');
+            let $selectAllValue = $('#spec-select-all').val();
+            let $itemDataCity = $(this).data('city');
+            let $selectCityValue = $('#spec-select-city').val();
+
+            //    if ($itemDataSpec.indexOf($selectAllValue) > -1 ) {
+            //        console.log($itemDataSpec);
+            //    }
+
+            if (($itemDataSpec.indexOf($selectAllValue) > -1) && ($itemDataCity.indexOf($selectCityValue) > -1)) {
+                $(this).addClass('active');
+                //    sliderInit();
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    };
+
+    function specFilterInit() {
+        $('.spec__item').each(function () {
+            let $itemDataSpec = $(this).data('spec');
+            let $selectAllValue = $('#spec-select-all').val();
+            let $itemDataCity = $(this).data('city');
+            let $selectCityValue = $('#spec-select-city').val();
+
+            if (($itemDataSpec.indexOf($selectAllValue) > -1) && ($itemDataCity.indexOf($selectCityValue) > -1)) {
+                $(this).addClass('active');
+                //    sliderInit();
+            } else {
+                $(this).removeClass('active');
+            }
+        });
+    };
+
+
+    selectAllChange();
+    selectCityChange();
+    specFilterInit();
+
+    // Shom more specialist in section Spec
+    $('.spec__button a').on('click', function () {
+        $('.spec__box-hide').addClass('active');
+        $(this).closest('.spec__button').addClass('passive');
+    });
+
+
 });
