@@ -34,16 +34,17 @@ $(document).ready(function () {
     });
 
     // Tabs in Popup
-    $('.js-tab-trigger').click(function () {
+    $('.popup__enter-main .js-tab-trigger').click(function () {
         var id = $(this).attr('data-tab'),
-            content = $('.js-tab-content[data-tab="' + id + '"]');
+            content = $('.popup__enter-main .js-tab-content[data-tab="' + id + '"]');
 
-        $('.js-tab-trigger.active').removeClass('active');
+        $('.popup__enter-main .js-tab-trigger.active').removeClass('active');
         $(this).addClass('active');
 
-        $('.js-tab-content.active').removeClass('active');
+        $('.popup__enter-main .js-tab-content.active').removeClass('active');
         content.addClass('active');
     });
+
 
     // Popup Enter 
     $('.header__right-enter a').on('click', function () {
@@ -456,4 +457,111 @@ $(document).ready(function () {
     });
 
 
+    // Select style in section Spec
+    $('#spec-select-all').selectize();
+    $('#spec-select-city').selectize();
+
+    // -------------Card------------
+
+    // Tabs in section Card
+    $('.cards .js-tab-trigger').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.cards .js-tab-content[data-tab="' + id + '"]');
+
+        $('.cards .js-tab-trigger.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.cards .js-tab-content.active').removeClass('active');
+        content.addClass('active');
+    });
+
+//     // Pagination on page Card
+//     function simpleTemplating(data) {
+//         var html = '<ul>';
+//         $.each(data, function(index, item){
+//             html += '<li>'+ item +'</li>';
+//         });
+//         html += '</ul>';
+//         return html;
+//     };
+  
+//     $('#cards-pagination').pagination({
+//       dataSource: [1, 2, 3, 4],
+//       pageSize: 1,
+//       autoHidePrevious: true,
+//       autoHideNext: true,
+//       callback: function(data, pagination) {
+//           var html = simpleTemplating(data);
+//           // $('#data-container').html(html);
+//       }
+//   });
+
+  // Select style in section Stories
+  $('#stories-select').selectize();
+
+//   ------------History----------
+
+//   Validate form4 in History
+$('#validate4').submit(function (event) {
+    event.preventDefault();
+
+    if (($('#companyName4').val() == '') || ($('#data4').val() == '') || ($('#budget4').val() == '') || ($('#desc4').val() == '') ) {
+        return false;
+    } else {
+        $('.popup__history').addClass('passive');
+        $('body, html').removeClass('active');
+        $('.popup__moder').removeClass('passive');
+    }
+});
+
+// Popup History in section History
+$('.stories__add a').on('click', function() {
+    $('.popup__history').removeClass('passive');
+    $('body, html').addClass('active');
+});
+
+$('.popup__history-cancel a').on('click', function() {
+    $('.popup__history').addClass('passive');
+    $('body, html').removeClass('active');
+});
+
+$('.popup__moder-button a').on('click', function() {
+    $('.popup__moder').addClass('passive');
+    $('body, html').removeClass('active');
+});
+
+// Selectize in popup History
+$('#history-type4').selectize();
+$('#history-city4').selectize();
+
+// Validate form in popup History
+$("#validate4").validate({
+    errorClass: "input_error",
+    rules: {
+        companyName4: {
+            required: true,
+            minlength: 2
+        },
+        data4: {
+            required: true,
+            minlength: 2
+        },
+        type4: {
+            required: true,
+            minlength: 2
+        },
+        city4: {
+            required: true,
+            minlength: 2
+        },
+        budget4: {
+            required: true,
+            minlength: 2
+        },
+        desc4: {
+            required: true,
+            minlength: 2
+        }
+    }
+});
 });
