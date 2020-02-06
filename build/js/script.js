@@ -6,11 +6,13 @@ $(document).ready(function () {
 
     // Header scroll
     let $header = $('.header');
+    let $rentHeader = $('.rent__header');
 
     $(window).scroll(function () {
         let top = $(this).scrollTop();
 
         $header.toggleClass('active', top > $header.height());
+        $rentHeader.toggleClass('active', top > $header.height());
 
     });
 
@@ -300,7 +302,7 @@ $(document).ready(function () {
 
                 slickifySpec($sliderId.attr('id'), $sliderArrowLeftId.attr('id'), $sliderArrowRightId.attr('id'));
 
-            } else if ( $sliderItemLength === 5) {
+            } else if ($sliderItemLength === 5) {
                 let $smallItemFour = $(this).find('.spec__slider').addClass('active');
 
                 $(window).on('load resize orientationchange', function () {
@@ -336,7 +338,7 @@ $(document).ready(function () {
                         }
                     }
                 });
-            } else if ( $sliderItemLength === 4 ) {
+            } else if ($sliderItemLength === 4) {
                 let $smallItemFour = $(this).find('.spec__slider').addClass('active');
 
                 $(window).on('load resize orientationchange', function () {
@@ -387,7 +389,7 @@ $(document).ready(function () {
                         }
                     }
                 });
-               
+
             }
         })
     };
@@ -475,93 +477,79 @@ $(document).ready(function () {
         content.addClass('active');
     });
 
-//     // Pagination on page Card
-//     function simpleTemplating(data) {
-//         var html = '<ul>';
-//         $.each(data, function(index, item){
-//             html += '<li>'+ item +'</li>';
-//         });
-//         html += '</ul>';
-//         return html;
-//     };
-  
-//     $('#cards-pagination').pagination({
-//       dataSource: [1, 2, 3, 4],
-//       pageSize: 1,
-//       autoHidePrevious: true,
-//       autoHideNext: true,
-//       callback: function(data, pagination) {
-//           var html = simpleTemplating(data);
-//           // $('#data-container').html(html);
-//       }
-//   });
+    // Select style in section Stories
+    $('#stories-select').selectize();
 
-  // Select style in section Stories
-  $('#stories-select').selectize();
+    //   ------------History----------
 
-//   ------------History----------
+    //   Validate form4 in History
+    $('#validate4').submit(function (event) {
+        event.preventDefault();
 
-//   Validate form4 in History
-$('#validate4').submit(function (event) {
-    event.preventDefault();
+        if (($('#companyName4').val() == '') || ($('#data4').val() == '') || ($('#budget4').val() == '') || ($('#desc4').val() == '')) {
+            return false;
+        } else {
+            $('.popup__history').addClass('passive');
+            $('body, html').removeClass('active');
+            $('.popup__moder').removeClass('passive');
+        }
+    });
 
-    if (($('#companyName4').val() == '') || ($('#data4').val() == '') || ($('#budget4').val() == '') || ($('#desc4').val() == '') ) {
-        return false;
-    } else {
+    // Popup History in section History
+    $('.stories__add a').on('click', function () {
+        $('.popup__history').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    $('.popup__history-cancel a').on('click', function () {
         $('.popup__history').addClass('passive');
         $('body, html').removeClass('active');
-        $('.popup__moder').removeClass('passive');
-    }
-});
+    });
 
-// Popup History in section History
-$('.stories__add a').on('click', function() {
-    $('.popup__history').removeClass('passive');
-    $('body, html').addClass('active');
-});
+    $('.popup__moder-button a').on('click', function () {
+        $('.popup__moder').addClass('passive');
+        $('body, html').removeClass('active');
+    });
 
-$('.popup__history-cancel a').on('click', function() {
-    $('.popup__history').addClass('passive');
-    $('body, html').removeClass('active');
-});
+    // Selectize in popup History
+    $('#history-type4').selectize();
+    $('#history-city4').selectize();
 
-$('.popup__moder-button a').on('click', function() {
-    $('.popup__moder').addClass('passive');
-    $('body, html').removeClass('active');
-});
-
-// Selectize in popup History
-$('#history-type4').selectize();
-$('#history-city4').selectize();
-
-// Validate form in popup History
-$("#validate4").validate({
-    errorClass: "input_error",
-    rules: {
-        companyName4: {
-            required: true,
-            minlength: 2
-        },
-        data4: {
-            required: true,
-            minlength: 2
-        },
-        type4: {
-            required: true,
-            minlength: 2
-        },
-        city4: {
-            required: true,
-            minlength: 2
-        },
-        budget4: {
-            required: true,
-            minlength: 2
-        },
-        desc4: {
-            required: true,
-            minlength: 2
+    // Validate form in popup History
+    $("#validate4").validate({
+        errorClass: "input_error",
+        rules: {
+            companyName4: {
+                required: true,
+                minlength: 2
+            },
+            data4: {
+                required: true,
+                minlength: 2
+            },
+            type4: {
+                required: true,
+                minlength: 2
+            },
+            city4: {
+                required: true,
+                minlength: 2
+            },
+            budget4: {
+                required: true,
+                minlength: 2
+            },
+            desc4: {
+                required: true,
+                minlength: 2
+            }
         }
-    }
-});
+    });
+
+
+    // --------Rent--------
+    $('.rent__header-icon').on('click', function(){
+        $('.rent__header-search').toggleClass('active');
+        $('.rent__header-input').toggleClass('active');
+    });
 });
