@@ -253,14 +253,22 @@
 
     &__ware {
         margin-bottom: 34px;
-        margin-right: -1%;
         display: flex;
         flex-wrap: wrap;
 
         &-item {
             margin-bottom: 47px;
-            width: 24%;
-            margin-right: 1%;
+
+            a {
+                display: block;
+            }
+
+            &:hover {
+
+                .cards__ware-name {
+                    color: #FD9590;
+                }
+            }
         }
 
         &-img {
@@ -364,6 +372,7 @@
                 letter-spacing: 0.04em;
                 text-transform: uppercase;
                 color: #FFFFFF;
+                white-space: nowrap;
             }
         }
     }
@@ -387,16 +396,30 @@
         }
 
         &-item {
-            display: flex;
-            width: 24%;
             margin-bottom: 20px;
-            margin-right: 1%;
             border: 1px solid #DFDFDF;
+
+            a {
+                display: flex;
+
+                &:hover {
+
+                    .cards__cataloge-name {
+                        color: #FD9590;
+                    }
+                }
+            }
         }
 
         &-img {
             width: 88px;
             height: 100px;
+            flex-shrink: 0;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
         }
 
         &-desc {
@@ -679,15 +702,6 @@
                 margin-bottom: 40px;
             }
         }
-
-        &__ware {
-            margin-right: -3%;
-
-            &-item {
-                margin-right: 2%;
-                width: 31%;
-            }
-        }
     }
 }
 
@@ -711,25 +725,11 @@
             }
         }
 
-        &__ware {
-            justify-content: space-between;
-            margin-right: 0;
-
-            &-item {
-                width: 48%;
-                margin-right: 0;
-            }
-        }
-
         &__cataloge {
 
             &-box {
                 margin-right: 0;
                 justify-content: space-between;
-            }
-
-            &-item {
-                width: 48%;
             }
         }
 
@@ -791,21 +791,6 @@
                 &.active {
                     border: none;
                 }
-            }
-        }
-
-        &__ware {
-
-            &-item {
-                width: 100%;
-            }
-        }
-
-        &__cataloge {
-
-            &-item {
-                width: 100%;
-                margin-right: 0;
             }
         }
 

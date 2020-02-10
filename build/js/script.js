@@ -552,4 +552,53 @@ $(document).ready(function () {
         $('.rent__header-search').toggleClass('active');
         $('.rent__header-input').toggleClass('active');
     });
+
+    // --------Decor--------
+    $('.decor__colors-item').on('click', function(){
+        $('.decor__colors-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    $('.decor__reset').on('click', function(){
+        $('.decor__filter input').prop('checked', false);
+        $('.decor__gap-input input').val(' ');
+        $('.decor__colors-item').removeClass('active');
+    });
+
+    $('.decor__right-item').on('click', function(){
+        $('.decor__right-item').removeClass('active');
+        $(this).addClass('active');
+    });
+
+    // ------------Product------------
+
+    // Initialize Slick Slider for section Product
+  $('.prod__slider-top').slick({
+    dots: false,
+    arrows: false,
+    swipe: true,
+    fade: true,
+    asNavFor: '.prod__slider-bottom',
+    slidesToShow: 1,
+    slidesToScroll: 1,
+});
+$('.prod__slider-bottom').slick({
+  slidesToShow: 4,
+  slidesToScroll: 1,
+  asNavFor: '.prod__slider-top',
+  dots: false,
+  swipe: true,
+  infinite: true,
+//   centerMode: true,
+  focusOnSelect: true,
+  responsive: [
+    {
+      breakpoint: 577,
+      settings: {
+        slidesToShow: 3,
+        slidesToScroll: 1,
+      }
+    }
+  ]
+});
 });

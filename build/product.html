@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Stories</title>
+    <title>Product</title>
 
     <!-- Cormorant font -->
     <link
@@ -259,322 +259,492 @@
 
     <main>
 
-        <!-- Stories -->
-        <section class="stories">
+        <!-- Decor -->
+        <section class="prod">
+
+            <!-- Rent Header -->
             <div class="container-fluid">
-                <div class="stories__banner">
-                    <div class="stories__img">
-                        <img src="img/story-img-banner.jpg" alt="image">
-                    </div>
-                    <div class="stories__desc">
-                        Истории детских мероприятий
+                <div class="rent__header">
+                    <div class="container">
+                        <div class="rent__header-box">
+                            <div class="rent__header-link">
+                                <a href="javascript:void(0)">
+                                    Каталог товаров
+                                </a>
+                            </div>
+                            <div class="rent__header-search">
+                                <div class="rent__header-input">
+                                    <input type="text">
+                                </div>
+                                <div class="rent__header-icon">
+                                    <img src="img/rent-icon-search.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="rent__header-basket">
+                                <div class="rent__header-bag">
+                                    <img src="img/rent-icon-bag.svg" alt="icon">
+                                </div>
+                                <div class="rent__header-value">
+                                    1
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+            <!-- End Rent Header -->
+
             <div class="container">
-                <div class="stories__container">
-                    <div class="stories__header">
-                        <div class="stories__title title">
-                            Истории
-                        </div>
-                        <div class="stories__selects">
-                            <div class="stories__subtitle">
-                                Всего: <span>300 историй</span>
+
+                <div class="prod__container">
+                    <div class="prod__box">
+                        <div class="prod__description">
+                            <div class="prod__images">
+                                <div class="prod__slider-top">
+                                    <div class="prod__top-item">
+                                        <a data-fancybox="gallery" href="img/product-img-1.jpg" tabindex="0"><img src="img/product-img-1.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="prod__top-item">
+                                        <a data-fancybox="gallery" href="img/card-img-port-10.jpg" tabindex="0"><img src="img/history-img-7.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="prod__top-item">
+                                        <a data-fancybox="gallery" href="img/card-img-port-6.jpg" tabindex="0"><img src="img/main-banner-2.jpg" alt="image"></a>
+                                    </div>
+                                    <div class="prod__top-item">
+                                        <a data-fancybox="gallery" href="img/card-img-test-6.png" tabindex="0"><img src="img/main-img-12.jpg" alt="image"></a>
+                                    </div>
+                                </div>
+                                <div class="prod__slider-bottom">
+                                    <div class="prod__bottom-item">
+                                        <div class="prod__bottom-card">
+                                            <img src="img/product-img-1.jpg" alt="image">
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="prod__bottom-item">
+                                        <div class="prod__bottom-card">
+                                            <img src="img/history-img-7.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="prod__bottom-item">
+                                        <div class="prod__bottom-card">
+                                            <img src="img/main-banner-2.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                    <div class="prod__bottom-item">
+                                        <div class="prod__bottom-card">
+                                            <img src="img/main-img-12.jpg" alt="image">
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="stories__right">
-                                <div class="stories__add">
+                            <div class="prod__desc">
+                                <div class="prod__desc-title">
+                                    Ваза с ёлкой, название в две строки
+                                </div>
+                                <div class="prod__desc-text">
+                                    В сочетании с таким же золотым столом создаст очень стильное и красивое рабочее место для визажиста и парикмахера на презентации
+                                </div>
+                                <div class="prod__sizes">
+                                    <div class="prod__sizes-item">
+                                        <div class="prod__sizes-name">
+                                            Размеры
+                                        </div>
+                                        <div class="prod__sizes-value">
+                                            930(H)*450(W)*490(D)*1100(SH) mm
+                                        </div>
+                                    </div>
+                                    <div class="prod__sizes-item">
+                                        <div class="prod__sizes-name">
+                                            В наличии
+                                        </div>
+                                        <div class="prod__sizes-value">
+                                            4 шт
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="prod__price">
+                                    <div class="prod__price-value">6 500 ₽</div>
+                                    <div class="prod__price-duration">
+                                        /сутки
+                                    </div>
+                                </div>
+                                <div class="prod__dates">
+                                    <div class="prod__dates-start">
+                                        <input type="text" name="" id="" placeholder="Дата аренды">
+                                        <span>-</span>
+                                    </div>
+                                    <div class="prod__dates-start">
+                                        <input type="text" name="" id="" placeholder="Дата возврата">
+                                    </div>
+                                </div>
+                                <div class="prod__desc-bottom">
+                                    <div class="prod__desc-amount">
+                                        <input type="text" name="" id="" value="1" class="cards__ware-input">
+                                        <div class="prod__desc-amountdesc">
+                                            шт.
+                                        </div>
+                                    </div>
+                                    <div class="prod__desc-button button">
+                                        <a href="javascript:void(0)">В корзину</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="prod__spec">
+                            <div class="prod__spec-header">
+                                <div class="prod__spec-title">
+                                    Анна Глазатова
+                                </div>
+                                <div class="prod__spec-prof">
+                                    Декоратор, г. Москва
+                                </div>
+                                <div class="prod__spec-rating">
+                                    <div class="prod__spec-star">
+                                        <img src="img/card-icon-star.svg" alt="icon">
+                                    </div>
+                                    <div class="prod__spec-rate">
+                                        4,8
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="prod__spec-main">
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Последний заказ
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        3 часа назад
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Пункт выдачи
+                                    </div>
+                                    <div class="prod__spec-value prod__spec-address">
+                                        <span>
+                                            г. Москва, мкр-н Северное Чертаново д.4 к.409
+                                        </span>
+                                        <span>
+                                            каждый день, 09:00 – 23:00
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Профскидка
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        <span>
+                                            30–40% аренда 
+                                        </span>
+                                        <span>
+                                            10% доставка
+                                        </span>
+                                        
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Мин. заказ
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        Нет
+                                        
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Доставка
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        <span>
+                                            1 500 ₽ легковая
+    
+                                        </span>
+                                        <span>
+                                            3 500 ₽ грузовая
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Оплата
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        Сбербанк,
+                                        Банковский перевод,
+                                        Наличные
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Залог
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        Не берется
+                                    </div>
+                                </div>
+                                <div class="prod__spec-item">
+                                    <div class="prod__spec-name">
+                                        Телефон
+                                    </div>
+                                    <div class="prod__spec-value">
+                                        8 (985) 553-64-64
+                                        каждый день,
+                                        09:00 – 23:00
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="prod__arend">
+                        <div class="prod__arend-title">
+                            Арендуйте вместе с:
+                        </div>
+                        <div class="prod__arend-box row">
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="prod__arend-item">
                                     <a href="javascript:void(0)">
-                                        + Добавить историю
+                                        <div class="prod__arend-img">
+                                            <img src="img/card-img-port-14.jpg" alt="image">
+                                        </div>
+                                        <div class="prod__arend-desc">
+                                            <div class="prod__arend-name">
+                                                Стулья
+                                            </div>
+                                            <div class="prod__arend-value">
+                                                68 
+                                            </div>
+                                        </div>
                                     </a>
-
+                                    
                                 </div>
-                                <div class="stories__select">
-                                    <select name="" id="stories-select">
-                                        <option value="all">Все темы</option>
-                                        <option value="birthday">День рождения</option>
-                                        <option value="event">Событие</option>
-                                        <option value="achiev">Достижение</option>
-                                    </select>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="prod__arend-item">
+                                    <a href="javascript:void(0)">
+                                        <div class="prod__arend-img">
+                                            <img src="img/card-img-port-14.jpg" alt="image">
+                                        </div>
+                                        <div class="prod__arend-desc">
+                                            <div class="prod__arend-name">
+                                                Стулья
+                                            </div>
+                                            <div class="prod__arend-value">
+                                                68 
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="prod__arend-item">
+                                    <a href="javascript:void(0)">
+                                        <div class="prod__arend-img">
+                                            <img src="img/card-img-port-14.jpg" alt="image">
+                                        </div>
+                                        <div class="prod__arend-desc">
+                                            <div class="prod__arend-name">
+                                                Стулья
+                                            </div>
+                                            <div class="prod__arend-value">
+                                                68 
+                                            </div>
+                                        </div>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="stories__main">
-                        <div class="stories__item">
-                            <div class="stories__big"
-                                style="background: url('img/story-img-1.jpg') no-repeat; background-size: cover;">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__big-desc">
-                                        <a href="javascript:void(0)">
-                                            <div class="stories__big-header">
-                                                <div class="stories__big-name">
-                                                    День Рождения
-                                                </div>
-                                                <div class="stories__big-date">
-                                                    12.11.2019
-                                                </div>
-                                            </div>
-                                            <div class="stories__big-title">
-                                                День рождения Машеньки
-                                            </div>
-                                            <div class="stories__big-text">
-                                                Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                                venenatis fringilla pellentesque felis diam. Placerat gravida sit
-                                                dignissim sed nisl, tempus magna. Fermentum dui commodo sodales placerat
-                                                vitae sed donec at. Etiam amet senectus convallis enim id posuere
-                                                fermentum.
-                                            </div>
-                                        </a>
-
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="stories__small">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__small-img">
-                                        <img src="img/story-img-2.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__small-desc">
-                                        <div class="stories__small-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__small-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__small-bottom">
-                                            <div class="stories__small-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__small-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
+                    <div class="prod__decor">
+                        <div class="prod__decor-title">
+                            Похожие товары:
                         </div>
-                        <div class="stories__item">
-                            <div class="stories__small">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__small-img">
-                                        <img src="img/story-img-3.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__small-desc">
-                                        <div class="stories__small-title">
-                                            День рождения Машеньки
+                        <div class="prod__decor-box row">
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="decor__goods-item">
+                                    <a href="javascript:void(0)">
+                                        <div class="decor__goods-img">
+                                            <img src="img/card-img-main-1.jpg" alt="image">
                                         </div>
-                                        <div class="stories__small-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
+                                        <div class="decor__goods-name">
+                                            Рождественские украшения
                                         </div>
-                                        <div class="stories__small-bottom">
-                                            <div class="stories__small-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__small-date">
-                                                12.11.2019
-                                            </div>
+                                        <div class="decor__goods-price">
+                                            6 500 ₽
                                         </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="stories__small">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__small-img">
-                                        <img src="img/story-img-4.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__small-desc">
-                                        <div class="stories__small-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__small-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__small-bottom">
-                                            <div class="stories__small-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__small-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="stories__middle">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__middle-img">
-                                        <img src="img/story-img-5.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__middle-desc">
-                                        <div class="stories__middle-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__middle-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__middle-bottom">
-                                            <div class="stories__middle-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__middle-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-                        <div class="stories__item">
-                            <div class="stories__small">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__small-img">
-                                        <img src="img/story-img-6.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__small-desc">
-                                        <div class="stories__small-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__small-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__small-bottom">
-                                            <div class="stories__small-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__small-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="stories__big"
-                                style="background: url('img/story-img-7.jpg') no-repeat; background-size: cover;">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__big-desc">
-                                        <a href="javascript:void(0)">
-                                            <div class="stories__big-header">
-                                                <div class="stories__big-name">
-                                                    День Рождения
+                                        <div class="decor__goods-desc">
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    Высота:
                                                 </div>
-                                                <div class="stories__big-date">
-                                                    12.11.2019
+                                                <div class="decor__goods-height">
+                                                    200 м.
                                                 </div>
                                             </div>
-                                            <div class="stories__big-title">
-                                                День рождения Машеньки
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    В наличии:
+                                                </div>
+                                                <div class="decor__goods-thing">
+                                                    2 шт.
+                                                </div>
                                             </div>
-                                            <div class="stories__big-text">
-                                                Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                                venenatis fringilla pellentesque felis diam. Placerat gravida sit
-                                                dignissim
-                                                sed nisl, tempus magna. Fermentum dui commodo sodales placerat vitae sed
-                                                donec at. Etiam amet senectus convallis enim id posuere fermentum.
+                                        </div>
+                                    </a>
+                                    <div class="decor__goods-bottom">
+                                        <div class="decor__goods-amount">
+                                            <input type="text" name="" id="" value="1" class="cards__ware-input">
+                                            <div class="decor__goods-amountdesc">
+                                                шт.
                                             </div>
-                                        </a>
-
+                                        </div>
+                                        <div class="decor__goods-button button">
+                                            <a href="javascript:void(0)">В корзину</a>
+                                        </div>
                                     </div>
-                                </a>
-
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="decor__goods-item">
+                                    <a href="javascript:void(0)">
+                                        <div class="decor__goods-img">
+                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                        </div>
+                                        <div class="decor__goods-name">
+                                            Рождественские украшения
+                                        </div>
+                                        <div class="decor__goods-price">
+                                            6 500 ₽
+                                        </div>
+                                        <div class="decor__goods-desc">
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    Высота:
+                                                </div>
+                                                <div class="decor__goods-height">
+                                                    200 м.
+                                                </div>
+                                            </div>
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    В наличии:
+                                                </div>
+                                                <div class="decor__goods-thing">
+                                                    2 шт.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="decor__goods-bottom">
+                                        <div class="decor__goods-amount">
+                                            <input type="text" name="" id="" value="1" class="cards__ware-input">
+                                            <div class="decor__goods-amountdesc">
+                                                шт.
+                                            </div>
+                                        </div>
+                                        <div class="decor__goods-button button">
+                                            <a href="javascript:void(0)">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="decor__goods-item">
+                                    <a href="javascript:void(0)">
+                                        <div class="decor__goods-img">
+                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                        </div>
+                                        <div class="decor__goods-name">
+                                            Рождественские украшения
+                                        </div>
+                                        <div class="decor__goods-price">
+                                            6 500 ₽
+                                        </div>
+                                        <div class="decor__goods-desc">
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    Высота:
+                                                </div>
+                                                <div class="decor__goods-height">
+                                                    200 м.
+                                                </div>
+                                            </div>
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    В наличии:
+                                                </div>
+                                                <div class="decor__goods-thing">
+                                                    2 шт.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="decor__goods-bottom">
+                                        <div class="decor__goods-amount">
+                                            <input type="text" name="" id="" value="1" class="cards__ware-input">
+                                            <div class="decor__goods-amountdesc">
+                                                шт.
+                                            </div>
+                                        </div>
+                                        <div class="decor__goods-button button">
+                                            <a href="javascript:void(0)">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xl-3 col-md-6 col-12">
+                                <div class="decor__goods-item">
+                                    <a href="javascript:void(0)">
+                                        <div class="decor__goods-img">
+                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                        </div>
+                                        <div class="decor__goods-name">
+                                            Рождественские украшения
+                                        </div>
+                                        <div class="decor__goods-price">
+                                            6 500 ₽
+                                        </div>
+                                        <div class="decor__goods-desc">
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    Высота:
+                                                </div>
+                                                <div class="decor__goods-height">
+                                                    200 м.
+                                                </div>
+                                            </div>
+                                            <div class="decor__goods-descitem">
+                                                <div class="decor__goods-descname">
+                                                    В наличии:
+                                                </div>
+                                                <div class="decor__goods-thing">
+                                                    2 шт.
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    <div class="decor__goods-bottom">
+                                        <div class="decor__goods-amount">
+                                            <input type="text" name="" id="" value="1" class="cards__ware-input">
+                                            <div class="decor__goods-amountdesc">
+                                                шт.
+                                            </div>
+                                        </div>
+                                        <div class="decor__goods-button button">
+                                            <a href="javascript:void(0)">В корзину</a>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="stories__item">
-                            <div class="stories__middle">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__middle-img">
-                                        <img src="img/story-img-8.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__middle-desc">
-                                        <div class="stories__middle-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__middle-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__middle-bottom">
-                                            <div class="stories__middle-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__middle-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="stories__small">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__small-img">
-                                        <img src="img/story-img-9.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__small-desc">
-                                        <div class="stories__small-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__small-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__small-bottom">
-                                            <div class="stories__small-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__small-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                            <div class="stories__small">
-                                <a href="javascript:void(0)">
-                                    <div class="stories__small-img">
-                                        <img src="img/story-img-10.jpg" alt="image">
-                                    </div>
-                                    <div class="stories__small-desc">
-                                        <div class="stories__small-title">
-                                            День рождения Машеньки
-                                        </div>
-                                        <div class="stories__small-text">
-                                            Felis nullam lectus volutpat aliquet. Suspendisse id malesuada proin
-                                            venenatis fringilla
-                                        </div>
-                                        <div class="stories__small-bottom">
-                                            <div class="stories__small-name">
-                                                День Рождения
-                                            </div>
-                                            <div class="stories__small-date">
-                                                12.11.2019
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="stories__button button">
-                        <a href="javascript:void(0)">Еще специалисты</a>
                     </div>
                 </div>
             </div>
+
         </section>
-        <!-- End Stories -->
+
     </main>
 
 
