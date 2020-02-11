@@ -217,6 +217,10 @@
                 position: relative;
             }
 
+            &:hover {
+                color: #3D3D3D;
+            }
+
             &.active {
                 
                 color: #3D3D3D;
@@ -606,8 +610,7 @@
         }
 
         &:hover {
-            color: #FD9590;
-            border: 1px solid #FD9590;
+            background: #E5E5E5;
         }
     }
 
@@ -791,6 +794,8 @@
                 &.active {
                     border: none;
                 }
+
+                
             }
         }
 

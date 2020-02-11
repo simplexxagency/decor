@@ -1,0 +1,961 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Product</title>
+
+    <!-- Cormorant font -->
+    <link
+        href="https://fonts.googleapis.com/css?family=Cormorant:300,400,500,600,700&display=swap&subset=cyrillic,cyrillic-ext"
+        rel="stylesheet">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <!-- Fancybox -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+
+    <!-- Selectize -->
+    <link href="css/selectize.css" rel="stylesheet" />
+
+    <!-- Slick Slider -->
+    <link rel="stylesheet" type="text/css" href="css/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick/slick-theme.css" />
+
+    <!-- Style -->
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="header__wrapper">
+                <div class="header__container">
+                    <div class="header__left">
+                        <div class="header__logo">
+                            <a href="javascript:void(0)">
+                                <img src="img/main-logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <ul class="header__left-nav d-none d-xl-flex">
+                            <li class="header__left-item">
+                                <a href="javascript:void(0)" class="header__left-link">Каталог специалистов</a>
+                            </li>
+                            <li class="header__left-item">
+                                <a href="javascript:void(0)" class="header__left-link">Истории</a>
+                            </li>
+                            <li class="header__left-item">
+                                <a href="javascript:void(0)" class="header__left-link">Аренда декора</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="header__right">
+                        <div class="header__right-add">
+                            <a href="javascript:void(0)">+ Добавить изделие</a>
+                        </div>
+                        <div class="header__right-city">
+                            <a href="javascript:void(0)" class="header__right-acccity">Москва</a>
+                            <div class="header__right-citytooltip">
+                                <div class="header__tooltip-title">
+                                    Выберите город:
+                                </div>
+                                <ul class="header__tooltip-list">
+                                    <li class="header__tooltip-item">
+                                        <a href="javascript:void(0)">
+                                            Воронеж
+                                        </a>
+                                    </li>
+                                    <li class="header__tooltip-item">
+                                        <a href="javascript:void(0)">
+                                            Грозный
+                                        </a>
+                                    </li>
+                                    <li class="header__tooltip-item">
+                                        <a href="javascript:void(0)">
+                                            Владивосток
+                                        </a>
+                                    </li>
+                                    <li class="header__tooltip-item">
+                                        <a href="javascript:void(0)">
+                                            Сургут
+                                        </a>
+                                    </li>
+                                    <li class="header__tooltip-item">
+                                        <a href="javascript:void(0)">
+                                            Мурманск
+                                        </a>
+                                    </li>
+                                    <li class="header__tooltip-item">
+                                        <a href="javascript:void(0)">
+                                            Магадан
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="header__tooltip-input">
+                                    <input type="text" placeholder="Или выберете другой город">
+                                </div>
+                                <div class="header__tooltip-close">
+                                    <img src="img/close-button.svg" alt="image">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__right-log d-none d-sm-flex">
+                            <div class="header__right-logout active">
+                                <div class="header__right-reg">
+                                    <a href="javascript:void(0)">Регистрация</a>
+                                </div>
+                                <div class="header__right-enter">
+                                    <a href="javascript:void(0)">Вход</a>
+                                </div>
+
+                            </div>
+                            <div class="header__right-login">
+                                <div class="header__login">
+                                    <div class="header__login-avatar">
+                                        <img src="img/main-img-avatar.jpg" alt="avatar">
+                                    </div>
+                                    <div class="header__login-name">
+                                        <!-- <span>Виктория</span> -->
+                                        <div class="header__login-arrow">
+                                            <img src="img/main-arrow.svg" alt="icon">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="header__login-menu">
+                                    <ul>
+                                        <li class="header__login-menuitem">
+                                            <a href="javascript:void(0)">
+                                                Мой кабинет
+                                            </a>
+                                        </li>
+                                        <li class="header__login-menuitem">
+                                            <a href="javascript:void(0)">
+                                                Мои клиенты
+                                            </a>
+                                        </li>
+                                        <li class="header__login-menuitem">
+                                            <a href="javascript:void(0)">
+                                                Мои заказы
+                                            </a>
+                                        </li>
+                                        <li class="header__login-menuitem">
+                                            <a href="javascript:void(0)">
+                                                Мои изделия
+                                            </a>
+                                        </li>
+                                        <li class="header__login-menuitem">
+                                            <a href="javascript:void(0)" class="header__login-exitbtn">
+                                                <div class="header__login-exiticon">
+                                                    <img src="img/main-exit.svg" alt="icon">
+                                                </div>
+                                                Выход
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header__right-btn d-flex align-items-center d-xl-none">
+                            <div class="header__mobile-icon">
+                                <div class="header__mobile-line"></div>
+                                <div class="header__mobile-line"></div>
+                                <div class="header__mobile-line"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="header__mobile">
+                    <div class="header__mobile-nav">
+                        <ul class="header__left-nav">
+                            <li class="header__left-item">
+                                <div class="header__right-add mobile">
+                                    <a href="javascript:void(0)">+ Добавить изделие</a>
+                                </div>
+                            </li>
+                            <li class="header__left-item">
+                                <a href="javascript:void(0)" class="header__left-link">Каталог специалистов</a>
+                            </li>
+                            <li class="header__left-item">
+                                <a href="javascript:void(0)" class="header__left-link">Истории</a>
+                            </li>
+                            <li class="header__left-item">
+                                <a href="javascript:void(0)" class="header__left-link">Аренда декора</a>
+                            </li>
+                            <li class="header__left-item d-flex d-sm-none">
+                                <div class="header__right-log">
+                                    <div class="header__right-logout active">
+                                        <div class="header__right-reg">
+                                            <a href="javascript:void(0)">Регистрация</a>
+                                        </div>
+                                        <div class="header__right-enter">
+                                            <a href="javascript:void(0)">Вход</a>
+                                        </div>
+
+                                    </div>
+                                    <div class="header__right-login">
+                                        <div class="header__login">
+                                            <div class="header__login-avatar">
+                                                <img src="img/main-img-avatar.jpg" alt="avatar">
+                                            </div>
+                                            <div class="header__login-name">
+                                                <!-- <span>Виктория</span> -->
+                                                <div class="header__login-arrow">
+                                                    <img src="img/main-arrow.svg" alt="icon">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="header__login-menu">
+                                            <ul>
+                                                <li class="header__login-menuitem">
+                                                    <a href="javascript:void(0)">
+                                                        Мой кабинет
+                                                    </a>
+                                                </li>
+                                                <li class="header__login-menuitem">
+                                                    <a href="javascript:void(0)">
+                                                        Мои клиенты
+                                                    </a>
+                                                </li>
+                                                <li class="header__login-menuitem">
+                                                    <a href="javascript:void(0)">
+                                                        Мои заказы
+                                                    </a>
+                                                </li>
+                                                <li class="header__login-menuitem">
+                                                    <a href="javascript:void(0)">
+                                                        Мои изделия
+                                                    </a>
+                                                </li>
+                                                <li class="header__login-menuitem">
+                                                    <a href="javascript:void(0)" class="header__login-exitbtn">
+                                                        <div class="header__login-exiticon">
+                                                            <img src="img/main-exit.svg" alt="icon">
+                                                        </div>
+                                                        Выход
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <!-- End Header -->
+
+    <main>
+
+        <!-- Basket -->
+        <section class="bask">
+
+            <!-- Rent Header -->
+            <div class="container-fluid">
+                <div class="rent__header">
+                    <div class="container">
+                        <div class="rent__header-box">
+                            <div class="rent__header-link">
+                                <a href="javascript:void(0)">
+                                    Каталог товаров
+                                </a>
+                            </div>
+                            <div class="rent__header-search">
+                                <div class="rent__header-input">
+                                    <input type="text">
+                                </div>
+                                <div class="rent__header-icon">
+                                    <img src="img/rent-icon-search.svg" alt="icon">
+                                </div>
+                            </div>
+                            <div class="rent__header-basket">
+                                <div class="rent__header-bag">
+                                    <img src="img/rent-icon-bag.svg" alt="icon">
+                                </div>
+                                <div class="rent__header-value">
+                                    1
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Rent Header -->
+
+            <div class="container">
+                <div class="bask__wrapper">
+                    <div class="bask__title title">
+                        Корзина
+                    </div>
+                    <div class="bask__container">
+                    
+                        <div class="bask__wrap">
+                            
+                            <div class="bask__orders">
+                                <div class="bask__orders-content js-tab-content active" data-tab='1'>
+                                    <div class="bask__orders-item">
+                                        <div class="bask__orders-img">
+                                            <img src="img/product-img-1.jpg" alt="image">
+                                        </div>
+                                        <div class="bask__orders-desc">
+                                            <div class="bask__orders-name">
+                                                Ваза с ёлкой, название в две строки
+                                            </div>
+                                            <div class="bask__orders-dime">
+                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
+                                            </div>
+                                            <div class="bask__orders-bottom">
+                                                <div class="bask__orders-left">
+                                                    <div class="bask__dates">
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата аренды">
+                                                        </div>
+                                                        <span>-</span>
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата возврата">
+                                                        </div>
+                                                    </div>
+                                                    <div class="bask__prices">
+                                                        <div class="bask__amount">
+                                                            <div class="bask__amount-input">
+                                                                <input type="text" value="2">
+                                                            </div>
+                                                            <div class="bask__amount-desc">
+                                                                шт.
+                                                            </div>
+                                                        </div>
+                                                        <div class="bask__price">
+                                                            х 
+                                                            <div class="bask__price-value" data-price='6500'>
+                                                                6 500 
+                                                            </div>
+                                                            ₽
+                                                        </div>
+                                                    </div>
+                                                    
+                                                </div>
+                                                <div class="bask__orders-right">
+                                                    <div class="bask__total">
+                                                        Итого:
+                                                    </div>
+                                                    <div class="bask__total-value">
+                                                        <span>
+                                                            13 000
+                                                        </span>
+                                                        ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bask__delete">
+                                                <img src="img/bask-icon-delete.svg" alt="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bask__orders-item">
+                                        <div class="bask__orders-img">
+                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                        </div>
+                                        <div class="bask__orders-desc">
+                                            <div class="bask__orders-name">
+                                                Рождественские украшения
+                                            </div>
+                                            <div class="bask__orders-dime">
+                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
+                                            </div>
+                                            <div class="bask__orders-bottom">
+                                                <div class="bask__orders-left">
+                                                    <div class="bask__dates">
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата аренды">
+                                                        </div>
+                                                        <span>-</span>
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата возврата">
+                                                        </div>
+                                                    </div>
+                                                    <div class="bask__prices">
+                                                        <div class="bask__amount">
+                                                            <div class="bask__amount-input">
+                                                                <input type="text" value="2">
+                                                            </div>
+                                                            <div class="bask__amount-desc">
+                                                                шт.
+                                                            </div>
+                                                        </div>
+                                                        <div class="bask__price">
+                                                            х 
+                                                            <div class="bask__price-value" data-price='6500'>
+                                                                6 500 
+                                                            </div>
+                                                            ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bask__orders-right">
+                                                    <div class="bask__total">
+                                                        Итого:
+                                                    </div>
+                                                    <div class="bask__total-value">
+                                                        <span>
+                                                            13 000
+                                                        </span>
+                                                        ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bask__delete">
+                                                <img src="img/bask-icon-delete.svg" alt="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="bask__orders-content js-tab-content" data-tab='2'>
+                                    <div class="bask__orders-item">
+                                        <div class="bask__orders-img">
+                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                        </div>
+                                        <div class="bask__orders-desc">
+                                            <div class="bask__orders-name">
+                                                Рождественские украшения
+                                            </div>
+                                            <div class="bask__orders-dime">
+                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
+                                            </div>
+                                            <div class="bask__orders-bottom">
+                                                <div class="bask__orders-left">
+                                                    <div class="bask__dates">
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата аренды">
+                                                        </div>
+                                                        <span>-</span>
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата возврата">
+                                                        </div>
+                                                    </div>
+                                                    <div class="bask__prices">
+                                                        <div class="bask__amount">
+                                                            <div class="bask__amount-input">
+                                                                <input type="text" value="2">
+                                                            </div>
+                                                            <div class="bask__amount-desc">
+                                                                шт.
+                                                            </div>
+                                                        </div>
+                                                        <div class="bask__price">
+                                                            х 
+                                                            <div class="bask__price-value" data-price='6500'>
+                                                                6 500 
+                                                            </div>
+                                                            ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bask__orders-right">
+                                                    <div class="bask__total">
+                                                        Итого:
+                                                    </div>
+                                                    <div class="bask__total-value">
+                                                        <span>
+                                                            13 000
+                                                        </span>
+                                                        ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bask__delete">
+                                                <img src="img/bask-icon-delete.svg" alt="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bask__orders-item">
+                                        <div class="bask__orders-img">
+                                            <img src="img/product-img-1.jpg" alt="image">
+                                        </div>
+                                        <div class="bask__orders-desc">
+                                            <div class="bask__orders-name">
+                                                Ваза с ёлкой, название в две строки
+                                            </div>
+                                            <div class="bask__orders-dime">
+                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
+                                            </div>
+                                            <div class="bask__orders-bottom">
+                                                <div class="bask__orders-left">
+                                                    <div class="bask__dates">
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата аренды">
+                                                        </div>
+                                                        <span>-</span>
+                                                        <div class="bask__dates-item">
+                                                            <input type="text" placeholder="Дата возврата">
+                                                        </div>
+                                                    </div>
+                                                    <div class="bask__prices">
+                                                        <div class="bask__amount">
+                                                            <div class="bask__amount-input">
+                                                                <input type="text" value="2">
+                                                            </div>
+                                                            <div class="bask__amount-desc">
+                                                                шт.
+                                                            </div>
+                                                        </div>
+                                                        <div class="bask__price">
+                                                            х 
+                                                            <div class="bask__price-value" data-price='6500'>
+                                                                6 500 
+                                                            </div>
+                                                            ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="bask__orders-right">
+                                                    <div class="bask__total">
+                                                        Итого:
+                                                    </div>
+                                                    <div class="bask__total-value">
+                                                        <span>
+                                                            13 000
+                                                        </span>
+                                                        ₽
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="bask__delete">
+                                                <img src="img/bask-icon-delete.svg" alt="icon">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bask__delivery">
+                                <div class="bask__size">
+                                    <div class="bask__size-box">
+                                        <div class="bask__size-item">
+                                            <div class="bask__size-desc">
+                                                Объем изделий: 
+                                            </div>
+                                            <div class="bask__size-value">
+                                                0,2 м³, 
+                                            </div>
+                                        </div>
+                                        <div class="bask__size-item">
+                                            <div class="bask__size-desc">       
+                                                Вес:                            
+            
+            
+                                            </div>
+                                            <div class="bask__size-value">
+                                                4 кг 
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bask__size-car">
+                                        (рекомендуется использовать легковой транспорт)
+                                    </div>
+                                </div>
+                                <div class="bask__punkt">
+                                    <div class="bask__punkt-desc">
+                                        Пункт выдачи: 
+                                    </div>
+                                    <div class="bask__punkt-address">
+                                        г. Москва, мкр-н Северное Чертаново д.4 к.409,
+                                    </div>
+                                    <div class="bask__punkt-time">
+                                        (каждый день, 09:00 – 23:00)
+                                    </div>
+                                </div>
+                                <div class="bask__delivery-link">
+                                    <a href="javascript:void(0)">
+                                        + Добавить доставку
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bask__setup">
+                                <div class="bask__setup-left">
+                                    <div class="bask__setup-desc">
+                                        Объем работы:  
+                                    </div>
+                                    <div class="bask__setup-item">
+                                        монтаж – 0,5 человекочаса, 
+                                    </div>
+                                    <div class="bask__setup-item">
+                                        демонтаж – 0,5 человекочаса
+                                    </div>
+                                </div>
+                                <div class="bask__setup-link">
+                                    <a href="javascript:void(0)">
+                                        + Добавить сетап
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="bask__bottom">
+                                <div class="bask__bottom-box">
+                                    <div class="bask__bottom-total">
+                                        <div class="bask__bottom-desc">
+                                            Всего:
+                                        </div>
+                                        <div class="bask__bottom-value">
+                                            <span>
+                                                1 026 000
+                                            </span>
+                                            ₽
+                                        </div>
+                                    </div>
+                                    <div class="bask__bottom-button button">
+                                        <a href="javascript:void(0)">
+                                            Оформить заказ
+                                        </a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="bask__spec">
+                            <div class="bask__spec-item js-tab-trigger active" data-tab="1">
+                                <div class="bask__spec-name">
+                                    Анна Глазатова
+                                </div>
+                                <div class="bask__spec-desc">
+                                    Сумма заказа:
+                                </div>
+                                <div class="bask__spec-total">
+                                    <span>
+                                        26 000
+                                    </span>
+                                    ₽
+                                </div>
+                            </div>
+                            <div class="bask__spec-item js-tab-trigger" data-tab="2">
+                                <div class="bask__spec-name">
+                                    Юлия Рахмадулина
+                                </div>
+                                <div class="bask__spec-desc">
+                                    Сумма заказа:
+                                </div>
+                                <div class="bask__spec-total">
+                                    <span>
+                                        1 000 000 
+                                    </span>
+                                    ₽
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                
+            </div>
+
+        </section>
+
+        <!-- End Basket -->
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__container">
+                <div class="footer__copyrights">
+                    &#169; LittleFest — платформа аренды декора
+                </div>
+                <div class="footer__rights">
+                    <a href="javascript:void(0)">Правовая информация</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- End Footer -->
+
+    <!-- Popup Enter -->
+    <div class="popup__enter popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__enter-main">
+            <div class="popup__enter-nav">
+                <div class="popup__nav-item js-tab-trigger js-trigger-enter active" data-tab="1">
+                    <span>
+                        Вход
+                    </span>
+                </div>
+                <div class="popup__nav-item js-tab-trigger js-trigger-reg" data-tab="2">
+                    <span>
+                        Регистрация
+                    </span>
+                </div>
+            </div>
+            <div class="popup__enter-content">
+                <div class="popup__content-box js-tab-content js-enter-enter active" data-tab='1'>
+                    <div class="popup__enter-box active">
+                        <div class="popup__enter-log">
+                            <form action="#" id="validate1">
+                                <div class="popup__enter-logitem">
+                                    <input type="email" name="email1" id="email1" placeholder="E-mail">
+                                </div>
+                                <div class="popup__enter-logitem">
+                                    <input type="password" name="password1" id="password1" placeholder="Пароль">
+                                    <div class="popup__enter-passicon">
+                                        <img class="active" src="img/popup-icon-eye-close.svg" alt="icon">
+                                        <img src="img/popup-icon-eye-open.svg" alt="icon">
+                                    </div>
+                                </div>
+                                <div class="popup__enter-forgot">
+                                    <a href="javascript:void(0)">Забыли пароль?</a>
+                                </div>
+                                <div class="popup__enter-button">
+                                    <input type="submit" value="Вход">
+                                </div>
+                            </form>
+
+                        </div>
+                        <div class="popup__enter-logbottom">
+                            <span>Нет учетной записи?</span>
+                            <a href="#">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                    <div class="popup__forgot-pass">
+                        <div class="popup__forgot-box">
+                            <form action="#" id="validate2">
+                                <div class="popup__forgot-mail">
+                                    <input type="email" name="email2" id="email2" placeholder="E-mail">
+                                </div>
+                                <div class="popup__forgot-submit">
+                                    <input type="submit" value="Восстановить пароль">
+                                </div>
+                            </form>
+                            <div class="popup__forgot-remember">
+                                <a href="javascript:void(0)">Вспомнили пароль?</a>
+                            </div>
+                        </div>
+
+                        <div class="popup__forgot-bottom">
+                            Нет учетной записи? <a href="javascript:void(0)">Зарегистрироваться</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__content-box js-tab-content js-enter-reg" data-tab='2'>
+                    <div class="popup__enter-reg">
+                        <form action="#" id="validate3">
+                            <div class="popup__reg-radio">
+                                <div class="popup__reg-radioitem">
+                                    <input type="radio" value="1" name="arend" id="spec1" checked>
+                                    <label for="spec1">Я специалист</label>
+                                </div>
+                                <div class="popup__reg-radioitem">
+                                    <input type="radio" class="star" value="2" name="arend" id="arend1">
+                                    <label for="arend1">Я арендатор</label>
+                                </div>
+                            </div>
+                            <div class="popup__reg-input">
+                                <div class="popup__reg-inputitem">
+                                    <input type="text" name="name3" id="name3" placeholder="Имя">
+                                </div>
+                                <div class="popup__reg-inputitem">
+                                    <input type="text" name="lastname3" id="lastname3" placeholder="Фамилия">
+                                </div>
+                                <div class="popup__reg-inputitem">
+                                    <input type="text" name="phone3" id="phone3" placeholder="Номер телефона">
+                                </div>
+                                <div class="popup__reg-inputitem">
+                                    <input type="email" name="email3" id="email3" placeholder="E-mail">
+                                </div>
+                                <div class="popup__reg-inputitem popup__reg-password">
+                                    <input type="password" name="password3" id="password3" placeholder="Пароль">
+                                    <div class="popup__reg-passicon">
+                                        <img class="active" src="img/popup-icon-eye-close.svg" alt="icon">
+                                        <img src="img/popup-icon-eye-open.svg" alt="icon">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="popup__reg-forgot">
+                                <a href="javascript:void(0)">Забыли пароль?</a>
+                            </div>
+                            <div class="popup__reg-submit">
+                                <input type="submit" value="Регистрация">
+                            </div>
+                        </form>
+                        <div class="popup__reg-politic">
+                            Регистрируясь, вы подтверждаете согласие
+                            с <a href="javascript:void(0)">политикой конфиденциальности</a>
+                        </div>
+
+                    </div>
+                    <div class="popup__reg-bottom">
+                        У вас уже есть аккаунт? <a href="javascript:void(0)">Войти</a>
+                    </div>
+                </div>
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Enter -->
+
+    <!-- Popup Link -->
+    <div class="popup__link popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__link-main">
+            <div class="popup__link-title">
+                Ссылка для восстановления
+                пароля отправлена вам на e-mail
+            </div>
+            <div class="popup__link-text">
+                Для восстановления следуйте инструкциям в письме
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Link -->
+
+    <!-- Popup History -->
+    <div class="popup__history popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__history-main">
+            <div class="popup__history-title">
+                Отправьте свой кейс на сайт
+            </div>
+            <div class="popup__history-text">
+                После проверки модератором Ваша история станет доступна в каталоге историй
+            </div>
+            <div class="popup__history-form">
+                <form action="" id="validate4">
+                    <div class="popup__history-box">
+                        <div class="popup__history-item">
+                            <input type="text" name='companyName4' id="companyName4" placeholder="Название компании">
+                        </div>
+                        <div class="popup__history-item popup__history-selects">
+                            <div class="popup__history-date">
+                                <input type="text" name="data4" id="data4" placeholder="Дата">
+                            </div>
+                            <div class="popup__history-type">
+                                <select name="type4" id="history-type4">
+                                    <option value="" disabled selected>Вид мероприятия</option>
+                                    <option value="birthday">День рождения</option>
+                                    <option value="event">Событие</option>
+                                    <option value="achive">Достижения</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="popup__history-item">
+                            <div class="popup__history-city">
+                                <select name="city4" id="history-city4">
+                                    <option value="" disabled selected>Москва</option>
+                                    <option value="moscow">Москва</option>
+                                    <option value="vologda">Вологда</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="popup__history-item">
+                            <input type="text" name="budget4" id="budget4" placeholder="Примерный бюджет">
+                        </div>
+                        <div class="popup__history-item popup__history-desc">
+                            <textarea name="desc4" id="desc4" placeholder="Описание"></textarea>
+                        </div>
+                        <div class="popup__history-item">
+                            <input type="text" name="link4" id="link4" placeholder="Ссылка на скачивание фото и видео">
+                        </div>
+                    </div>
+
+                    <div class="popup__history-bottom">
+                        <div class="popup__history-cancel">
+                            <a href="javascript:void(0)">
+                                Отмена
+                            </a>
+                        </div>
+                        <div class="popup__history-submit">
+                            <input type="submit" value="Продолжить">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <!-- End Popup History -->
+
+    <!-- Popup Moder -->
+    <div class="popup__moder popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__moder-main">
+            <div class="popup__moder-title">
+                Ваша история отправлена
+                модератору
+            </div>
+            <div class="popup__moder-text">
+                Вам придет письмо на e-mail со ссылкой
+
+                на Вашу историю
+            </div>
+            <div class="popup__moder-button">
+                <a href="javascript:void(0)">Вернуться на главную</a>
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+    </div>
+    <!-- End Popup Moder -->
+
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+
+    <!-- jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Selectize -->
+    <script src="js/selectize.js"></script>
+
+    <!-- Pagination.js -->
+    <script src="js/pagination.js"></script>
+
+    <!-- Slick Slider -->
+    <script src="js/slick.min.js"></script>
+
+    <!-- Mask input -->
+    <script src="js/jquery.maskedinput.min.js"></script>
+
+    <!-- Jquery Validate -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js"></script>
+
+    <!-- Fancybox -->
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
