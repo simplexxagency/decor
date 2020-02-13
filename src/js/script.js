@@ -456,6 +456,7 @@ $(document).ready(function () {
     $('.spec__button a').on('click', function () {
         $('.spec__box-hide').addClass('active');
         $(this).closest('.spec__button').addClass('passive');
+        
     });
 
 
@@ -570,6 +571,20 @@ $(document).ready(function () {
         $(this).addClass('active');
     });
 
+    // Selectize Decor
+    $('#popup-city-select').selectize();
+
+    // City change on page Decor
+    $('.decor__city-change a').on('click', function() {
+        $('.popup__city').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    $('.popup__city-cancel a, .popup__city-submit input').on('click', function() {
+        $('.popup__city').addClass('passive');
+        $('body, html').removeClass('active');
+    });
+
     // ------------Product------------
 
     // Initialize Slick Slider for section Product
@@ -613,26 +628,167 @@ $(document).ready(function () {
 
         $('.bask__orders .js-tab-content.active').removeClass('active');
         content.addClass('active');
+
+        totalSpec();
     });
 
+    function sumSpecOnLoad() {
+
+        $('.bask__spec .js-tab-trigger').each(function () {
+            var id = $(this).attr('data-tab'),
+                thisSpec = $(this),
+                content = $('.bask__orders .js-tab-content[data-tab="' + id + '"]');
+
+            totalSpec(thisSpec, content);
+        });
+    };
+
+
     // Calculate on page Basket
-    // $('.bask__amount-input input').change(function(event) {
-    //     let $inputValue = $(this).val();
-    //     let $price = $(this).closest('.bask__orders-left').find('.bask__price-value').data('price');
-    //     let $totalItem = $(this).closest('.bask__orders-bottom').find('.bask__total-value span');
-    //     console.log($inputValue * $price);
-    //     console.log(typeof $inputValue);
-    //     $totalItem.text($inputValue * $price);
-    //     if ( !((typeof ($inputValue)) == "number" )) {
-    //         event.preventDefault();
-    //         $totalItem.text("0");
-    //     }
-        
-    // });
+    function inputSum() {
+
+        $('.bask__amount-input input').each(function () {
+            let $inputValue = $(this).val();
+            let $price = $(this).closest('.bask__orders-left').find('.bask__price-value').data('price');
+            let $totalItem = $(this).closest('.bask__orders-bottom').find('.bask__total-value span');
+
+            if (!isNaN($inputValue)) {
+
+                $totalItem.text($inputValue * $price);
+            } else {
+                $totalItem.text("0");
+            };
+
+        });
+    };
+
+    function fullSum() {
+        let $fullSum = 0;
+        let $fullTotal = $('.bask__bottom-value span');
+
+        $('.bask__spec-item').each(function () {
+
+            $fullSum += +$(this).find('.bask__spec-total span').text();
+        });
+
+        $fullTotal.text($fullSum);
+    };
+
+    function totalSpec(thisSpec, thisItem) {
+        let $activeTotal = thisItem.find('.bask__total-value span');
+        let $activeSpec = thisSpec.find('.bask__spec-total span');
+        let $totalSpec = 0;
+
+        $activeTotal.each(function (index) {
+
+            let $activeTotalValue = $(this).text();
+            $totalSpec += +$activeTotalValue;
+        });
+        $activeSpec.text($totalSpec);
+    };
+    sumSpecOnLoad()
+    inputSum();
+    fullSum();
+
+    function inputChange() {
+
+        $('.bask__amount-input input').change(function (event) {
+            inputSum();
+            sumSpecOnLoad();
+            fullSum();
+        });
+    };
+    inputChange();
 
     // Delete item on page Basket
-    $('.bask__delete').on('click', function(){
+    $('.bask__delete').on('click', function () {
         $(this).closest('.bask__orders-item').remove();
+        inputSum();
+        sumSpecOnLoad();
+        fullSum();
+    });
+
+    // ---------Order-----------
+
+    // Selectize Order
+    $('#order-select').selectize();
+
+    // Validate form in popup Enter
+    $("#validate5").validate({
+        errorClass: "input_error",
+        rules: {
+            email5: {
+                required: true,
+                email: true
+            },
+            name5: {
+                required: true,
+                minlength: 2
+            },
+            lastname5: {
+                required: true,
+                minlength: 2
+            },
+            phone5: {
+                required: true,
+                minlength: 2
+            }
+        }
+    });
+
+    // Form validate on page Order
+    $('#validate5').submit(function (event) {
+        event.preventDefault();
+
+        if (($('#email5').val() == '') || ($('#name5').val() == '') || ($('#lastname5').val() == '') || ($('#phone5').val() == '')) {
+            return false;
+        } else {
+            $('.popup__order').removeClass('passive');
+        }
+    });
+
+    // Form Mask
+    jQuery(function ($) {
+        $('#phone5').mask('+9 (999) 999-9999');
+    });
+
+    // ------------Admin-------------
+
+    // Tabs on page Admin
+    $('.admin__tab-nav .js-tab-trigger').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.admin__tab-content .js-tab-content[data-tab="' + id + '"]');
+
+        $('.admin__tab-nav .js-tab-trigger.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.admin__tab-content .js-tab-content.active').removeClass('active');
+        content.addClass('active');
+    });
+
+    $('.admin__subtab-nav .js-subtab-trigger').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.admin__subtab-content .js-subtab-content[data-tab="' + id + '"]');
+
+        $('.admin__subtab-nav .js-subtab-trigger.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.admin__subtab-content .js-subtab-content.active').removeClass('active');
+        content.addClass('active');
+    });
+
+    // Show Tip on Admin-top
+    let $adminTip = $('.admin__top-tip');
+    $('.admin__top-title a').on('click', function(){
+        $adminTip.addClass('active');
+    });
+
+    // Click on blocks
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$adminTip.is(e.target) // если клик был не по нашему блоку
+            && $adminTip.has(e.target).length === 0) { // и не по его дочерним элементам
+                $adminTip.removeClass('active'); // скрываем его
+        };
     });
 
 });

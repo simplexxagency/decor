@@ -1,0 +1,207 @@
+.priv {
+
+    &__cabinet {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__left {
+        width: 352px;
+        margin-right: 32px;
+        
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        background: #FFFFFF;
+        border: 1px solid #DFDFDF;
+
+        &-wrap {
+            padding: 24px 32px;
+            flex-grow: 1;
+        }
+
+        &-title {
+            margin-bottom: 24px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: -0.006em;
+            color: #3D3D3D;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 16px;
+            }
+        }
+
+        &-desc {
+            width: 133px;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #ABABAB;
+        }
+
+        &-value {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.04em;
+
+            color: #56C37C;
+        }
+
+        &-link {
+            padding: 17px 32px;
+            background: #F8F8F8;
+
+            a {
+                display: flex;
+                align-items: flex-end;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #56C47C;
+
+                &:hover {
+                    color: #008830;
+
+                    img {
+                        filter: brightness(0) saturate(100%) invert(23%) sepia(93%) saturate(2230%) hue-rotate(136deg) brightness(96%) contrast(101%);
+                    }
+                }
+            }
+
+            
+        }
+
+        &-icon {
+            width: 16px;
+            margin-right: 5px;
+        }
+    }
+
+    &__right {
+        padding: 24px 32px 16px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        background: #F8F8F8;
+        border: 1px solid #DFDFDF;
+
+        &-title {
+            margin-bottom: 25px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: -0.006em;
+            color: #3D3D3D;
+        }
+
+        &-box {
+            margin-bottom: 72px;
+        }
+
+        &-item {
+            display: flex;
+
+            &:not(:last-child) {
+                margin-bottom: 17px;
+            }
+        }
+
+        &-name {
+            width: 273px;
+            flex-shrink: 0;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #ABABAB;
+        }
+
+        &-value {
+            font-size: 16px;
+            line-height: 19px;
+            letter-spacing: 0.04em;
+            color: #3D3D3D;
+        }
+
+        &-valuelink {
+            display: block;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #56C37C;
+        }
+
+        &-link {
+
+            a {
+                display: flex;
+                align-items: flex-end;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #56C47C;
+            }
+        }
+
+        &-icon {
+            margin-right: 5px;
+            width: 16px;
+        }
+    }
+
+    
+}
+
+@media all and (max-width: 991px) {
+    .priv {
+
+        &__cabinet {
+            flex-direction: column;
+        }
+
+        &__left {
+            width: 100%;
+            margin-right: 0;
+            margin-bottom: 30px;
+
+            &-item {
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 577px) {
+    .priv {
+
+        &__right {
+
+            &-item {
+                flex-direction: column;
+            }
+
+            &-name {
+                margin-bottom: 10px;
+                width: 100%;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 420px) {
+    .priv {
+
+        &__right {
+
+            &-link {
+
+                a {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}

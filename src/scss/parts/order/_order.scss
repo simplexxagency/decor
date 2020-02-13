@@ -1,0 +1,250 @@
+.order {
+    margin-bottom: 144px;
+    
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    &__container {
+        padding-top: 69px;
+    }
+
+    &__header {
+        margin-bottom: 85px;
+    }
+
+    &__title {
+        margin-bottom: 30px;
+        font-size: 56px;
+        text-align: left;
+    }
+
+    &__subtitle {
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: #3D3D3D;
+
+        a {
+            color: #56C37C;
+
+            &:hover {
+                color: #008830;
+            }
+        }
+    }
+
+    &__form {
+
+        form {
+            display: flex;
+            justify-content: space-between;
+        } 
+    }
+
+    &__left {
+        width: 448px;
+        margin-right: 32px;
+
+        &-item {
+            position: relative;
+
+            &:not(:last-child) {
+                margin-bottom: 8px;
+            }
+
+            input {
+                padding: 15px 16px;
+                width: 100%;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                color: #3D3D3D;
+                background: #FFFFFF;
+                border: 1px solid #DFDFDF;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+
+                &:hover,
+                &:focus {
+                    border: 1px solid #56C37C;
+                }
+            }
+        }
+
+        &-select {
+
+            .selectize-control.single .selectize-input, .selectize-control.single .selectize-input input {
+                width: 100%;
+                padding: 16px 16px 14px;
+                font-family: $font-main;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                color: #494949;
+                border-radius: 0;
+            }
+    
+            .selectize-input {
+                box-shadow: none;
+                border: 1px solid #dfdfdf;
+            }
+    
+            .selectize-dropdown .option, .selectize-dropdown .optgroup-header {
+                padding: 16px;
+                cursor: pointer;
+                font-family: $font-main;
+                font-style: normal;
+                font-weight: normal;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                color: #494949;
+    
+                &:hover {
+                    background: #F8F8F8;
+                }
+            }
+        }
+    }
+
+    &__right {
+        flex-grow: 1;
+
+        &-box {
+            margin-bottom: 32px;
+        }
+
+        &-item {
+            padding: 18px 16px;
+            display: flex;
+            justify-content: space-between;
+            background: #F8F8F8;
+            border: 1px solid #DFDFDF;
+
+            &:not(:last-child) {
+                margin-bottom: 7px;
+            }
+        }
+
+        &-name {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 22px;
+            letter-spacing: -0.006em;
+            color: #3D3D3D;
+        }
+
+        &-value {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: right;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        &-total {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-full {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 32px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-button {
+
+            input {
+                padding: 22px 70px;
+                display: block;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+                background: #FD9590;
+
+                &:hover {
+                    background: #E96963;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+    .order {
+        // margin-bottom: 80px;
+        min-height: calc( 100vh - 100px);
+
+        &__form {
+
+            form {
+                flex-direction: column;
+            }
+        }
+
+        &__left {
+            margin-bottom: 50px;
+            margin-right: 0;   
+            width: 100%;
+        }
+    }
+}
+
+@media all and (max-width: 577px) {
+    .order {
+
+        &__title {
+            font-size: 30px;
+            line-height: unset;
+        }
+
+        &__right {
+
+            &-bottom {
+                flex-direction: column;
+            }
+
+            &-desc {
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 420px) {
+    .order {
+
+        &__right {
+
+            &-item {
+                flex-direction: column;
+            }
+
+            &-button {
+                width: 100%;
+
+                input {
+                    width: 100%;
+                    padding: 22px 0;
+                }
+            }
+        }
+    }
+}

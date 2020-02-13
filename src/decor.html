@@ -402,6 +402,24 @@
                                 </div>
                             </div>
                             <div class="decor__aside-item">
+                                <div class="decor__aside-name">
+                                    Город:
+                                </div>
+                                <div class="decor__city">
+                                    <div class="decor__city-item">
+                                        <div class="decor__city-check">
+                                            <input type="checkbox" checked name="moscow" id="city1" value="moscow">
+                                            <label for="city1">Москва</label>
+                                        </div>
+                                        <div class="decor__city-change">
+                                            <a href="javascript:void(0)">
+                                                Изменить
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="decor__aside-item">
                                 <div class="decor__reset">
                                     <img src="img/decor-icon-x.svg" alt="icon">
                                     Очистить все фильтры
@@ -1319,6 +1337,47 @@
         </div>
     </div>
     <!-- End Popup Moder -->
+
+    <!-- Popup City -->
+    <div class="popup__city popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__city-main">
+            <div class="popup__city-title">
+                Укажите, пожалуйста, ваш город
+            </div>
+            <div class="popup__city-text">
+                Мы сможем найти интересные предложения от декораторов из вашего города
+            </div>
+            <div class="popup__city-form">
+                <form action="">
+                    <div class="popup__city-select">
+                        <select name="" id="popup-city-select">
+                            <option value="" disabled selected>Москва</option>
+                            <option value="moscow">Москва</option>
+                            <option value="chita">Чита</option>
+                        </select>
+                    </div>
+                    <div class="popup__city-bottom">
+                        <div class="popup__city-cancel">
+                            <a href="javascript:void(0)">
+                                Отмена
+                            </a>
+                        </div>
+                        <div class="popup__city-submit">
+                            <input type="submit" value="Продолжить">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+        
+    </div>   
+    <!-- End Popup City -->
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

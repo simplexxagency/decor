@@ -1,0 +1,289 @@
+.admin {
+    margin-bottom: 144px;
+
+    .container-fluid {
+        padding: 0;
+    }
+
+    &__container {
+        padding-top: 68px;
+    }
+
+    &__top {
+        margin-bottom: 64px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &-spec {
+            position: relative;
+        }
+
+        &-title {
+            
+            text-align: left;
+            font-size: 56px;
+
+            a {
+                display: inline-block;
+                color: #56C37C;
+                border-bottom: 4px dashed #56C37C;
+
+                &:hover {
+                    color: #008830;
+                    border-bottom: 4px dashed #008830;
+                }
+            }
+        }
+
+        &-tip {
+            display: none;
+            padding: 22px;
+            position: absolute;
+            z-index: 1;
+            bottom: -75px;
+            left: 0;
+            width: 100%;
+            justify-content: center;
+            background: #F8F8F8;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        &-tipdesc {
+            margin-right: 5px;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #747474;
+        }
+
+        &-tiplink {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #56C37C;
+            border-bottom: 1px solid #56C37C;
+
+            &:hover {
+                color: #008830;
+                border-bottom: 1px solid #008830;
+            }
+        }
+
+        &-link {
+
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #56C47C;
+            }
+
+            &:hover {
+
+                a {
+                    color: #008830;
+                }
+
+                img {
+                    filter: brightness(0) saturate(100%) invert(23%) sepia(93%) saturate(2230%) hue-rotate(136deg) brightness(96%) contrast(101%);
+                }
+            }
+        }
+
+        &-icon {
+            margin-right: 5px;
+            width: 16px;
+        }
+    }
+
+    &__tab {
+
+        &-nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid #DFDFDF;
+        }
+
+        &-navitem {
+            padding-bottom: 16px;
+            width: 25%;
+            position: relative;
+            top: 2px;
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            text-transform: uppercase;
+            border-bottom: 3px solid transparent;
+            color: #ABABAB;
+            cursor: pointer;
+
+            &.active {
+                color: #3D3D3D;
+                border-bottom: 3px solid #56C37C; 
+
+                &.arrow-down {
+
+                    &:after {
+                        content: '';
+                        position: absolute;
+                        bottom: -14px;
+                        left: 50%;
+                        transform: translateX(-50%);
+                        margin-left: -5px;
+                        border-width: 6px;
+                        border-style: solid;
+                        border-color: #56C37C transparent transparent transparent;
+                    }
+                }
+            }
+
+            &:hover {
+                color: #3d3d3d;
+                border-bottom: 3px solid #56C37C;
+            }
+        }
+
+        &-content {
+            padding-top: 17px;
+        }
+
+        &-contentitem {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    &__subtab {
+
+        &-nav {
+            margin-bottom: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        &-navitem {
+            width: calc( 100% / 6);
+            position: relative;
+            text-align: center;
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            color: #ABABAB;
+            cursor: pointer;
+
+            &.active {
+                color: #3D3D3D;
+            }
+
+            &:hover {
+                color: #3d3d3d;
+            }
+        }
+
+        &-contentitem {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+    }
+
+    ::-webkit-scrollbar {
+        -webkit-appearance: none;
+    }
+    
+    ::-webkit-scrollbar:vertical {
+        width: 12px;
+    }
+    
+    ::-webkit-scrollbar:horizontal {
+        height: 12px;
+    }
+    
+    ::-webkit-scrollbar-thumb {
+        background-color: #56C37C;
+        border-radius: 10px;
+        border: 2px solid #ffffff;
+    }
+    
+    ::-webkit-scrollbar-track {
+        border-radius: 10px;  
+        background-color: #ffffff; 
+    }
+}
+
+@media all and (max-width: 991px) {
+    .admin {
+        margin-bottom: 80px;
+
+        &__top {
+            flex-direction: column;
+
+            &-spec {
+                margin-bottom: 20px;
+            }
+        }
+
+        &__subtab {
+
+            &-nav {
+                padding-bottom: 12px;
+                overflow-x: scroll;
+                width: 100%;
+            }
+
+            &-navitem {
+                width: unset;
+                margin-right: 20px;
+                white-space: nowrap;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .admin {
+
+        &__top {
+
+            &-title {
+                font-size: 36px;
+                text-align: center;
+                line-height: 40px;
+            }
+        }
+
+        &__tab {
+
+            &-nav {
+                padding-bottom: 12px;
+                overflow-x: scroll;
+                overflow-y: hidden;
+                width: 100%;
+            }
+
+            &-navitem {
+                width: unset;
+                margin-right: 20px;
+                white-space: nowrap;
+                padding-bottom: 0;
+                border: none;
+
+                &.active,
+                &:hover {
+                    border: none;
+                }
+            }
+        }
+
+        
+    }
+}

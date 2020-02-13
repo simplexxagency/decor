@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-    <title>Basket</title>
+    <title>Order</title>
 
     <!-- Cormorant font -->
     <link
@@ -259,8 +259,8 @@
 
     <main>
 
-        <!-- Basket -->
-        <section class="bask">
+        <!-- Order -->
+        <section class="order">
 
             <!-- Rent Header -->
             <div class="container-fluid">
@@ -295,364 +295,79 @@
             <!-- End Rent Header -->
 
             <div class="container">
-                <div class="bask__wrapper">
-                    <div class="bask__title title">
-                        Корзина
+                <div class="order__container">
+                    <div class="order__header">
+                        <div class="order__title title">
+                            Оформление заказа
+                        </div>
+                        <div class="order__subtitle">
+                            Заполните форму или <a href="javascript:void(0)">авторизуйтесь</a> 
+                        </div>
                     </div>
-                    <div class="bask__container">
                     
-                        <div class="bask__wrap">
-                            
-                            <div class="bask__orders">
-                                <div class="bask__orders-content js-tab-content active" data-tab='1'>
-                                    <div class="bask__orders-item">
-                                        <div class="bask__orders-img">
-                                            <img src="img/product-img-1.jpg" alt="image">
+                    <div class="order__form">
+                        <form action="" id="validate5">
+                            <div class="order__left">
+                                <div class="order__left-item">
+                                    <input type="text" name="name5" id="name5" placeholder="Ваше имя">
+                                </div>
+                                <div class="order__left-item">
+                                    <input type="text" name="lastname5" id="lastname5" placeholder="Ваша фамилия">
+                                </div>
+                                <div class="order__left-item">
+                                    <input type="email" name="email5" id="email5" placeholder="E-mail">
+                                </div>
+                                <div class="order__left-item">
+                                    <input type="text" name="phone5" id="phone5" placeholder="Номер телефона">
+                                </div>
+                                <div class="order__left-item order__left-select">
+                                    <select name="select5" id="order-select" class="">
+                                        <option value="card">Банковской карточкой</option>
+                                        <option value="cash">Наличными при получении</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="order__right">
+                                <div class="order__right-box">
+                                    <div class="order__right-item">
+                                        <div class="order__right-name">
+                                            Анна Глазатова
                                         </div>
-                                        <div class="bask__orders-desc">
-                                            <div class="bask__orders-name">
-                                                Ваза с ёлкой, название в две строки
-                                            </div>
-                                            <div class="bask__orders-dime">
-                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
-                                            </div>
-                                            <div class="bask__orders-bottom">
-                                                <div class="bask__orders-left">
-                                                    <div class="bask__dates">
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата аренды">
-                                                        </div>
-                                                        <span>-</span>
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата возврата">
-                                                        </div>
-                                                    </div>
-                                                    <div class="bask__prices">
-                                                        <div class="bask__amount">
-                                                            <div class="bask__amount-input">
-                                                                <input type="text" value="2">
-                                                            </div>
-                                                            <div class="bask__amount-desc">
-                                                                шт.
-                                                            </div>
-                                                        </div>
-                                                        <div class="bask__price">
-                                                            х 
-                                                            <div class="bask__price-value" data-price='6500'>
-                                                                6 500 
-                                                            </div>
-                                                            ₽
-                                                        </div>
-                                                    </div>
-                                                    
-                                                </div>
-                                                <div class="bask__orders-right">
-                                                    <div class="bask__total">
-                                                        Итого:
-                                                    </div>
-                                                    <div class="bask__total-value">
-                                                        <span>13000</span>
-                                                        ₽
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="bask__delete">
-                                                <img src="img/bask-icon-delete.svg" alt="icon">
-                                            </div>
+                                        <div class="order__right-value">
+                                            26 000 ₽
                                         </div>
                                     </div>
-                                    <div class="bask__orders-item">
-                                        <div class="bask__orders-img">
-                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                    <div class="order__right-item">
+                                        <div class="order__right-name">
+                                            Юлия Рахмадулина
                                         </div>
-                                        <div class="bask__orders-desc">
-                                            <div class="bask__orders-name">
-                                                Рождественские украшения
-                                            </div>
-                                            <div class="bask__orders-dime">
-                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
-                                            </div>
-                                            <div class="bask__orders-bottom">
-                                                <div class="bask__orders-left">
-                                                    <div class="bask__dates">
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата аренды">
-                                                        </div>
-                                                        <span>-</span>
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата возврата">
-                                                        </div>
-                                                    </div>
-                                                    <div class="bask__prices">
-                                                        <div class="bask__amount">
-                                                            <div class="bask__amount-input">
-                                                                <input type="text" value="2">
-                                                            </div>
-                                                            <div class="bask__amount-desc">
-                                                                шт.
-                                                            </div>
-                                                        </div>
-                                                        <div class="bask__price">
-                                                            х 
-                                                            <div class="bask__price-value" data-price='6500'>
-                                                                6 500 
-                                                            </div>
-                                                            ₽
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bask__orders-right">
-                                                    <div class="bask__total">
-                                                        Итого:
-                                                    </div>
-                                                    <div class="bask__total-value">
-                                                        <span>13000</span>
-                                                        ₽
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="bask__delete">
-                                                <img src="img/bask-icon-delete.svg" alt="icon">
-                                            </div>
+                                        <div class="order__right-value">
+                                            1 000 000 ₽
                                         </div>
                                     </div>
                                 </div>
-                                <div class="bask__orders-content js-tab-content" data-tab='2'>
-                                    <div class="bask__orders-item">
-                                        <div class="bask__orders-img">
-                                            <img src="img/card-img-main-1.jpg" alt="image">
+                                <div class="order__right-bottom">
+                                    <div class="order__right-desc">
+                                        <div class="order__right-total">
+                                            Итого к оплате:
                                         </div>
-                                        <div class="bask__orders-desc">
-                                            <div class="bask__orders-name">
-                                                Рождественские украшения
-                                            </div>
-                                            <div class="bask__orders-dime">
-                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
-                                            </div>
-                                            <div class="bask__orders-bottom">
-                                                <div class="bask__orders-left">
-                                                    <div class="bask__dates">
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата аренды">
-                                                        </div>
-                                                        <span>-</span>
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата возврата">
-                                                        </div>
-                                                    </div>
-                                                    <div class="bask__prices">
-                                                        <div class="bask__amount">
-                                                            <div class="bask__amount-input">
-                                                                <input type="text" value="2">
-                                                            </div>
-                                                            <div class="bask__amount-desc">
-                                                                шт.
-                                                            </div>
-                                                        </div>
-                                                        <div class="bask__price">
-                                                            х 
-                                                            <div class="bask__price-value" data-price='6500'>
-                                                                6 500 
-                                                            </div>
-                                                            ₽
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bask__orders-right">
-                                                    <div class="bask__total">
-                                                        Итого:
-                                                    </div>
-                                                    <div class="bask__total-value">
-                                                        <span>13000</span>
-                                                        ₽
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="bask__delete">
-                                                <img src="img/bask-icon-delete.svg" alt="icon">
-                                            </div>
+                                        <div class="order__right-full">
+                                            1 026 000 ₽
                                         </div>
                                     </div>
-                                    <div class="bask__orders-item">
-                                        <div class="bask__orders-img">
-                                            <img src="img/product-img-1.jpg" alt="image">
-                                        </div>
-                                        <div class="bask__orders-desc">
-                                            <div class="bask__orders-name">
-                                                Ваза с ёлкой, название в две строки
-                                            </div>
-                                            <div class="bask__orders-dime">
-                                                930(H) * 450(W) * 490(D) * 1100(SH) mm
-                                            </div>
-                                            <div class="bask__orders-bottom">
-                                                <div class="bask__orders-left">
-                                                    <div class="bask__dates">
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата аренды">
-                                                        </div>
-                                                        <span>-</span>
-                                                        <div class="bask__dates-item">
-                                                            <input type="text" placeholder="Дата возврата">
-                                                        </div>
-                                                    </div>
-                                                    <div class="bask__prices">
-                                                        <div class="bask__amount">
-                                                            <div class="bask__amount-input">
-                                                                <input type="text" value="2">
-                                                            </div>
-                                                            <div class="bask__amount-desc">
-                                                                шт.
-                                                            </div>
-                                                        </div>
-                                                        <div class="bask__price">
-                                                            х 
-                                                            <div class="bask__price-value" data-price='6500'>
-                                                                6 500 
-                                                            </div>
-                                                            ₽
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="bask__orders-right">
-                                                    <div class="bask__total">
-                                                        Итого:
-                                                    </div>
-                                                    <div class="bask__total-value">
-                                                        <span>13000</span>
-                                                        ₽
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="bask__delete">
-                                                <img src="img/bask-icon-delete.svg" alt="icon">
-                                            </div>
-                                        </div>
+                                    <div class="order__right-button button">
+                                        <input type="submit" value="Оформить заказ">
                                     </div>
                                 </div>
                             </div>
-                            <div class="bask__delivery">
-                                <div class="bask__size">
-                                    <div class="bask__size-box">
-                                        <div class="bask__size-item">
-                                            <div class="bask__size-desc">
-                                                Объем изделий: 
-                                            </div>
-                                            <div class="bask__size-value">
-                                                0,2 м³, 
-                                            </div>
-                                        </div>
-                                        <div class="bask__size-item">
-                                            <div class="bask__size-desc">       
-                                                Вес:                            
-            
-            
-                                            </div>
-                                            <div class="bask__size-value">
-                                                4 кг 
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="bask__size-car">
-                                        (рекомендуется использовать легковой транспорт)
-                                    </div>
-                                </div>
-                                <div class="bask__punkt">
-                                    <div class="bask__punkt-desc">
-                                        Пункт выдачи: 
-                                    </div>
-                                    <div class="bask__punkt-address">
-                                        г. Москва, мкр-н Северное Чертаново д.4 к.409,
-                                    </div>
-                                    <div class="bask__punkt-time">
-                                        (каждый день, 09:00 – 23:00)
-                                    </div>
-                                </div>
-                                <div class="bask__delivery-link">
-                                    <a href="javascript:void(0)">
-                                        + Добавить доставку
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bask__setup">
-                                <div class="bask__setup-left">
-                                    <div class="bask__setup-desc">
-                                        Объем работы:  
-                                    </div>
-                                    <div class="bask__setup-item">
-                                        монтаж – 0,5 человекочаса, 
-                                    </div>
-                                    <div class="bask__setup-item">
-                                        демонтаж – 0,5 человекочаса
-                                    </div>
-                                </div>
-                                <div class="bask__setup-link">
-                                    <a href="javascript:void(0)">
-                                        + Добавить сетап
-                                    </a>
-                                </div>
-                            </div>
-                            <div class="bask__bottom">
-                                <div class="bask__bottom-box">
-                                    <div class="bask__bottom-total">
-                                        <div class="bask__bottom-desc">
-                                            Всего:
-                                        </div>
-                                        <div class="bask__bottom-value">
-                                            <span>
-                                                1 026 000
-                                            </span>
-                                            ₽
-                                        </div>
-                                    </div>
-                                    <div class="bask__bottom-button button">
-                                        <a href="javascript:void(0)">
-                                            Оформить заказ
-                                        </a>
-                                    </div>
-                                </div>
-                                
-                            </div>
-                        </div>
-                        
-                        <div class="bask__spec">
-                            <div class="bask__spec-item js-tab-trigger active" data-tab="1">
-                                <div class="bask__spec-name">
-                                    Анна Глазатова
-                                </div>
-                                <div class="bask__spec-desc">
-                                    Сумма заказа:
-                                </div>
-                                <div class="bask__spec-total">
-                                    <span>
-                                        26 000
-                                    </span>
-                                    ₽
-                                </div>
-                            </div>
-                            <div class="bask__spec-item js-tab-trigger" data-tab="2">
-                                <div class="bask__spec-name">
-                                    Юлия Рахмадулина
-                                </div>
-                                <div class="bask__spec-desc">
-                                    Сумма заказа:
-                                </div>
-                                <div class="bask__spec-total">
-                                    <span>
-                                        1 000 000 
-                                    </span>
-                                    ₽
-                                </div>
-                            </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
-                
-                
             </div>
 
         </section>
 
-        <!-- End Basket -->
+        <!-- End Order -->
 
     </main>
 
@@ -913,6 +628,31 @@
         </div>
     </div>
     <!-- End Popup Moder -->
+
+    <!-- Popup Order -->
+    <div class="popup__order popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__order-main">
+            <div class="popup__order-title">
+                Спасибо за заказ!
+            </div>
+            <div class="popup__order-text">
+                Декоратор свяжется с вами для уточнения деталей заказа. Через 10 секунд вы будете перенаправлены на главную
+            </div>
+            <div class="popup__order-button button">
+                <a href="javascript:void(0)">
+                    Перейти на главную
+                </a>
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+        
+    </div>
+    <!-- End Popup Order -->
 
     <!-- Bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"

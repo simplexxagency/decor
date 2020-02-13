@@ -227,6 +227,76 @@
         }
     }
 
+    &__city {
+
+        &-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            &:not(:last-child) {
+                margin-bottom: 20px;
+            }
+        }
+
+        &-check {
+
+            input[type="checkbox"] {
+                display: none;
+            }
+
+            label {
+                cursor: pointer;
+
+                
+            }
+
+            input[type="checkbox"]+label:before {
+                content: "";
+                color: transparent;
+                display: inline-block;
+                border: 1px solid #dfdfdf;
+                font-size: 20px;
+                line-height: 22px;
+                margin: -5px 8px 0 0;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                vertical-align: middle;
+                -webkit-transition: color ease .3s;
+                -o-transition: color ease .3s;
+                transition: color ease .3s;
+            }
+
+            input[type="checkbox"]:checked+label:before {
+                background: url('../img/decor-icon-check.svg') 50% 50% no-repeat;
+                background-size: 62%;
+            }
+
+            &:hover {
+
+                input[type="checkbox"]+label:before {
+                    content: '';
+                    border: 1px solid #121d25;
+                }
+            }
+        }
+
+        &-change {
+
+            a {
+                font-size: 16px;
+                color: #ABABAB;
+                border-bottom: 1px dashed rgba(146, 146, 146, 0.5);
+
+                &:hover {
+                    color: #56C37C;
+                    border-bottom: 1px dashed #56C37C;
+                }
+            }
+        }
+    }
+
     &__reset {
         display: flex;
         align-items: center;
