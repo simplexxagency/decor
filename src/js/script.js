@@ -456,7 +456,7 @@ $(document).ready(function () {
     $('.spec__button a').on('click', function () {
         $('.spec__box-hide').addClass('active');
         $(this).closest('.spec__button').addClass('passive');
-        
+
     });
 
 
@@ -575,12 +575,12 @@ $(document).ready(function () {
     $('#popup-city-select').selectize();
 
     // City change on page Decor
-    $('.decor__city-change a').on('click', function() {
+    $('.decor__city-change a').on('click', function () {
         $('.popup__city').removeClass('passive');
         $('body, html').addClass('active');
     });
 
-    $('.popup__city-cancel a, .popup__city-submit input').on('click', function() {
+    $('.popup__city-cancel a, .popup__city-submit input').on('click', function () {
         $('.popup__city').addClass('passive');
         $('body, html').removeClass('active');
     });
@@ -779,7 +779,7 @@ $(document).ready(function () {
 
     // Show Tip on Admin-top
     let $adminTip = $('.admin__top-tip');
-    $('.admin__top-title a').on('click', function(){
+    $('.admin__top-title a').on('click', function () {
         $adminTip.addClass('active');
     });
 
@@ -787,8 +787,196 @@ $(document).ready(function () {
     $(document).mouseup(function (e) { // событие клика по веб-документу
         if (!$adminTip.is(e.target) // если клик был не по нашему блоку
             && $adminTip.has(e.target).length === 0) { // и не по его дочерним элементам
-                $adminTip.removeClass('active'); // скрываем его
+            $adminTip.removeClass('active'); // скрываем его
         };
     });
 
+    // ----------Agcy-------
+
+    // Tooltip time on page Agcy
+    let $worktimeTip = $('.agcy__worktime-tip');
+
+    $('#client.agcy__item-worktime').on('click', function () {
+        $(this).find('.agcy__worktime-tip').addClass('active');
+        $(this).find('.agcy__item-arrow').addClass('active');
+    });
+
+    $('#punkt.agcy__item-worktime').on('click', function () {
+        $(this).find('.agcy__worktime-tip').addClass('active');
+        $(this).find('.agcy__item-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$worktimeTip.is(e.target) // если клик был не по нашему блоку
+            && $worktimeTip.has(e.target).length === 0) { // и не по его дочерним элементам
+            $worktimeTip.removeClass('active'); // скрываем его
+            $worktimeTip.closest('.agcy__item-worktime').find('.agcy__item-arrow').removeClass('active');
+        };
+    });
+
+    // Change time
+    function selectFirstTimeChange() {
+        $(".agcy__worktime-select").change(function () {
+            selectOnLoad();
+        });
+    };
+
+    function timeInputChange() {
+        let $inputChange = $('.agcy__worktime-input');
+
+        $inputChange.on('change', function () {
+            let $selectValue = $(this).closest('.agcy__item-worktime').find('.agcy__worktime-select');
+
+            if ($(this).prop('checked')) {
+                $(this).closest('.agcy__item-worktime').find('span').text('Круглосуточно');
+            } else {
+                selectOnLoad();
+            }
+        });
+
+    };
+
+    function selectOnLoad() {
+        $(".agcy__worktime-select").each(function () {
+            let $newTime = $(this).val();
+            let $secondTime = $(this).siblings('select').val();
+            let $timeResult = $(this).closest('.agcy__item-worktime').find('span');
+            let $timeCheck = $(this).closest('.agcy__item-worktime').find('input:checkbox');
+
+            if ($timeCheck.prop('checked')) {
+                $timeCheck.text('Круглосуточно');
+            } else {
+
+                if (+$newTime > +$secondTime) {
+                    $timeResult.text('c ' + $secondTime + ':00 до ' + $newTime + ':00');
+                } else {
+                    $timeResult.text('c ' + $newTime + ':00 до ' + $secondTime + ':00');
+                }
+            }
+        });
+    }
+
+    selectOnLoad();
+    selectFirstTimeChange();
+    timeInputChange();
+
+    // Change Day
+
+    // Tooltip time on page Agcy
+    let $dayTip = $('.agcy__restday-tip');
+
+    $('#clientDay.agcy__item-restday').on('click', function () {
+        $(this).find('.agcy__restday-tip').addClass('active');
+        $(this).find('.agcy__item-arrow').addClass('active');
+    });
+
+    $('#punktDay.agcy__item-restday').on('click', function () {
+        $(this).find('.agcy__restday-tip').addClass('active');
+        $(this).find('.agcy__item-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$dayTip.is(e.target) // если клик был не по нашему блоку
+            && $dayTip.has(e.target).length === 0) { // и не по его дочерним элементам
+            $dayTip.removeClass('active'); // скрываем его
+            $dayTip.closest('.agcy__item-restday').find('.agcy__item-arrow').removeClass('active');
+        };
+    });
+
+    // Change day
+    function changeDay(id) {
+        let $parentId = $('#' + id + '');
+        let $restDay = $parentId.find('.agcy__restday-item');
+        let $restdayArray = {};
+
+        $restDay.on('click', function () {
+            let $restdayBox = $(this).closest('.agcy__item-restday').find('.agcy__restday-value');
+            let $span = $('<span></span>');
+            let $restdayActive = $('.agcy__restday-item.active');
+            let $restdayOrder = $(this).data('order');
+            let $restdayDay = $(this).data('day')
+            let $dayCheck = $(this).closest('.agcy__item-restday').find('input:checkbox');
+
+            if ($dayCheck.prop('checked')) {
+                $restdayBox.text('Без выходных');
+            } else {
+
+                $(this).toggleClass('active');
+
+                if ($(this).hasClass('active')) {
+                    $restdayArray[$restdayOrder] = $restdayDay;
+                } else {
+                    delete $restdayArray[$restdayOrder]
+                }
+
+                $restdayBox.text('')
+                if (Object.keys($restdayArray).length === 0) {
+                    $restdayBox.text('Без выходных')
+                }
+
+                for (let prop in $restdayArray) {
+
+                    if (Object.keys($restdayArray).length === 1) {
+                        $restdayBox.append($restdayArray[prop])
+                    } else {
+                        $restdayBox.append($restdayArray[prop] + ', ')
+                    }
+                    console.log(Object.keys($restdayArray).length)
+
+                }
+            }
+
+
+        });
+    };
+
+    function dayInputChange(id) {
+        let $parentId = $('#' + id + '')
+        let $dayChange = $parentId.find('.agcy__restday-input');
+
+        $dayChange.on('change', function () {
+
+            if ($(this).prop('checked')) {
+                $(this).closest('.agcy__item-restday').find('.agcy__restday-item').removeClass('active');
+                $(this).closest('.agcy__item-restday').find('.agcy__restday-value').text('Без выходных');
+            } else {
+                changeDay(id);
+            }
+        });
+
+    };
+
+    dayInputChange("clientDay");
+    changeDay("clientDay");
+    dayInputChange("punktDay");
+    changeDay("punktDay");
+
+    // Tooltip Demon on page Agcy
+    $('.agcy__demon').on('click', function () {
+        $(this).find('.agcy__demon-tip').addClass('active');
+        $(this).find('.agcy__item-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.agcy__demon-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.agcy__demon-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.agcy__demon-tip').removeClass('active'); // скрываем его
+            $('.agcy__demon-tip').closest('.agcy__demon').find('.agcy__item-arrow').removeClass('active');
+        };
+    });
+
+    $('.agcy__demon-item').on('click', function(){
+        $('.agcy__demon-item').removeClass('active');
+        $(this).addClass('active');
+        $('.agcy__demon-value').text($(this).text());
+    });
+
+    // Close popup agcy
+    $('.agcy__close a').on('click', function(){
+        $('.popup__agcy').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    // Selectize
+    // $('.agcy__worktime-select').selectize();
 });

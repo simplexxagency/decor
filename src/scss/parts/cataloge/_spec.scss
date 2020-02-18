@@ -6,20 +6,32 @@
     }
 
     &__banner {
-        height: 215px;
+        
         position: relative;
         margin-bottom: 64px;
 
+        &:after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;    
+            bottom: 0;
+            right: 0;
+            background: linear-gradient(0deg, rgba(104, 90, 76, 0.5), rgba(104, 90, 76, 0.5));
+        }
+
         &-img {
+            height: 215px;
 
             img {
-                height: 215px;
+                height: 100%;
                 object-fit: cover;
             }
         }
 
         &-desc {
             position: absolute;
+            z-index: 1;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
