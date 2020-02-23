@@ -47,11 +47,14 @@
         }
 
         &-value {
-            font-size: 16px;
-            line-height: 19px;
-            letter-spacing: 0.04em;
-
-            color: #56C37C;
+            
+            input {
+                font-size: 16px;
+                line-height: 19px;
+                letter-spacing: 0.04em;
+                background: transparent;
+                color: #56C37C;
+            }
         }
 
         &-link {
@@ -130,9 +133,14 @@
 
         &-valuelink {
             display: block;
-            font-size: 16px;
-            letter-spacing: 0.04em;
-            color: #56C37C;
+            
+            input {
+                width: 100%;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                color: #56C37C;
+                background: transparent;
+            }
         }
 
         &-link {

@@ -62,9 +62,17 @@
         }
 
         &-value {
+            flex-grow: 1;
             display: flex;
-            flex-wrap: wrap;
+            // flex-wrap: wrap;
             align-items: center;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #56C37C;
+        }
+
+        &-input {
+            width: 100%;
             font-size: 16px;
             letter-spacing: 0.04em;
             color: #56C37C;
@@ -172,6 +180,20 @@
             //         background: #F8F8F8;
             //     }
             // }
+        }
+
+        &-select-wrap {
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 15px;
+                right: 11px;
+                width: 11px;
+                height: 9px;
+                background: url("../img/agcy-icon-arrowdown.svg") no-repeat;
+            }
         }
 
         &-def {
@@ -383,6 +405,18 @@
             position: relative;
             top: -3px;
             margin-right: 10px;
+        }
+    }
+}
+
+@media all and (max-width: 1199px) {
+    .agcy {
+
+        &__item {
+
+            &-value {
+                flex-wrap: wrap;
+            }
         }
     }
 }

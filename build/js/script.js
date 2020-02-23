@@ -791,7 +791,47 @@ $(document).ready(function () {
         };
     });
 
+    // ----------Priv---------------
+    // Phone Mask
+    $('#adminPhone1').mask('+9 (999) 999-9999');
+
+    // Value input change
+    $('.priv__left-value input').on('change', function(){
+        let $link = $(this).closest('.priv__left-value');
+        let $val = $(this).val();
+
+        $link.attr('title', $val);
+    });
+
+    // Support change
+    // $('.priv__right-valuelink input').on('change', function(){
+    //     let $link = $(this).closest('.priv__right-valuelink');
+    //     let $val = $(this).val();
+
+    //     $link.attr('href', $val);
+    //     $link.attr('title', $val);
+    // });
+
+    // $('.priv__right-valuelink input').on('blur', function(){
+    //     let $link = $(this).closest('.priv__right-valuelink');
+    //     let $val = $(this).val();
+
+    //     $link.attr('href', $val);
+    //     $link.attr('title', $val);
+    // });
+
     // ----------Agcy-------
+
+    // Phone Mask
+    $('.agcy__item-phone').mask('+9 (999) 999-9999');
+
+    // Title change
+    $('.agcy__item-input').on('change', function(){
+        let $link = $(this);
+        let $val = $(this).val();
+
+        $link.attr('title', $val);
+    });
 
     // Tooltip time on page Agcy
     let $worktimeTip = $('.agcy__worktime-tip');
@@ -839,7 +879,7 @@ $(document).ready(function () {
     function selectOnLoad() {
         $(".agcy__worktime-select").each(function () {
             let $newTime = $(this).val();
-            let $secondTime = $(this).siblings('select').val();
+            let $secondTime = $(this).closest('.agcy__worktime-select-wrap').siblings('.agcy__worktime-select-wrap').find('select').val();
             let $timeResult = $(this).closest('.agcy__item-worktime').find('span');
             let $timeCheck = $(this).closest('.agcy__item-worktime').find('input:checkbox');
 
@@ -890,6 +930,7 @@ $(document).ready(function () {
         let $restdayArray = {};
 
         $restDay.on('click', function () {
+            console.log('1111111111')
             let $restdayBox = $(this).closest('.agcy__item-restday').find('.agcy__restday-value');
             let $span = $('<span></span>');
             let $restdayActive = $('.agcy__restday-item.active');
@@ -919,7 +960,8 @@ $(document).ready(function () {
                     if (Object.keys($restdayArray).length === 1) {
                         $restdayBox.append($restdayArray[prop])
                     } else {
-                        $restdayBox.append($restdayArray[prop] + ', ')
+                        $restdayBox.append($restdayArray[prop] + ' ')
+
                     }
                     console.log(Object.keys($restdayArray).length)
 
@@ -979,4 +1021,254 @@ $(document).ready(function () {
 
     // Selectize
     // $('.agcy__worktime-select').selectize();
+
+    // -----------Office--------
+    // Popup Discount
+    $('.offi__prof-value a').on('click', function() {
+        $('.popup__disc').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    $('.popup__disc-submit a').on('click', function(){
+        $('.popup__disc-hide').removeClass('passive');
+        $(this).closest('.popup__disc-submit').removeClass('active');
+    }); 
+
+    $('.popup__disc-final a').on('click', function(){
+        $('.popup__disc').addClass('passive');
+        $('body, html').removeClass('active');
+        $('.popup__disc-hide').addClass('passive');
+        $('.popup__disc-submit').addClass('active');
+    });
+
+    $('.popup__disc-cancel a').on('click', function(){
+        $('.popup__disc-hide').addClass('passive');
+        $('.popup__disc-submit').addClass('active');
+    });
+
+    // Change days in Arend
+    function arendDays () {
+        $('.offi__prof-day').each(function() {
+            let $val = $(this).val();
+            let $dayValue = $(this).closest('.offi__arend-value').find('.offi__arend-dayvalue');
+            console.log($val.toString().slice(-2))
+            if ($val == 1) {
+                $dayValue.text('день');
+            } else if ($val == 2 || $val == 3 || $val == 4) {
+                $dayValue.text('дня');
+            } else {
+                $dayValue.text('дней');
+            }
+
+            if ( $val < 10 ) {
+                $(this).css('margin-right', '-20px');
+            } else if ( $val >= 10 && $val < 99) {
+                $(this).css('margin-right', '-10px');
+            } else {
+                $(this).css('margin-right', '0');
+            }
+        });
+    };
+
+    $('.offi__prof-day').on('change', function() {
+        arendDays();
+    });
+
+    arendDays();
+
+    // All input change
+    function allInputChange () {
+        $('.offi__prof-inputnumber').each(function (){
+            let $max = $(this).attr('max');
+            let $val = $(this).val();
+
+            if ( $max < 999) {
+
+                if ( $val < 10 ) {
+                    $(this).css('margin-right', '-20px');
+                } else if ( $val >= 10 && $val < 99) {
+                    $(this).css('margin-right', '-10px');
+                } else {
+                    $(this).css('margin-right', '0');
+                }
+            } else  if ( $max > 1000) {
+
+                if ( $val < 10 ) {
+                    $(this).css('margin-right', '-30px');
+                } else if ( $val >= 10 && $val < 99) {
+                    $(this).css('margin-right', '-20px');
+                } else if ( $val >= 100 && $val < 999)  {
+                    $(this).css('margin-right', '-10px');
+                } else {
+                    $(this).css('margin-right', '0');
+                }
+            }
+        });
+    };
+
+    $('.offi__prof-inputnumber').on('change', function(){
+        allInputChange();
+    });
+
+    allInputChange();
+
+    // Change Deposite
+    $('.offi__arend-deposit').on('click', function(){
+        $('.offi__arend-tip').addClass('active');
+        $(this).find('.offi__arend-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.offi__arend-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.offi__arend-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.offi__arend-tip').removeClass('active'); // скрываем его
+            $('.offi__arend-tip').closest('.offi__arend-value').find('.offi__arend-arrow').removeClass('active');
+        };
+    });
+
+    $('.offi__arend-tipitem').on('click', function(){
+        let $depActive = $(this).closest('.offi__arend-value').find('.offi__arend-deposit span').text();
+        let $depChoose = $(this).text();
+        
+        $(this).closest('.offi__arend-value').find('.offi__arend-deposit span').text($depChoose);
+        $(this).text($depActive);
+        $('.offi__arend-tip').removeClass('active');
+        $(this).find('.offi__arend-arrow').removeClass('active');
+    });
+
+    // Delivery select
+    $('.offi__deli-selectwrap').on('click', function(){
+        
+        $(this).closest('.offi__deli-select').find('.offi__deli-tip').addClass('active');
+        $(this).find('.offi__deli-arrow').addClass('active');
+
+        
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.offi__deli-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.offi__deli-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.offi__deli-tip').removeClass('active'); // скрываем его
+            $('.offi__deli-tip').closest('.offi__deli-select').find('.offi__deli-arrow').removeClass('active');
+        };
+    });
+
+    $('.offi__deli-tip').on('click', function(){
+        let $selectActive = $(this).closest('.offi__deli-select').find('span').text();
+        let $selectChoose = $(this).text();
+        let $parent = $(this).closest('.offi__deli');
+
+        if ( $parent.find('.offi__deli-main').hasClass('active')) {
+            $parent.find('.offi__deli-main').removeClass('active')
+        } else {
+            $parent.find('.offi__deli-main').addClass('active')
+        }
+
+        $(this).closest('.offi__deli-select').find('span').text($selectChoose);
+        $(this).text($selectActive);
+        $(this).removeClass('active');
+        $(this).closest('.offi__deli-select').find('.offi__deli-arrow').removeClass('active');
+    });
+
+    // Using choose
+    $('.offi__deli-usingwrap').on('click', function(){
+        
+        $(this).closest('.offi__deli-using').find('.offi__deli-usingtip').addClass('active');
+        $(this).find('.offi__deli-arrow').addClass('active');
+        $(this).find('span').toggleClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.offi__deli-usingtip').is(e.target) // если клик был не по нашему блоку
+            && $('.offi__deli-usingtip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.offi__deli-usingtip').removeClass('active'); // скрываем его
+            $('.offi__deli-usingtip').closest('.offi__deli-using').find('.offi__deli-arrow').removeClass('active');
+        };
+    });
+
+    $('.offi__deli-usingtip').on('click', function(){
+        let $selectActive = $(this).closest('.offi__deli-using').find('span').text();
+        let $selectChoose = $(this).text();
+        let $result = $(this).closest('.offi__deli-row').find('.offi__deli-result span');
+        let $flag = $(this).closest('.offi__deli-using').find('.offi__deli-usingwrap span');
+
+        $result.toggleClass('active');
+
+        $(this).closest('.offi__deli-using').find('span').text($selectChoose);
+        $(this).text($selectActive);
+        $(this).removeClass('active');
+        $(this).closest('.offi__deli-using').find('.offi__deli-arrow').removeClass('active');
+    });
+
+    // Add using
+    $('.offi__deli-button').on('click', function() {
+        $(this).closest('.offi__deli-main').find('.offi__deli-rowspecial').removeClass('passive');
+        $(this).removeClass('active');
+    });
+
+    // Setup select
+    $('.offi__setup-selectwrap').on('click', function(){
+        
+        $(this).closest('.offi__setup-select').find('.offi__setup-tip').addClass('active');
+        $(this).find('.offi__setup-arrow').addClass('active');
+
+        
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.offi__setup-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.offi__setup-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.offi__setup-tip').removeClass('active'); // скрываем его
+            $('.offi__setup-tip').closest('.offi__setup-select').find('.offi__setup-arrow').removeClass('active');
+        };
+    });
+
+    $('.offi__setup-tip').on('click', function(){
+        let $selectActive = $(this).closest('.offi__setup-select').find('span').text();
+        let $selectChoose = $(this).text();
+        let $parent = $(this).closest('.offi__setup');
+
+        if ( $parent.find('.offi__setup-main').hasClass('active')) {
+            $parent.find('.offi__setup-main').removeClass('active')
+        } else {
+            $parent.find('.offi__setup-main').addClass('active')
+        }
+
+        $(this).closest('.offi__setup-select').find('span').text($selectChoose);
+        $(this).text($selectActive);
+        $(this).removeClass('active');
+        $(this).closest('.offi__setup-select').find('.offi__setup-arrow').removeClass('active');
+    });
+
+    // Add setup
+    $('.offi__setup-button').on('click', function() {
+        $(this).closest('.offi__setup-main').find('.offi__setup-rowspecial').removeClass('passive');
+        $(this).removeClass('active');
+    });
+
+    // Persent margin
+    function marginOnLoad (){
+
+        $('.offi__prof-inputpersent').each( function(){
+            let $val = $(this).val();
+
+            if ( $val < 10 ) {
+                $(this).css('margin-right', '-20px');
+            } else if ( $val >= 10 && $val < 99) {
+                $(this).css('margin-right', '-12px');
+            } else {
+                $(this).css('margin-right', '0');
+            }
+        });
+    };
+
+    function marginChange (){
+        
+        $('.offi__prof-inputpersent').on('change', function(){
+            marginOnLoad();
+        });
+    };
+    
+    marginChange();
+    marginOnLoad();
 });
