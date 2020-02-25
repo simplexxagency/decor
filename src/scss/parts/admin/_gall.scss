@@ -1,0 +1,110 @@
+.gall {
+
+    &__add {
+        margin-bottom: 16px;
+        display: flex;
+        justify-content: flex-end;
+
+        a {
+            font-size: 14px;
+            letter-spacing: 0.04em;
+            color: #56C47C;
+
+            &:hover {
+                color: $color-darkgreen;
+            }
+        }
+    }
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &-img {
+            margin-right: 8px;
+            width: 256px;
+            height: 256px;
+            flex-shrink: 0;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-box {
+            position: relative;
+            padding: 24px;
+            background: #FFFFFF;
+            border: 1px solid #DFDFDF;
+            flex-grow: 1;
+        }
+
+        &-wrap {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        &-tag {
+            margin-right: 16px;
+            margin-bottom: 16px;
+            padding: 10px 16px;
+            display: flex;
+            align-items: center;
+            background: #E8FBEF;
+
+            &.delete {
+                display: none;
+            }
+        }
+
+        &-close {
+            width: 9px;
+            margin-right: 9px;
+            position: relative;
+            top: -4px;
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        &-value {
+            font-size: 14px;
+            letter-spacing: -0.016em;
+            color: #56C37C;
+        }
+
+        &-add {
+            position: absolute;
+            bottom: 16px;
+            // left: 27px;
+
+            a {
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #56C47C;
+
+                &:hover {
+                    color: $color-darkgreen;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+    .gall {
+
+        &__item {
+            flex-direction: column;
+
+            &-img {
+                margin-bottom: 20px;
+            }
+        }
+
+
+    }
+}

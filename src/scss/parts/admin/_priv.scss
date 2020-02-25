@@ -185,6 +185,14 @@
 @media all and (max-width: 577px) {
     .priv {
 
+        &__left {
+
+            &-desc {
+                width: 100px;
+                flex-shrink: 0;
+            }
+        }
+
         &__right {
 
             &-item {

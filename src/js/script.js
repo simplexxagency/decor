@@ -1271,4 +1271,60 @@ $(document).ready(function () {
     
     marginChange();
     marginOnLoad();
+
+    // ---------Prop--------
+    // Delete logotype
+    $('.prop__site-change a').on('click', function(){
+        $(this).closest('.prop__site-logo').find('.prop__site-image img').css('display', 'none');
+    });
+
+    $('.prop__site-delete a').on('click', function(){
+        $(this).closest('.prop__site-logo').find('.prop__site-image img').css('display', 'none');
+    });
+
+    // ---------Gallery------------
+    // Popup Gall
+    $('.gall__item-add').on('click', function(){
+        let $parentTag = $(this).closest('.gall__item');
+
+        $('.popup__gall').removeClass('passive');
+        $('body, html').addClass('active');
+        $parentTag.addClass('active');
+        tagAdd();
+        console.log('222')
+    });
+
+    // Add new tag
+    function tagAdd() {
+
+        $('.popup__gall-item').on('click', function(){
+            let $newTag = $(this).text();
+            let $newTagBox = $('<div class="gall__item-tag"></div>');
+            let $newTagClose = $('<div class="gall__item-close"><img src="img/gall-close.svg" alt="icon"></div>');
+            let $newTagValue = $('<div class="gall__item-value"></div>');
+            let $activeItem = $('.gall__item.active');
+            
+            $newTagValue.append($newTag);
+            $newTagBox.append($newTagClose);
+            $newTagBox.append($newTagValue);
+            $activeItem.find('.gall__item-wrap').append($newTagBox);
+            console.log('111')
+            tagDel();
+        });
+    };
+
+    $('.popup__gall .popup__close, .popup__gall .popup__shadow').on('click', function () {
+        $('.popup').addClass('passive');
+        $('body, html').removeClass('active');
+        $('.gall__item.active').removeClass('active');
+    });
+
+    // Tag delete
+    function tagDel (){
+        $('.gall__item-close').on('click', function(){
+            $(this).closest('.gall__item-tag').addClass('delete');
+        });
+    };
+    
+    tagDel();
 });
