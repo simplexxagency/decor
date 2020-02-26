@@ -71,6 +71,17 @@
             a {
                 display: flex;
                 align-items: center;
+
+                &:hover {
+
+                    .cards__header-phone {
+                        filter: brightness(0) saturate(100%) invert(20%) sepia(96%) saturate(4131%) hue-rotate(146deg) brightness(97%) contrast(101%);
+                    }
+
+                    .cards__header-num {
+                        color: $color-darkgreen;
+                    }
+                }
             }
         }
 
@@ -91,6 +102,17 @@
 
             a {
                 display: flex;
+
+                &:hover {
+
+                    .cards__header-mail {
+                        filter: brightness(0) saturate(100%) invert(20%) sepia(96%) saturate(4131%) hue-rotate(146deg) brightness(97%) contrast(101%);
+                    }
+
+                    .cards__header-mailaddress {
+                        color: $color-darkgreen;
+                    }
+                }
             }
         }
 
@@ -178,6 +200,17 @@
             a {
                 display: flex;
                 align-items: center;
+
+                &:hover {
+
+                    .cards__header-mapicon {
+                        filter: brightness(0) saturate(100%) invert(20%) sepia(96%) saturate(4131%) hue-rotate(146deg) brightness(97%) contrast(101%);
+                    }
+
+                    .cards__header-maplink {
+                        color: $color-darkgreen;
+                    }
+                }
             }
         }
 

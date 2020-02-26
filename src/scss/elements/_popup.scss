@@ -403,7 +403,7 @@
         }
 
         &-forgot {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             display: flex;
             justify-content: flex-end;
 
@@ -437,7 +437,7 @@
         }
 
         &-politic {
-            margin-bottom: 32px;
+            margin-bottom: 24px;
             font-size: 14px;
             line-height: 20px;
             letter-spacing: 0.01em;
@@ -546,7 +546,7 @@
 
         &-main {
             width: 400px;
-            padding: 48px 32px 60px;
+            padding: 32px 32px 32px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -1082,6 +1082,119 @@
         }
     } 
 
+    &__repr {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 15;
+
+        &.passive {
+            display: none;
+        }
+
+        &-main {
+            width: 400px;
+            padding: 48px 32px 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5);
+        }
+
+        &-title {
+            margin-bottom: 18px;
+            font-family: $font-corm;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: -0.006em;
+            color: #3D3D3D;
+            text-align: left;
+        }
+
+        &-search {
+            position: relative;
+            margin-bottom: 25px;
+
+            input {
+                padding: 16px;
+                width: 100%;
+                background: #FFFFFF;
+                border: 1px solid #DFDFDF;
+                font-size: 16px;
+                letter-spacing: 0.01em;
+                color: #3D3D3D;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+
+                &:focus,
+                &:hover {
+                    border: 1px solid #56C37C;
+                }
+            }
+        }
+
+        &-icon {
+            width: 19px;
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        &-box {
+            height: 400px;
+            overflow-y: scroll;
+        }
+
+        ::-webkit-scrollbar {
+            -webkit-appearance: none;
+            cursor: pointer;
+        }
+        
+        ::-webkit-scrollbar:vertical {
+            width: 3px;
+            cursor: pointer;
+        }
+        
+        ::-webkit-scrollbar-thumb:vertical {
+            background-color: #FD9590;
+            cursor: pointer;
+        }
+    
+        ::-webkit-scrollbar-track-piece:vertical  {
+            background-color: #bdbdbd;
+            border: 1px solid #fff;
+            cursor: pointer;
+        }
+        
+        ::-webkit-scrollbar-track:vertical  {
+            border-radius: 10px;  
+            background-color: #000; 
+            cursor: pointer;
+        }
+
+        &-item {
+            padding: 11px 16px;
+            cursor: pointer;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+
+            &:hover {
+                background: #F8F8F8;
+                color: #3D3D3D;
+            }
+        }
+    } 
+
     // Discount
 
     &__disc {
@@ -1248,7 +1361,7 @@
         }
     } 
 
-    // City
+    // Gallery
 
     &__gall {
         display: block;
@@ -1528,6 +1641,18 @@
         }
 
         &__gall {
+
+            &-main {
+                padding-top: 50px;
+                width: 100%;
+            }
+
+            &-box {
+                height: 300px;
+            }
+        }
+
+        &__repr {
 
             &-main {
                 padding-top: 50px;

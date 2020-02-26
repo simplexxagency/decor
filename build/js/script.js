@@ -145,13 +145,16 @@ $(document).ready(function () {
         rules: {
             email1: {
                 required: true,
-                email: true
+                email: true,
+                message: 'Ай-яй'
             },
             password1: {
                 required: true,
-                minlength: 2
+                minlength: 2,
+                message: 'Ай-яй'
             }
-        }
+        },
+        message: 'Ай-яй'
     });
 
     $("#validate2").validate({
@@ -1016,6 +1019,18 @@ $(document).ready(function () {
     // Close popup agcy
     $('.agcy__close a').on('click', function(){
         $('.popup__agcy').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    $('.popup__agcy-cancel, .popup__agcy-accept').on('click', function(){
+        $('.popup__agcy').addClass('passive');
+        $('body, html').removeClass('active');
+    });
+
+    // Popup Representation
+    $('.agcy__link a').on('click', function(){
+
+        $('.popup__repr').removeClass('passive');
         $('body, html').addClass('active');
     });
 

@@ -251,13 +251,7 @@
             align-items: center;
             cursor: pointer;
 
-            &:hover {
-                border: 2px solid #FD9590;
-
-                img {
-                    filter: brightness(0) saturate(100%) invert(67%) sepia(9%) saturate(2222%) hue-rotate(314deg) brightness(101%) contrast(98%);
-                }
-            }
+            
 
             
         }
@@ -274,6 +268,17 @@
 
         &-img {
             width: 16px;
+        }
+    }
+
+    .slick-arrow {
+
+        &:hover {
+            border: 2px solid #FD9590;
+
+            img {
+                filter: brightness(0) saturate(100%) invert(67%) sepia(9%) saturate(2222%) hue-rotate(314deg) brightness(101%) contrast(98%);
+            }
         }
     }
 

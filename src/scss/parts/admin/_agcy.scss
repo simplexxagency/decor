@@ -9,6 +9,10 @@
             font-size: 14px;
             letter-spacing: 0.04em;
             color: #56C47C;
+
+            &:hover {
+                color: $color-darkgreen;
+            }
         }
     }
 
@@ -80,6 +84,7 @@
 
         &-media {
             color: #AAF1C3;
+            font-size: 16px;
         }
 
         &-arrow {
