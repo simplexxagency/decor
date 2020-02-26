@@ -35,7 +35,7 @@
 <body>
 
     <!-- Header -->
-    <header class="header">
+    <header class="header active">
         <div class="container">
             <div class="header__wrapper">
                 <div class="header__container">
@@ -257,7 +257,7 @@
     </header>
     <!-- End Header -->
 
-    <main>
+    <main class="padding-top">
 
         <!-- Basket -->
         <section class="bask">
@@ -595,17 +595,25 @@
                                     </div>
                                     <div class="bask__dhide-second">
                                         <div class="bask__dhide-link">
-                                            <a href="javascript:void(0)">
-                                                <span>
-                                                    Время доставки
+                                                <span class="bask__dhide-time">
+                                                    <div class="active">
+                                                        Время доставки
+                                                    </div>
+                                                    <div class="">
+                                                        <div class="bask__dhide-getting">
+
+                                                        </div>
+                                                        <div class="bask__dhide-return">
+
+                                                        </div>
+                                                    </div>
                                                 </span>
-                                                <span>
+                                                <span class="bask__dhide-place">
                                                     Место доставки
                                                 </span>
-                                                <span>
+                                                <span class="bask__dhide-contact">
                                                     Контактное лицо
                                                 </span>
-                                            </a>
                                         </div>
                                     </div>
                                     <div class="bask__dhide-third">
@@ -1010,7 +1018,7 @@
                             <div class="popup__bask-name">
                                 Получение
                             </div>
-                            <div class="popup__bask-value">
+                            <div class="popup__bask-value popup__bask-getting">
                                 <span>
                                     С
                                 </span>
@@ -1111,7 +1119,7 @@
                             <div class="popup__bask-name">
                                 Возврат
                             </div>
-                            <div class="popup__bask-value">
+                            <div class="popup__bask-value popup__bask-return">
                                 <span>
                                     С
                                 </span>
@@ -1216,11 +1224,11 @@
                         <div class="popup__bask-value">
                             <div class="popup__bask-radios">
                                 <div class="popup__bask-radio">
-                                    <input type="radio" id="radio1" name="radio" />
+                                    <input type="radio" id="radio1" class="popup__bask-radiobutton" name="radio" />
                                      <label for="radio1"> в пределах МКАД</label>
                                 </div>
                                 <div class="popup__bask-radio">
-                                    <input type="radio" id="radio2" name="radio" />
+                                    <input type="radio" id="radio2" class="popup__bask-radiobutton" name="radio" />
                                      <label for="radio1"> за МКАД</label>
                                 </div>
                             </div>
@@ -1257,7 +1265,7 @@
                                     <input type="text" placeholder="имя и фамилия">
                                 </div>
                                 <div class="popup__bask-phone">
-                                    <input type="text" id="bask-phone" placeholder="например, название ресторана">
+                                    <input type="text" id="bask-phone" class="agcy__item-phone" placeholder="например, название ресторана">
                                 </div>
                                 
                             </div>

@@ -77,6 +77,10 @@ body {
     background: #fff;
 }
 
+.padding-top {
+    padding-top: 100px;
+}
+
 .title {
     font-family: $font-corm;
     font-style: normal;
@@ -137,4 +141,16 @@ input::-webkit-inner-spin-button {
 
 input[type=number] {
     -moz-appearance:textfield; /* Firefox */
+}
+
+@media all and (max-width: 991px) {
+    .padding-top {
+        padding-top: 103px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .padding-top {
+        padding-top: 85px;
+    }
 }

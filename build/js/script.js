@@ -11,7 +11,7 @@ $(document).ready(function () {
     $(window).scroll(function () {
         let top = $(this).scrollTop();
 
-        $header.toggleClass('active', top > $header.height());
+        // $header.toggleClass('active', top > $header.height());
         $rentHeader.toggleClass('active', top > $header.height());
 
     });
@@ -146,15 +146,12 @@ $(document).ready(function () {
             email1: {
                 required: true,
                 email: true,
-                message: 'Ай-яй'
             },
             password1: {
                 required: true,
                 minlength: 2,
-                message: 'Ай-яй'
             }
-        },
-        message: 'Ай-яй'
+        }
     });
 
     $("#validate2").validate({
@@ -740,6 +737,44 @@ $(document).ready(function () {
         $('.popup__bask').removeClass('passive');
         $('body, html').addClass('active');
     });
+
+    // Change time
+    function selectBaskTimeChange() {
+        $(".popup__bask-select").change(function () {
+            selectBaskOnLoad();
+        });
+    };
+
+    function selectBaskOnLoad() {
+        $(".popup__bask-getting .popup__bask-select").each(function () {
+            let $newTime = $(this).val();
+            let $secondTime = $(this).closest('.popup__bask-selectwrap').siblings('.popup__bask-selectwrap').find('select').val();
+            let $timeResult = $('.bask__dhide-getting');
+
+            if (+$newTime > +$secondTime) {
+                $timeResult.text('Получение c ' + $secondTime + ':00 до ' + $newTime + ':00');
+            } else {
+                $timeResult.text('Получение c ' + $newTime + ':00 до ' + $secondTime + ':00');
+            }
+            
+        });
+
+        $(".popup__bask-return .popup__bask-select").each(function () {
+            let $newTime = $(this).val();
+            let $secondTime = $(this).closest('.popup__bask-selectwrap').siblings('.popup__bask-selectwrap').find('select').val();
+            let $timeResult = $('.bask__dhide-return');
+
+            if (+$newTime > +$secondTime) {
+                $timeResult.text('Возврат c ' + $secondTime + ':00 до ' + $newTime + ':00');
+            } else {
+                $timeResult.text('Возврат c ' + $newTime + ':00 до ' + $secondTime + ':00');
+            }
+            
+        });
+    }
+
+    selectBaskOnLoad();
+    selectBaskTimeChange();
 
     // ---------Order-----------
 
