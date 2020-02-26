@@ -190,6 +190,7 @@
 @media all and (max-width: 991px) {
     .order {
         // margin-bottom: 80px;
+        height: unset;
         min-height: calc( 100vh - 100px);
 
         &__form {

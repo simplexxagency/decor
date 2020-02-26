@@ -264,12 +264,12 @@ input[type=number] {
     transform: translate(-50%, -50%);
     width: 400px;
     position: relative;
-    padding: 22px 0 0;
+    padding: 18px 0 0;
     background: #FFFFFF;
     -webkit-box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5);
     box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5); }
   .popup__enter-content {
-    padding-top: 16px; }
+    padding-top: 14px; }
   .popup__enter-box {
     display: none; }
     .popup__enter-box.active {
@@ -462,7 +462,7 @@ input[type=number] {
       border-bottom: 1px solid #008830; }
 
 .popup__reg-radio {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -508,7 +508,7 @@ input[type=number] {
   position: relative; }
   .popup__reg-inputitem input {
     width: 100%;
-    padding: 14px 15px;
+    padding: 13px 15px;
     letter-spacing: 0.01em;
     background: #FFFFFF;
     border: 1px solid #DFDFDF; }
@@ -525,7 +525,7 @@ input[type=number] {
     .popup__reg-inputitem input::placeholder {
       color: #ABABAB; }
   .popup__reg-inputitem:not(:last-child) {
-    margin-bottom: 12px; }
+    margin-bottom: 10px; }
 
 .popup__reg-passicon {
   width: 24px;
@@ -557,10 +557,10 @@ input[type=number] {
       border-bottom: 1px solid #008830; }
 
 .popup__reg-submit {
-  margin-bottom: 16px; }
+  margin-bottom: 14px; }
   .popup__reg-submit input {
     width: 100%;
-    padding: 22px;
+    padding: 20px;
     background: #FD9590;
     letter-spacing: 0.04em;
     text-transform: uppercase;
@@ -583,7 +583,7 @@ input[type=number] {
       border-bottom: 1px solid #008830; }
 
 .popup__reg-bottom {
-  padding: 22px;
+  padding: 20px;
   background: #F8F8F8;
   text-align: center;
   letter-spacing: 0.01em;
@@ -6226,6 +6226,7 @@ input[type=number] {
 
 @media all and (max-width: 991px) {
   .order {
+    height: unset;
     min-height: calc( 100vh - 100px); }
     .order__form form {
       -webkit-box-orient: vertical;

@@ -36,13 +36,13 @@
             transform: translate(-50%, -50%);
             width: 400px;
             position: relative;
-            padding: 22px 0 0;
+            padding: 18px 0 0;
             background: #FFFFFF;
             box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5);
         }
 
         &-content {
-            padding-top: 16px;
+            padding-top: 14px;
         }
 
         &-box {
@@ -308,7 +308,7 @@
     &__reg {
 
         &-radio {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             display: flex;
         }
 
@@ -364,7 +364,7 @@
             input {
                 
                 width: 100%;
-                padding: 14px 15px;
+                padding: 13px 15px;
                 letter-spacing: 0.01em;
                 background: #FFFFFF;
                 border: 1px solid #DFDFDF;
@@ -379,7 +379,7 @@
             }
 
             &:not(:last-child) {
-                margin-bottom: 12px;
+                margin-bottom: 10px;
             }
         }
 
@@ -420,11 +420,11 @@
         }
 
         &-submit {
-            margin-bottom: 16px;
+            margin-bottom: 14px;
 
             input {
                 width: 100%;
-                padding: 22px;
+                padding: 20px;
                 background: #FD9590;
                 letter-spacing: 0.04em;
                 text-transform: uppercase;
@@ -456,7 +456,7 @@
         }
 
         &-bottom {
-            padding: 22px;
+            padding: 20px;
             background: #F8F8F8;
             text-align: center;
             letter-spacing: 0.01em;
