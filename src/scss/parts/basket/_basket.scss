@@ -219,10 +219,26 @@
 
     &__delivery {
         margin-bottom: 27px;
-        display: flex;
-        justify-content: space-between;
+        
         padding-bottom: 24px;
         border-bottom: 1px solid #DFDFDF;
+
+        &-wrap {
+            display: none;
+            justify-content: space-between;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        &-hide {
+            display: none;
+
+            &.active {
+                display: flex;
+            }
+        }
 
         &-link {
 
@@ -235,6 +251,22 @@
                     color: #008830;
                 }
             }
+        }
+    }
+
+    &__dhide {
+
+        &-title {
+            margin-bottom: 16px;
+            font-size: 28px;
+            line-height: 1;
+            text-align: left;
+        }
+
+        &-subtitle {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3D3D3D;
         }
     }
 
@@ -294,10 +326,25 @@
 
     &__setup {
         margin-bottom: 21px;
-        display: flex;
-        justify-content: space-between;
         padding-bottom: 24px;
         border-bottom: 1px solid #DFDFDF;
+
+        &-wrap {
+            display: none;
+            justify-content: space-between;
+
+            &.active {
+                display: flex;
+            }
+        }
+
+        &-hide {
+            display: none;
+
+            &.active {
+                display: flex;
+            }
+        }
 
         &-desc {
             font-size: 16px;

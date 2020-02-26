@@ -711,6 +711,30 @@ $(document).ready(function () {
         fullSum();
     });
 
+    // Add Delivery
+    $('.bask__delivery-link').on('click', function(){
+        $(this).closest('.bask__delivery-wrap').removeClass('active');
+        $(this).closest('.bask__delivery').find('.bask__delivery-hide').addClass('active');
+    });
+
+    // Delete Setup
+    $('.bask__dhide-delete').on('click', function(){
+        $(this).closest('.bask__delivery-hide').removeClass('active');
+        $(this).closest('.bask__delivery').find('.bask__delivery-wrap').addClass('active');
+    });
+
+    // Add Setup
+    $('.bask__setup-link').on('click', function(){
+        $(this).closest('.bask__setup-wrap').removeClass('active');
+        $(this).closest('.bask__setup').find('.bask__setup-hide').addClass('active');
+    });
+
+    // Delete Setup
+    $('.bask__shide-delete').on('click', function(){
+        $(this).closest('.bask__setup-hide').removeClass('active');
+        $(this).closest('.bask__setup').find('.bask__setup-wrap').addClass('active');
+    });
+
     // ---------Order-----------
 
     // Selectize Order

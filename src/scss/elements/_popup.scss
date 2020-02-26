@@ -42,7 +42,7 @@
         }
 
         &-content {
-            padding-top: 24px;
+            padding-top: 16px;
         }
 
         &-box {
@@ -308,7 +308,7 @@
     &__reg {
 
         &-radio {
-            margin-bottom: 25px;
+            margin-bottom: 16px;
             display: flex;
         }
 
@@ -364,7 +364,7 @@
             input {
                 
                 width: 100%;
-                padding: 16px;
+                padding: 15px;
                 letter-spacing: 0.01em;
                 background: #FFFFFF;
                 border: 1px solid #DFDFDF;
@@ -478,7 +478,7 @@
 
     &__close {
         position: absolute;
-        top: -28px;
+        top: -24px;
         right: -33px;
         width: 17px;
         cursor: pointer;
