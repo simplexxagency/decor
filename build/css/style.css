@@ -966,6 +966,38 @@ input[type=number] {
     .popup__city-submit input:hover {
       background: #E96963; }
 
+.popup__bask {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 15; }
+  .popup__bask.passive {
+    display: none; }
+  .popup__bask-main {
+    width: 476px;
+    padding: 24px 20px 39px 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background: #fff;
+    -webkit-box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5);
+    box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5); }
+  .popup__bask-title {
+    margin-bottom: 24px;
+    font-family: "Cormorant", serif;
+    font-weight: bold;
+    font-size: 24px;
+    text-align: center;
+    letter-spacing: -0.006em;
+    color: #3D3D3D;
+    -moz-text-align-last: left;
+    text-align-last: left; }
+
 .popup__order {
   display: block;
   position: fixed;
@@ -2023,6 +2055,7 @@ input[type=number] {
       font-family: "museo_sans_cyrl300", sans-serif;
       font-weight: 300;
       font-size: 16px;
+      line-height: 24px;
       text-align: center;
       color: #FFFFFF; }
     .example__bottom-button a {

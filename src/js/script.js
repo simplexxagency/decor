@@ -735,6 +735,12 @@ $(document).ready(function () {
         $(this).closest('.bask__setup').find('.bask__setup-wrap').addClass('active');
     });
 
+    // Popup Basket
+    $('.bask__dhide-link').on('click', function() {
+        $('.popup__bask').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
     // ---------Order-----------
 
     // Selectize Order
