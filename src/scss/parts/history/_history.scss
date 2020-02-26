@@ -201,6 +201,17 @@
 
         &-img {
             margin-bottom: 18px;
+            position: relative;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+                background: linear-gradient(180deg, rgba(248, 214, 184, 0.2) 0%, rgba(245, 168, 165, 0.5) 100%);
+            }
 
             img {
                 height: 340px;

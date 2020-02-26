@@ -165,6 +165,7 @@
                 display: block;
                 color: #fff;
                 padding: 16px 67px;
+                text-transform: uppercase;
             }
         }
     }
@@ -197,7 +198,7 @@
     &__price {
         margin-bottom: 17px;
         display: flex;
-        align-items: center;
+        align-items: baseline;
 
         &-value {
             margin-right: 5px;
@@ -213,6 +214,8 @@
             font-weight: 300;
             font-size: 14px;
             color: #3D3D3D;
+            position: relative;
+            top: -4px;
         }
     }
 

@@ -145,9 +145,10 @@
         }
 
         &-img {
+            height: 215px;
 
             img {
-                height: 215px;
+                height: 100%;
                 object-fit: cover;
             }
         }
@@ -202,12 +203,19 @@
 
         &-img {
             flex-shrink: 0;
+            width: 80px;
+            height: 98px;
 
             img {
-                width: 80px;
-                height: 98px;
+                height: 100%;
                 object-fit: cover;
             }
+        }
+
+        &-imgmain {
+            padding: 10px 10px 10px 10px;
+            width: 80px;
+            height: 98px;
         }
 
         &-desc {
@@ -348,9 +356,10 @@
         }
 
         &-img {
+            height: 370px;
 
             img {
-                height: 370px;
+                height: 100%;
                 object-fit: cover;
             }
         }
