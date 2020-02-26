@@ -508,7 +508,7 @@ input[type=number] {
   position: relative; }
   .popup__reg-inputitem input {
     width: 100%;
-    padding: 15px;
+    padding: 14px 15px;
     letter-spacing: 0.01em;
     background: #FFFFFF;
     border: 1px solid #DFDFDF; }
@@ -569,7 +569,7 @@ input[type=number] {
       background: #E96963; }
 
 .popup__reg-politic {
-  margin-bottom: 24px;
+  margin-bottom: 18px;
   font-size: 14px;
   line-height: 20px;
   letter-spacing: 0.01em;
@@ -6080,7 +6080,8 @@ input[type=number] {
       margin-right: 0; } }
 
 .order {
-  margin-bottom: 144px; }
+  margin-bottom: 144px;
+  height: 100vh; }
   .order .container-fluid {
     padding: 0; }
   .order__container {
