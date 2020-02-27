@@ -234,6 +234,7 @@
 
         &-hide {
             display: none;
+            justify-content: space-between;
 
             &.active {
                 display: flex;
@@ -264,9 +265,143 @@
         }
 
         &-subtitle {
+            margin-bottom: 16px;
             font-size: 16px;
             letter-spacing: 0.01em;
             color: #3D3D3D;
+
+            span {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 5px;
+                }
+            }
+        }
+
+        &-first {
+            width: 326px;
+        }
+
+        &-second {
+            width: 370px;
+        }
+
+        &-getting {
+            margin-bottom: 10px;
+        }
+
+        &-link {
+            cursor: pointer;
+
+            &:hover {
+
+                * {
+                    color: #56C37C;
+                }
+            }
+        }
+
+        &-time {
+            display: inline-block;
+            margin-bottom: 10px;
+
+            &>div {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+            }
+        }
+
+        &-place {
+            margin-bottom: 10px;
+        }
+
+        &-price {
+            font-family: "Cormorant", serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-delete {
+
+            a {
+                display: inline-block;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                text-decoration: underline;
+                color: #56C37C;
+
+                &:hover {
+                    color: $color-darkgreen;
+                }
+            }
+        }
+    }
+
+    &__shide {
+
+        &-title {
+            margin-bottom: 16px;
+            font-size: 28px;
+            line-height: 1;
+            text-align: left;
+        }
+
+        &-subtitle {
+            margin-bottom: 16px;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3D3D3D;
+
+            span {
+                display: block;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+        }
+
+        &-first {
+            width: 326px;
+        }
+
+        &-time {
+            margin-top: 10px;
+        }
+
+        &-second {
+            width: 370px;
+        }
+
+        &-price {
+            font-family: "Cormorant", serif;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-delete {
+
+            a {
+                display: inline-block;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                text-decoration: underline;
+                color: #56C37C;
+
+                &:hover {
+                    color: $color-darkgreen;
+                }
+            }
         }
     }
 
@@ -299,6 +434,8 @@
             letter-spacing: 0.01em;
             color: #3D3D3D;
         }
+
+        
     }
 
     &__punkt {
@@ -340,6 +477,7 @@
 
         &-hide {
             display: none;
+            justify-content: space-between;
 
             &.active {
                 display: flex;
@@ -510,8 +648,22 @@
 
             &-bottom {
                 flex-direction: column;
-            }
+            } 
+        }
 
+        &__dhide {
+
+            &-first {
+                width: 200px;
+            }
+            
+        }
+
+        &__shide {
+
+            &-first {
+                width: 200px;
+            }
             
         }
 
@@ -547,6 +699,58 @@
         &__punkt {
             margin-bottom: 20px;
         }
+
+        &__delivery {
+
+            &-wrap {
+                flex-direction: column;
+            }
+
+            &-hide {
+                flex-direction: column;
+            }
+        }
+
+        &__dhide {
+
+            &-first {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            &-second {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
+
+        &__setup {
+
+            &-left {
+                margin-bottom: 20px;
+            }
+
+            &-wrap {
+                flex-direction: column;
+            }
+
+            &-hide {
+                flex-direction: column;
+            }
+        }
+
+        &__shide {
+            
+            &-first {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+
+            &-second {
+                margin-bottom: 20px;
+                width: 100%;
+            }
+        }
     }
 }
 
@@ -570,6 +774,14 @@
                     margin-right: 0;
                 }
             }
+        }
+
+        &__punkt {
+            width: 100%;
+        }
+
+        &__size {
+            width: 100%;
         }
     }
 }

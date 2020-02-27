@@ -595,11 +595,11 @@
                                     </div>
                                     <div class="bask__dhide-second">
                                         <div class="bask__dhide-link">
-                                                <span class="bask__dhide-time">
-                                                    <div class="active">
-                                                        Время доставки
+                                                <div class="bask__dhide-time">
+                                                    <div class="bask__dhide-desc active">
+                                                        Время доставки:
                                                     </div>
-                                                    <div class="">
+                                                    <div class="bask__dhide-result">
                                                         <div class="bask__dhide-getting">
 
                                                         </div>
@@ -607,13 +607,13 @@
 
                                                         </div>
                                                     </div>
-                                                </span>
-                                                <span class="bask__dhide-place">
-                                                    Место доставки
-                                                </span>
-                                                <span class="bask__dhide-contact">
-                                                    Контактное лицо
-                                                </span>
+                                                </div>
+                                                <div class="bask__dhide-place">
+                                                    Место доставки:
+                                                </div>
+                                                <div class="bask__dhide-contact">
+                                                    Контактное лицо:
+                                                </div>
                                         </div>
                                     </div>
                                     <div class="bask__dhide-third">
@@ -1012,7 +1012,7 @@
                 Детали доставки
             </div>
             <div class="popup__bask-form">
-                <form action="">
+                <form action="" id="basketForm">
                     <div class="popup__bask-box">
                         <div class="popup__bask-item">
                             <div class="popup__bask-name">
@@ -1217,31 +1217,31 @@
                             </div>
                         </div>
                     </div>
-                    <div class="popup__bask-address">
+                    <div class="popup__bask-address popup__bask-item">
                         <div class="popup__bask-name">
                             Адрес
                         </div>
-                        <div class="popup__bask-value">
+                        <div class="popup__bask-value popup__bask-radiowrap">
                             <div class="popup__bask-radios">
                                 <div class="popup__bask-radio">
-                                    <input type="radio" id="radio1" class="popup__bask-radiobutton" name="radio" />
+                                    <input type="radio" id="radio1" class="popup__bask-radiobutton" data-radio='mkad' name="radio" />
                                      <label for="radio1"> в пределах МКАД</label>
                                 </div>
                                 <div class="popup__bask-radio">
-                                    <input type="radio" id="radio2" class="popup__bask-radiobutton" name="radio" />
-                                     <label for="radio1"> за МКАД</label>
+                                    <input type="radio" id="radio2" class="popup__bask-radiobutton" data-radio='after' name="radio" />
+                                     <label for="radio2"> за МКАД</label>
                                 </div>
                             </div>
                             <div class="popup__bask-radiohide">
                                 <div class="popup__bask-mkad">
-                                    <input type="text" name="" id="" placeholder="Укажите адрес" value="">
+                                    <input type="text" id="address6" placeholder="Укажите адрес" value="">
                                 </div>
                                 <div class="popup__bask-after">
                                     <div class="popup__bask-afteritem">
                                         <input type="number" name="" id="" placeholder="x">
                                         км от МКАД
                                     </div>
-                                    <input type="text" name="" id="" value="укажите адрес">
+                                    <input type="text" id="afterMkad" placeholder="укажите адрес">
         
                                 </div>
                             </div>
@@ -1253,19 +1253,22 @@
                                 Комментарий
                             </div>
                             <div class="popup__bask-value">
-                                <input type="text" placeholder="например, название ресторана">
+                                <div class="popup__bask-comment">
+                                    <input type="text" placeholder="например, название ресторана">
+                                </div>
+                                
                             </div>
                         </div>
                         <div class="popup__bask-item">
                             <div class="popup__bask-name">
                                 Контактное лицо
                             </div>
-                            <div class="popup__bask-value">
+                            <div class="popup__bask-value popup__bask-contact">
                                 <div class="popup__bask-lastname">
-                                    <input type="text" placeholder="имя и фамилия">
+                                    <input type="text" name='name6' placeholder="имя и фамилия">
                                 </div>
                                 <div class="popup__bask-phone">
-                                    <input type="text" id="bask-phone" class="agcy__item-phone" placeholder="например, название ресторана">
+                                    <input type="text" id="bask-phone" name="phone6" class="agcy__item-phone" placeholder="8 XXXXXXXXXX">
                                 </div>
                                 
                             </div>

@@ -718,6 +718,13 @@ $(document).ready(function () {
     $('.bask__dhide-delete').on('click', function(){
         $(this).closest('.bask__delivery-hide').removeClass('active');
         $(this).closest('.bask__delivery').find('.bask__delivery-wrap').addClass('active');
+        $('.bask__dhide-desc').addClass('active');
+        $('.bask__dhide-result').removeClass('active');
+        $('.bask__dhide-contact').text('Контакт:');
+        $('.bask__dhide-place').text('Место доставки:');
+        $('.popup__bask-radiobutton').prop('checked', false);
+        $('.popup__bask-radiohide').removeClass('active');
+        $('.popup__bask-hide').removeClass('active');
     });
 
     // Add Setup
@@ -773,8 +780,77 @@ $(document).ready(function () {
         });
     }
 
-    selectBaskOnLoad();
-    selectBaskTimeChange();
+    
+
+    // Radio checked
+    $('.popup__bask-radiobutton').on('click', function(){
+        let $mkad = $(this).data('radio');
+
+        $('.popup__bask-radiohide').addClass('active');
+        if ( $mkad == 'mkad') {
+            $('.popup__bask-after').removeClass('active');
+            $('.popup__bask-mkad').addClass('active');
+        } else if ( $mkad == 'after') {
+            $('.popup__bask-after').addClass('active');
+            $('.popup__bask-mkad').removeClass('active');
+        }
+        $('.popup__bask-hide').addClass('active');
+    });
+
+    $('.popup__bask .popup__shadow, .popup__bask .popup__close').on('click', function(){
+        $('.popup__bask-hide').removeClass('active');
+        $('.popup__bask-radiohide').removeClass('active');
+        $('.popup__bask-radiobutton').prop('checked', false);
+    });
+
+    // Validate Basket Form
+    $("#basketForm").validate({
+        errorClass: "input_error",
+        rules: {
+            name6: {
+                required: true,
+                minlength: 2
+            },
+            phone6: {
+                required: true,
+                minlength: 2
+            }
+        }
+    });
+
+    $('#basketForm').submit(function (event) {
+        event.preventDefault();
+        let $lastName = $('.popup__bask-lastname input').val();
+        let $number = $('.popup__bask-phone input').val();
+        let $placeafter = $('#afterMkad').val();
+        let $placeMkad = $('.popup__bask-mkad input').val();
+
+        if (($('#bask-phone').val() == '') || ($('#name6').val() == '')) {
+            return false;
+        } else {
+            selectBaskOnLoad();
+            selectBaskTimeChange();
+            $('.bask__dhide-desc').removeClass('active');
+            $('.bask__dhide-result').addClass('active');
+            $('.bask__dhide-contact').text('Контакт:' + ' ' + $lastName + ' ' + $number);
+            $('.popup__bask').addClass('passive');
+            $('body, html').removeClass('active');
+
+            if ( !($placeafter == '') || !($placeMkad == '')) {
+                console.log('111111')
+
+                if ( $('.popup__bask-after').hasClass('active')) {
+                    console.log('222222222222')
+                    $('.bask__dhide-place').text('Место доставки:' + ' ' + $placeafter);
+                } else if ( $('.popup__bask-mkad').hasClass('active')) {
+                    console.log('3333333333')
+                    $('.bask__dhide-place').text('Место доставки:' + ' ' + $placeMkad);
+                }
+            }
+
+            
+        }
+    });
 
     // ---------Order-----------
 
@@ -1407,4 +1483,20 @@ $(document).ready(function () {
     };
     
     tagDel();
+
+    // ---------- Cataloge Admin -----------
+    // Delete Avatar
+    $('.cata__priv-change').on('click', function(){
+        $(this).closest('.cata__priv-avatar').find('.cata__priv-image img').remove();
+    });
+
+    $('.cata__priv-delete').on('click', function(){
+        $(this).closest('.cata__priv-avatar').find('.cata__priv-image img').remove();
+    });
+
+    // Delete Banner
+    $('.cata__banner-delete').on('click', function(){
+        $(this).closest('.cata__banner-box').find('.cata__banner-image img').remove();
+        $(this).closest('.cata__banner-box').find('.cata__banner-image').addClass('active');
+    });
 });

@@ -949,7 +949,7 @@
         }
 
         &-main {
-            width: 476px;
+            width: 578px;
             padding: 24px 20px 39px 32px;
             position: absolute;
             top: 50%;
@@ -968,6 +968,224 @@
             letter-spacing: -0.006em;
             color: #3D3D3D;
             text-align-last: left;
+        }
+
+        &-item {
+            display: flex;
+            margin-bottom: 16px;
+            align-items: center;
+            
+        }
+
+        &-name {
+            width: 200px;
+            flex-shrink: 0;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #ABABAB;
+        }
+
+        &-value {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #56C37C;
+
+            span {
+                margin-right: 10px;
+            }
+        }
+
+        &-selectwrap {
+            position: relative;
+            margin-right: 10px;
+
+            &:after {
+                content: '';
+                position: absolute;
+                top: 15px;
+                right: 11px;
+                width: 11px;
+                height: 9px;
+                background: url('../img/agcy-icon-arrowdown.svg') no-repeat;
+            }
+        }
+
+        &-select {
+            
+            width: 98px;
+            padding: 10px 16px;
+            background: #FFFFFF;
+            border: 1px solid #E5E5E5;
+            position: relative;
+            cursor: pointer;
+        }
+
+        &-radiowrap {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &-radios {
+            margin-bottom: 16px;
+            display: flex;
+
+            input[type=radio] {display: none;}
+
+            input[type=radio] + label:before {
+                content: "";
+                border-radius: 50%;
+                display: inline-block;
+                border: 1px solid #56C37C;
+                margin: -5px 5px 0 0;
+                height: 14px;
+                width: 14px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 0;    
+                transition: font-size ease .3s;
+            }
+            input[type=radio]:checked + label:before {
+                background: url('../../img/dot_PNG4.png') 50% 50% no-repeat;   
+                background-size: 68%;
+            }
+        }
+
+        &-radio {
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+        }
+
+        &-radiohide {
+            position: relative;
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        &-mkad {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            input {
+                color: #56C37C;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+            }
+        }
+
+        &-comment {
+            width: 100%;
+
+            input {
+                width: 100%;
+                color: $color-green;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+            }
+        }
+
+        &-after {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+
+            input {
+                color: $color-green;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+            }
+        }
+
+        &-afteritem {
+            margin-bottom: 16px;
+
+            input {
+                width: 100px;
+                margin-right: 10px;
+                padding: 10px;
+                background: #FFFFFF;
+                border: 1px solid #E5E5E5;
+                color: $color-green;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+            }
+            
+        }
+
+        &-hide {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        &-contact {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &-lastname {
+            margin-bottom: 16px;
+            position: relative;
+
+            input {
+                color: $color-green;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+                
+            }
+        }
+
+        &-phone {
+            position: relative;
+
+            input {
+                color: $color-green;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+                
+            }
+        }
+
+        &-submit {
+
+            input {
+                padding: 22px 40px;
+                background: #FD9590;
+                text-align: center;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+                &:hover {
+                    background: #E96963;
+                }
+            }
         }
     }
     
@@ -1515,6 +1733,22 @@
     } 
 }
 
+@media all and (max-width: 767px) {
+    .popup {
+
+        &__bask {
+
+            &-main {
+                width: 485px;
+            }
+
+            &-name {
+                width: 150px;
+            }
+        }
+    }
+}
+
 @media all and (max-width: 577px) {
     .popup {
 
@@ -1648,6 +1882,22 @@
             }
         }
 
+        &__bask {
+
+            &-main {
+                width: 100%;
+            }
+
+            &-item {
+                flex-direction: column;
+                align-items: unset;
+            }
+
+            &-name {
+                margin-bottom: 10px;
+            }
+        }
+
         &__disc {
 
             &-main {
@@ -1711,6 +1961,34 @@
 
             &-main {
                 width: 100%;
+            }
+        }
+
+
+        &__bask {
+
+            &-main {
+                height: 560px;
+                overflow-y: scroll;
+            }
+
+            &-title {
+                margin-bottom: 16px;
+            }
+
+            &-submit {
+
+                input {
+                    width: 100%;
+                }
+            }
+
+            .popup__close {
+                top: 20px;
+            }
+
+            &-radios {
+                flex-direction: column;
             }
         }
     }

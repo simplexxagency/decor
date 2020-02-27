@@ -1,13 +1,13 @@
 .cata {
 
     &__priv {
-        padding: 24px 32px;
+        padding: 26px 32px 43px;
         margin-bottom: 16px;
         background: #FFFFFF;
         border: 1px solid #DFDFDF;
 
         &-title {
-            margin-bottom: 24px;
+            margin-bottom: 27px;
             font-size: 28px;
             line-height: 1;
             text-align: left;
@@ -22,6 +22,7 @@
             margin-right: 24px;
             width: 64px;
             height: 64px;
+            background: url('../img/cabinet-icon-photo.svg') center no-repeat #D9EFE3;
 
             img {
                 height: 100%;
@@ -30,7 +31,7 @@
         }
 
         &-ava {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             font-size: 16px;
             letter-spacing: 0.04em;
             color: #ABABAB;
@@ -74,7 +75,7 @@
             display: flex;
 
             &:not(:last-child) {
-                margin-bottom: 16px;
+                margin-bottom: 17px;
             }
         }
 
@@ -100,18 +101,19 @@
                 line-height: 24px;
                 letter-spacing: 0.04em;
                 color: #56C37C;
+                overflow: hidden;
             }
         }
     }
 
     &__cont {
-        padding: 24px 32px;
+        padding: 26px 32px 38px;
         margin-bottom: 16px;
         background: #FFFFFF;
         border: 1px solid #DFDFDF;
 
         &-title {
-            margin-bottom: 20px;
+            margin-bottom: 28px;
             font-size: 28px;
             line-height: 1;
             text-align: left;
@@ -150,13 +152,13 @@
     }
 
     &__banner {
-        padding: 24px 32px;
+        padding: 26px 32px 49px;
         margin-bottom: 16px;
         background: #FFFFFF;
         border: 1px solid #DFDFDF;
 
         &-title {
-            margin-bottom: 24px;
+            margin-bottom: 27px;
             font-size: 28px;
             line-height: 1;
             text-align: left;
@@ -172,6 +174,7 @@
             width: 202px;
             height: 94px;
             position: relative;
+            background: url('../img/cabinet-icon-photo.svg') center no-repeat #D9EFE3;
 
             &:after {
                 content: '';
@@ -183,6 +186,13 @@
                 background: linear-gradient(180deg, rgba(0, 21, 75, 0.97) 0%, rgba(143, 154, 184, 0.489583) 99.99%, rgba(255, 255, 255, 0) 100%);
             }
 
+            &.active {
+
+                &:after {
+                    display: none;
+                }
+            }
+
             img {
                 height: 100%;
                 object-fit: cover;
@@ -190,12 +200,13 @@
         }
         
         &-term {
-            margin-bottom: 12px;
+            margin-bottom: 15px;
             display: flex;
             align-items: center;
         }
 
         &-name {
+            margin-right: 5px;
             font-size: 16px;
             letter-spacing: 0.04em;
             color: #ABABAB;
@@ -232,12 +243,12 @@
     }
 
     &__port {
-        padding: 24px 32px;
+        padding: 11px 32px 45px;
         background: #FFFFFF;
         border: 1px solid #DFDFDF;
 
         &-header {
-            margin-bottom: 24px;
+            margin-bottom: 12px;
             display: flex;
             align-items: baseline;
             justify-content: space-between;
