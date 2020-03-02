@@ -151,7 +151,18 @@ $(document).ready(function () {
                 required: true,
                 minlength: 2,
             }
-        }
+        },
+        messages: {
+            email1: {
+                required: "Нам нужен ваш email, чтобы связаться с Вами",
+                email: "Ваш почтовый адрес должен выглядеть name@domain.ru"
+            },
+            password1: {
+                required: "Введите пароль",
+                minlength: "Пароль должен быть не меньше 3 символов",
+            }
+        },
+        focusInvalid: true,
     });
 
     $("#validate2").validate({
@@ -161,7 +172,14 @@ $(document).ready(function () {
                 required: true,
                 email: true
             }
-        }
+        },
+        messages: {
+            email2: {
+                required: "Нам нужен ваш email, чтобы связаться с Вами",
+                email: "Ваш почтовый адрес должен выглядеть name@domain.ru"
+            }
+        },
+        focusInvalid: true,
     });
 
     $("#validate3").validate({
@@ -188,6 +206,29 @@ $(document).ready(function () {
                 minlength: 2
             }
         },
+        messages: {
+            name3: {
+                required: "Введите имя",
+                minlength: "Имя должно быть не меньше 3 символов",
+            },
+            email3: {
+                required: "Нам нужен ваш email, чтобы связаться с Вами",
+                email: "Ваш почтовый адрес должен выглядеть name@domain.ru"
+            },
+            phone3: {
+                required: "Введите ваш номер телефона",
+                minlength: "Номер телефона должен быть 10 символов"
+            },
+            lastname3: {
+                required: "Введите фамилию",
+                minlength: "Фамилия должна быть не меньше 3 символов",
+            },
+            password3: {
+                required: "Введите пароль",
+                minlength: "Пароль должен быть не меньше 3 символов",
+            }
+        },
+        focusInvalid: true,
     });
 
     // Form Mask
@@ -526,7 +567,7 @@ $(document).ready(function () {
             },
             data4: {
                 required: true,
-                minlength: 2
+                minlength: 6
             },
             type4: {
                 required: true,
@@ -544,7 +585,30 @@ $(document).ready(function () {
                 required: true,
                 minlength: 2
             }
-        }
+        },
+        messages: {
+            companyName4: {
+                required: "Введите имя компании",
+                minlength: "Имя должно быть не меньше 3 символов",
+            },
+            email3: {
+                required: "Нам нужен ваш email, чтобы связаться с Вами",
+                email: "Ваш почтовый адрес должен выглядеть name@domain.ru"
+            },
+            data4: {
+                required: "Введите дату",
+                minlength: "Дата должена быть 6 символов"
+            },
+            budget4: {
+                required: "Введите бюджет",
+                minlength: "Бюджет должен быть не меньше 3 символов",
+            },
+            desc4: {
+                required: "Введите описание",
+                minlength: "Описание должно быть не меньше 3 символов",
+            }
+        },
+        focusInvalid: true,
     });
 
 
@@ -815,7 +879,18 @@ $(document).ready(function () {
                 required: true,
                 minlength: 2
             }
-        }
+        },
+        messages: {
+            name6: {
+                required: "Введите имя",
+                minlength: "Имя должно быть не меньше 3 символов",
+            },
+            phone6: {
+                required: "Введите номер телефона",
+                minlength: "Номер телефона должен быть 10 символов",
+            }
+        },
+        focusInvalid: true,
     });
 
     $('#basketForm').submit(function (event) {
@@ -875,9 +950,28 @@ $(document).ready(function () {
             },
             phone5: {
                 required: true,
-                minlength: 2
+                minlength: 10
             }
-        }
+        },
+        messages: {
+            name5: {
+                required: "Введите имя",
+                minlength: "Имя должно быть не меньше 3 символов",
+            },
+            email5: {
+                required: "Нам нужен ваш email, чтобы связаться с Вами",
+                email: "Ваш почтовый адрес должен выглядеть name@domain.ru"
+            },
+            lastname5: {
+                required: "Введите фамилию",
+                minlength: "Фамилия должна быть не меньше 3 символов"
+            },
+            phone5: {
+                required: "Введите номер телефона",
+                minlength: "Номер телефона должен быть 10 символов",
+            }
+        },
+        focusInvalid: true,
     });
 
     // Form validate on page Order
@@ -1447,7 +1541,6 @@ $(document).ready(function () {
         $('body, html').addClass('active');
         $parentTag.addClass('active');
         tagAdd();
-        console.log('222')
     });
 
     // Add new tag
@@ -1464,7 +1557,6 @@ $(document).ready(function () {
             $newTagBox.append($newTagClose);
             $newTagBox.append($newTagValue);
             $activeItem.find('.gall__item-wrap').append($newTagBox);
-            console.log('111')
             tagDel();
         });
     };
@@ -1499,4 +1591,7 @@ $(document).ready(function () {
         $(this).closest('.cata__banner-box').find('.cata__banner-image img').remove();
         $(this).closest('.cata__banner-box').find('.cata__banner-image').addClass('active');
     });
+
+    // Textarea auto height
+    autosize($('textarea'));
 });
