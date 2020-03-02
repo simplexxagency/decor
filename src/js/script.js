@@ -773,13 +773,13 @@ $(document).ready(function () {
     });
 
     // Add Delivery
-    $('.bask__delivery-link').on('click', function(){
+    $('.bask__delivery-link').on('click', function () {
         $(this).closest('.bask__delivery-wrap').removeClass('active');
         $(this).closest('.bask__delivery').find('.bask__delivery-hide').addClass('active');
     });
 
     // Delete Setup
-    $('.bask__dhide-delete').on('click', function(){
+    $('.bask__dhide-delete').on('click', function () {
         $(this).closest('.bask__delivery-hide').removeClass('active');
         $(this).closest('.bask__delivery').find('.bask__delivery-wrap').addClass('active');
         $('.bask__dhide-desc').addClass('active');
@@ -792,19 +792,19 @@ $(document).ready(function () {
     });
 
     // Add Setup
-    $('.bask__setup-link').on('click', function(){
+    $('.bask__setup-link').on('click', function () {
         $(this).closest('.bask__setup-wrap').removeClass('active');
         $(this).closest('.bask__setup').find('.bask__setup-hide').addClass('active');
     });
 
     // Delete Setup
-    $('.bask__shide-delete').on('click', function(){
+    $('.bask__shide-delete').on('click', function () {
         $(this).closest('.bask__setup-hide').removeClass('active');
         $(this).closest('.bask__setup').find('.bask__setup-wrap').addClass('active');
     });
 
     // Popup Basket
-    $('.bask__dhide-link').on('click', function() {
+    $('.bask__dhide-link').on('click', function () {
         $('.popup__bask').removeClass('passive');
         $('body, html').addClass('active');
     });
@@ -827,7 +827,7 @@ $(document).ready(function () {
             } else {
                 $timeResult.text('Получение c ' + $newTime + ':00 до ' + $secondTime + ':00');
             }
-            
+
         });
 
         $(".popup__bask-return .popup__bask-select").each(function () {
@@ -840,28 +840,28 @@ $(document).ready(function () {
             } else {
                 $timeResult.text('Возврат c ' + $newTime + ':00 до ' + $secondTime + ':00');
             }
-            
+
         });
     }
 
-    
+
 
     // Radio checked
-    $('.popup__bask-radiobutton').on('click', function(){
+    $('.popup__bask-radiobutton').on('click', function () {
         let $mkad = $(this).data('radio');
 
         $('.popup__bask-radiohide').addClass('active');
-        if ( $mkad == 'mkad') {
+        if ($mkad == 'mkad') {
             $('.popup__bask-after').removeClass('active');
             $('.popup__bask-mkad').addClass('active');
-        } else if ( $mkad == 'after') {
+        } else if ($mkad == 'after') {
             $('.popup__bask-after').addClass('active');
             $('.popup__bask-mkad').removeClass('active');
         }
         $('.popup__bask-hide').addClass('active');
     });
 
-    $('.popup__bask .popup__shadow, .popup__bask .popup__close').on('click', function(){
+    $('.popup__bask .popup__shadow, .popup__bask .popup__close').on('click', function () {
         $('.popup__bask-hide').removeClass('active');
         $('.popup__bask-radiohide').removeClass('active');
         $('.popup__bask-radiobutton').prop('checked', false);
@@ -911,19 +911,19 @@ $(document).ready(function () {
             $('.popup__bask').addClass('passive');
             $('body, html').removeClass('active');
 
-            if ( !($placeafter == '') || !($placeMkad == '')) {
+            if (!($placeafter == '') || !($placeMkad == '')) {
                 console.log('111111')
 
-                if ( $('.popup__bask-after').hasClass('active')) {
+                if ($('.popup__bask-after').hasClass('active')) {
                     console.log('222222222222')
                     $('.bask__dhide-place').text('Место доставки:' + ' ' + $placeafter);
-                } else if ( $('.popup__bask-mkad').hasClass('active')) {
+                } else if ($('.popup__bask-mkad').hasClass('active')) {
                     console.log('3333333333')
                     $('.bask__dhide-place').text('Место доставки:' + ' ' + $placeMkad);
                 }
             }
 
-            
+
         }
     });
 
@@ -1034,7 +1034,7 @@ $(document).ready(function () {
     $('#adminPhone1').mask('+9 (999) 999-9999');
 
     // Value input change
-    $('.priv__left-value input').on('change', function(){
+    $('.priv__left-value input').on('change', function () {
         let $link = $(this).closest('.priv__left-value');
         let $val = $(this).val();
 
@@ -1064,7 +1064,7 @@ $(document).ready(function () {
     $('.agcy__item-phone').mask('+9 (999) 999-9999');
 
     // Title change
-    $('.agcy__item-input').on('change', function(){
+    $('.agcy__item-input').on('change', function () {
         let $link = $(this);
         let $val = $(this).val();
 
@@ -1245,25 +1245,25 @@ $(document).ready(function () {
         };
     });
 
-    $('.agcy__demon-item').on('click', function(){
+    $('.agcy__demon-item').on('click', function () {
         $('.agcy__demon-item').removeClass('active');
         $(this).addClass('active');
         $('.agcy__demon-value').text($(this).text());
     });
 
     // Close popup agcy
-    $('.agcy__close a').on('click', function(){
+    $('.agcy__close a').on('click', function () {
         $('.popup__agcy').removeClass('passive');
         $('body, html').addClass('active');
     });
 
-    $('.popup__agcy-cancel, .popup__agcy-accept').on('click', function(){
+    $('.popup__agcy-cancel, .popup__agcy-accept').on('click', function () {
         $('.popup__agcy').addClass('passive');
         $('body, html').removeClass('active');
     });
 
     // Popup Representation
-    $('.agcy__link a').on('click', function(){
+    $('.agcy__link a').on('click', function () {
 
         $('.popup__repr').removeClass('passive');
         $('body, html').addClass('active');
@@ -1274,31 +1274,31 @@ $(document).ready(function () {
 
     // -----------Office--------
     // Popup Discount
-    $('.offi__prof-value a').on('click', function() {
+    $('.offi__prof-value a').on('click', function () {
         $('.popup__disc').removeClass('passive');
         $('body, html').addClass('active');
     });
 
-    $('.popup__disc-submit a').on('click', function(){
+    $('.popup__disc-submit a').on('click', function () {
         $('.popup__disc-hide').removeClass('passive');
         $(this).closest('.popup__disc-submit').removeClass('active');
-    }); 
+    });
 
-    $('.popup__disc-final a').on('click', function(){
+    $('.popup__disc-final a').on('click', function () {
         $('.popup__disc').addClass('passive');
         $('body, html').removeClass('active');
         $('.popup__disc-hide').addClass('passive');
         $('.popup__disc-submit').addClass('active');
     });
 
-    $('.popup__disc-cancel a').on('click', function(){
+    $('.popup__disc-cancel a').on('click', function () {
         $('.popup__disc-hide').addClass('passive');
         $('.popup__disc-submit').addClass('active');
     });
 
     // Change days in Arend
-    function arendDays () {
-        $('.offi__prof-day').each(function() {
+    function arendDays() {
+        $('.offi__prof-day').each(function () {
             let $val = $(this).val();
             let $dayValue = $(this).closest('.offi__arend-value').find('.offi__arend-dayvalue');
             console.log($val.toString().slice(-2))
@@ -1310,9 +1310,9 @@ $(document).ready(function () {
                 $dayValue.text('дней');
             }
 
-            if ( $val < 10 ) {
+            if ($val < 10) {
                 $(this).css('margin-right', '-20px');
-            } else if ( $val >= 10 && $val < 99) {
+            } else if ($val >= 10 && $val < 99) {
                 $(this).css('margin-right', '-10px');
             } else {
                 $(this).css('margin-right', '0');
@@ -1320,34 +1320,34 @@ $(document).ready(function () {
         });
     };
 
-    $('.offi__prof-day').on('change', function() {
+    $('.offi__prof-day').on('change', function () {
         arendDays();
     });
 
     arendDays();
 
     // All input change
-    function allInputChange () {
-        $('.offi__prof-inputnumber').each(function (){
+    function allInputChange() {
+        $('.offi__prof-inputnumber').each(function () {
             let $max = $(this).attr('max');
             let $val = $(this).val();
 
-            if ( $max < 999) {
+            if ($max < 999) {
 
-                if ( $val < 10 ) {
+                if ($val < 10) {
                     $(this).css('margin-right', '-20px');
-                } else if ( $val >= 10 && $val < 99) {
+                } else if ($val >= 10 && $val < 99) {
                     $(this).css('margin-right', '-10px');
                 } else {
                     $(this).css('margin-right', '0');
                 }
-            } else  if ( $max > 1000) {
+            } else if ($max > 1000) {
 
-                if ( $val < 10 ) {
+                if ($val < 10) {
                     $(this).css('margin-right', '-30px');
-                } else if ( $val >= 10 && $val < 99) {
+                } else if ($val >= 10 && $val < 99) {
                     $(this).css('margin-right', '-20px');
-                } else if ( $val >= 100 && $val < 999)  {
+                } else if ($val >= 100 && $val < 999) {
                     $(this).css('margin-right', '-10px');
                 } else {
                     $(this).css('margin-right', '0');
@@ -1356,14 +1356,14 @@ $(document).ready(function () {
         });
     };
 
-    $('.offi__prof-inputnumber').on('change', function(){
+    $('.offi__prof-inputnumber').on('change', function () {
         allInputChange();
     });
 
     allInputChange();
 
     // Change Deposite
-    $('.offi__arend-deposit').on('click', function(){
+    $('.offi__arend-deposit').on('click', function () {
         $('.offi__arend-tip').addClass('active');
         $(this).find('.offi__arend-arrow').addClass('active');
     });
@@ -1376,10 +1376,10 @@ $(document).ready(function () {
         };
     });
 
-    $('.offi__arend-tipitem').on('click', function(){
+    $('.offi__arend-tipitem').on('click', function () {
         let $depActive = $(this).closest('.offi__arend-value').find('.offi__arend-deposit span').text();
         let $depChoose = $(this).text();
-        
+
         $(this).closest('.offi__arend-value').find('.offi__arend-deposit span').text($depChoose);
         $(this).text($depActive);
         $('.offi__arend-tip').removeClass('active');
@@ -1387,12 +1387,12 @@ $(document).ready(function () {
     });
 
     // Delivery select
-    $('.offi__deli-selectwrap').on('click', function(){
-        
+    $('.offi__deli-selectwrap').on('click', function () {
+
         $(this).closest('.offi__deli-select').find('.offi__deli-tip').addClass('active');
         $(this).find('.offi__deli-arrow').addClass('active');
 
-        
+
     });
 
     $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -1403,12 +1403,12 @@ $(document).ready(function () {
         };
     });
 
-    $('.offi__deli-tip').on('click', function(){
+    $('.offi__deli-tip').on('click', function () {
         let $selectActive = $(this).closest('.offi__deli-select').find('span').text();
         let $selectChoose = $(this).text();
         let $parent = $(this).closest('.offi__deli');
 
-        if ( $parent.find('.offi__deli-main').hasClass('active')) {
+        if ($parent.find('.offi__deli-main').hasClass('active')) {
             $parent.find('.offi__deli-main').removeClass('active')
         } else {
             $parent.find('.offi__deli-main').addClass('active')
@@ -1421,8 +1421,8 @@ $(document).ready(function () {
     });
 
     // Using choose
-    $('.offi__deli-usingwrap').on('click', function(){
-        
+    $('.offi__deli-usingwrap').on('click', function () {
+
         $(this).closest('.offi__deli-using').find('.offi__deli-usingtip').addClass('active');
         $(this).find('.offi__deli-arrow').addClass('active');
         $(this).find('span').toggleClass('active');
@@ -1436,7 +1436,7 @@ $(document).ready(function () {
         };
     });
 
-    $('.offi__deli-usingtip').on('click', function(){
+    $('.offi__deli-usingtip').on('click', function () {
         let $selectActive = $(this).closest('.offi__deli-using').find('span').text();
         let $selectChoose = $(this).text();
         let $result = $(this).closest('.offi__deli-row').find('.offi__deli-result span');
@@ -1451,18 +1451,18 @@ $(document).ready(function () {
     });
 
     // Add using
-    $('.offi__deli-button').on('click', function() {
+    $('.offi__deli-button').on('click', function () {
         $(this).closest('.offi__deli-main').find('.offi__deli-rowspecial').removeClass('passive');
         $(this).removeClass('active');
     });
 
     // Setup select
-    $('.offi__setup-selectwrap').on('click', function(){
-        
+    $('.offi__setup-selectwrap').on('click', function () {
+
         $(this).closest('.offi__setup-select').find('.offi__setup-tip').addClass('active');
         $(this).find('.offi__setup-arrow').addClass('active');
 
-        
+
     });
 
     $(document).mouseup(function (e) { // событие клика по веб-документу
@@ -1473,12 +1473,12 @@ $(document).ready(function () {
         };
     });
 
-    $('.offi__setup-tip').on('click', function(){
+    $('.offi__setup-tip').on('click', function () {
         let $selectActive = $(this).closest('.offi__setup-select').find('span').text();
         let $selectChoose = $(this).text();
         let $parent = $(this).closest('.offi__setup');
 
-        if ( $parent.find('.offi__setup-main').hasClass('active')) {
+        if ($parent.find('.offi__setup-main').hasClass('active')) {
             $parent.find('.offi__setup-main').removeClass('active')
         } else {
             $parent.find('.offi__setup-main').addClass('active')
@@ -1491,20 +1491,20 @@ $(document).ready(function () {
     });
 
     // Add setup
-    $('.offi__setup-button').on('click', function() {
+    $('.offi__setup-button').on('click', function () {
         $(this).closest('.offi__setup-main').find('.offi__setup-rowspecial').removeClass('passive');
         $(this).removeClass('active');
     });
 
     // Persent margin
-    function marginOnLoad (){
+    function marginOnLoad() {
 
-        $('.offi__prof-inputpersent').each( function(){
+        $('.offi__prof-inputpersent').each(function () {
             let $val = $(this).val();
 
-            if ( $val < 10 ) {
+            if ($val < 10) {
                 $(this).css('margin-right', '-20px');
-            } else if ( $val >= 10 && $val < 99) {
+            } else if ($val >= 10 && $val < 99) {
                 $(this).css('margin-right', '-12px');
             } else {
                 $(this).css('margin-right', '0');
@@ -1512,29 +1512,29 @@ $(document).ready(function () {
         });
     };
 
-    function marginChange (){
-        
-        $('.offi__prof-inputpersent').on('change', function(){
+    function marginChange() {
+
+        $('.offi__prof-inputpersent').on('change', function () {
             marginOnLoad();
         });
     };
-    
+
     marginChange();
     marginOnLoad();
 
     // ---------Prop--------
     // Delete logotype
-    $('.prop__site-change a').on('click', function(){
+    $('.prop__site-change a').on('click', function () {
         $(this).closest('.prop__site-logo').find('.prop__site-image img').css('display', 'none');
     });
 
-    $('.prop__site-delete a').on('click', function(){
+    $('.prop__site-delete a').on('click', function () {
         $(this).closest('.prop__site-logo').find('.prop__site-image img').css('display', 'none');
     });
 
     // ---------Gallery------------
     // Popup Gall
-    $('.gall__item-add').on('click', function(){
+    $('.gall__item-add').on('click', function () {
         let $parentTag = $(this).closest('.gall__item');
 
         $('.popup__gall').removeClass('passive');
@@ -1546,13 +1546,13 @@ $(document).ready(function () {
     // Add new tag
     function tagAdd() {
 
-        $('.popup__gall-item').on('click', function(){
+        $('.popup__gall-item').on('click', function () {
             let $newTag = $(this).text();
             let $newTagBox = $('<div class="gall__item-tag"></div>');
             let $newTagClose = $('<div class="gall__item-close"><img src="img/gall-close.svg" alt="icon"></div>');
             let $newTagValue = $('<div class="gall__item-value"></div>');
             let $activeItem = $('.gall__item.active');
-            
+
             $newTagValue.append($newTag);
             $newTagBox.append($newTagClose);
             $newTagBox.append($newTagValue);
@@ -1568,30 +1568,45 @@ $(document).ready(function () {
     });
 
     // Tag delete
-    function tagDel (){
-        $('.gall__item-close').on('click', function(){
+    function tagDel() {
+        $('.gall__item-close').on('click', function () {
             $(this).closest('.gall__item-tag').addClass('delete');
         });
     };
-    
+
     tagDel();
 
     // ---------- Cataloge Admin -----------
     // Delete Avatar
-    $('.cata__priv-change').on('click', function(){
+    $('.cata__priv-change').on('click', function () {
         $(this).closest('.cata__priv-avatar').find('.cata__priv-image img').remove();
     });
 
-    $('.cata__priv-delete').on('click', function(){
+    $('.cata__priv-delete').on('click', function () {
         $(this).closest('.cata__priv-avatar').find('.cata__priv-image img').remove();
     });
 
     // Delete Banner
-    $('.cata__banner-delete').on('click', function(){
+    $('.cata__banner-delete').on('click', function () {
         $(this).closest('.cata__banner-box').find('.cata__banner-image img').remove();
         $(this).closest('.cata__banner-box').find('.cata__banner-image').addClass('active');
     });
 
     // Textarea auto height
     autosize($('textarea'));
+
+    // ----------- Client ---------------
+    // Client Tooltip Search
+    $('.clie__header-searchwrap').on('click', function () {
+
+        $('.clie__header-hide').addClass('active');
+    });
+
+    // Click on blocks
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.clie__header-hide').is(e.target) // если клик был не по нашему блоку
+            && $('.clie__header-hide').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.clie__header-hide').removeClass('active'); // скрываем его
+        };
+    });
 });

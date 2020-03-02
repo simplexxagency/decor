@@ -1,0 +1,201 @@
+.clie {
+
+    &__container {
+        padding-top: 53px;
+    }
+
+    &__title {
+        font-size: 48px;
+        text-align: left;
+        line-height: 1;
+    }
+
+    &__header {
+        margin-top: -16px;
+        margin-bottom: 65px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+
+        &-value {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &-download {
+            margin-right: 32px;
+
+            a {
+                display: flex;
+                align-items: center;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #56C47C;
+
+                &:hover {
+                    color: #008830;
+
+                    .clie__header-icon {
+                        filter: brightness(0) saturate(100%) invert(19%) sepia(100%) saturate(3515%) hue-rotate(146deg) brightness(97%) contrast(103%);
+                    }
+                }
+            }
+        }
+
+        &-icon {
+            width: 16px;
+            position: relative;
+            top: -3px;
+            margin-right: 9px;
+        }
+
+        &-search {
+            position: relative;
+        }
+
+        &-searchwrap {
+            position: relative;
+
+            input {
+                width: 240px;
+                padding: 16px 34px 16px 16px;
+                background: #FFFFFF;
+                border: 1px solid #DFDFDF;
+                font-size: 16px;
+                letter-spacing: 0.04em;
+                color: #3D3D3D;
+
+                &::placeholder {
+                    color: #ABABAB;
+                }
+
+                &:hover,
+                &:focus {
+                    border: 1px solid #56C37C;
+                }
+            }
+            
+        }
+
+        &-searchicon {
+            position: absolute;
+            width: 19px;
+            top: 50%;
+            right: 10px;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+
+        &-hide {
+            display: none;
+            position: absolute;
+            top: 53px;
+            left: 0;
+            width: 100%;
+            background: #fff;
+            border: 1px solid #DFDFDF;
+            height: 240px;
+            overflow: scroll;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        &-hideitem {
+            padding: 11px 16px;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #3D3D3D;
+            cursor: pointer;
+
+            &:hover {
+                background: #F8F8F8;
+            }
+        }
+    }
+
+    &__head {
+        padding-left: 16px;
+        margin-bottom: 6px;
+        display: flex;
+        align-items: center;
+        font-size: 12px;
+        letter-spacing: 0.04em;
+        color: #ABABAB;
+
+        &-client {
+            width: 286px;
+            flex-shrink: 0;
+        }
+
+        &-company {
+            width: 233px;
+            flex-shrink: 0;
+        }
+
+        &-gain {
+            width: 190px;
+            flex-shrink: 0;
+        }
+
+        &-city {
+            width: 248px;
+            flex-shrink: 0;
+        }
+    }
+
+    &__item {
+
+        &-link {
+            padding: 12px 16px;
+            display: flex;
+            align-items: center;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #3D3D3D;
+            cursor: pointer;
+
+            &:hover {
+                background: #F8F8F8;
+
+                .clie__item-client {
+                    color: #008830;
+                }
+            }
+        }
+
+        &-client {
+            width: 287px;
+            font-size: 16px;
+            letter-spacing: 0.04em;
+            color: #56C37C;
+            flex-shrink: 0;
+        }
+
+        &-company {
+            width: 232px;
+            flex-shrink: 0;
+        }
+
+        &-gain {
+            width: 190px;
+            flex-shrink: 0;
+        }
+
+        &-city {
+            width: 248px;
+            flex-shrink: 0;
+        }
+
+        &-phone {
+            white-space: nowrap;
+        }
+    }
+}
