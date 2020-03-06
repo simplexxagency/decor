@@ -2116,15 +2116,19 @@
                                         <div class="clie__head">
                                             <div class="clie__head-client">
                                                 Клиент
+                                                <div class="clie__head-slash">/</div>
                                             </div>
                                             <div class="clie__head-company">
                                                 Компания
+                                                <div class="clie__head-slash">/</div>
                                             </div>
                                             <div class="clie__head-gain">
                                                 Выручка
+                                                <div class="clie__head-slash">/</div>
                                             </div>
                                             <div class="clie__head-city">
                                                 Город
+                                                <div class="clie__head-slash">/</div>
                                             </div>
                                             <div class="clie__head-phone">
                                                 Телефон
@@ -2339,7 +2343,7 @@
                                         Рената Корхова
                                     </div>
                                     <div class="pers__client">
-                                        <div class="pers__client-title">
+                                        <div class="pers__client-title title">
                                             Клиент
                                         </div>
                                         <div class="pers__client-box">
@@ -2410,7 +2414,7 @@
                                         </div>
                                     </div>
                                     <div class="pers__status">
-                                        <div class="pers__status-title">
+                                        <div class="pers__status-title title">
                                             Статус
                                         </div>
                                         <div class="pers__status-box">
@@ -2418,7 +2422,8 @@
                                                 <div class="pers__status-name">
                                                     Статус
                                                 </div>
-                                                <div class="pers__status-value pers__status-prof">
+                                                <div class="pers__status-value">
+
                                                     <div class="pers__status-profwrap">
                                                         <span>
                                                             Профессионал
@@ -2446,7 +2451,8 @@
                                                     Профскидка на аренду
                                                 </div>
                                                 <div class="pers__status-value">
-                                                    <input type="number" name="" min="0" max="100" id="" value="10">%
+                                                    <input type="number" class="offi__prof-inputpersent" name="" min="0"
+                                                        max="100" id="" value="10">%
                                                 </div>
                                             </div>
                                             <div class="pers__status-item">
@@ -2454,7 +2460,8 @@
                                                     Профскидка на доставку и сетап
                                                 </div>
                                                 <div class="pers__status-value">
-                                                    <input type="number" name="" min="0" max="100" id="" value="0">%
+                                                    <input type="number" class="offi__prof-inputpersent" name="" min="0"
+                                                        max="100" id="" value="0">%
                                                 </div>
                                             </div>
                                             <div class="pers__status-item">
@@ -2486,7 +2493,7 @@
                                                 <div class="pers__doc-name">
                                                     Бумажные документы
                                                 </div>
-                                                <div class="pers__doc-value">
+                                                <div class="pers__status-value">
                                                     <div class="pers__status-profwrap">
                                                         <span>
                                                             Не хочет получать
@@ -2504,7 +2511,7 @@
                                     </div>
                                     <div class="pers__money">
                                         <div class="pers__money-header">
-                                            <div class="pers__money-title">
+                                            <div class="pers__money-title title">
                                                 Деньги
                                             </div>
                                             <a href="javascript:void(0)" class="pers__money-link">
@@ -2532,19 +2539,22 @@
                                         </div>
                                     </div>
                                     <div class="pers__oper">
-                                        <div class="pers__oper-title">
+                                        <div class="pers__oper-title title">
                                             Операции
                                         </div>
                                         <div class="pers__oper-box">
                                             <div class="pers__oper-head">
                                                 <div class="pers__oper-headdate">
                                                     Дата
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__oper-headorder">
                                                     Заказ
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__oper-headbase">
                                                     Основание
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__oper-headsum">
                                                     Сумма
@@ -2567,29 +2577,33 @@
                                         </div>
                                     </div>
                                     <div class="pers__order">
-                                        <div class="pers__order-title">
+                                        <div class="pers__order-title title">
                                             Заказы
                                         </div>
                                         <div class="pers__order-box">
                                             <div class="pers__order-head">
-                                                <div class="pers__oder-headnum">
+                                                <div class="pers__order-headnum">
                                                     Номер
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__order-headgetting">
                                                     Получение
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__order-headreturn">
                                                     Возврат
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__order-headstatus">
                                                     Статус
+                                                    <div class="clie__head-slash">/</div>
                                                 </div>
                                                 <div class="pers__order-headprice">
                                                     Цена
                                                 </div>
                                             </div>
                                             <div class="pers__order-item">
-                                                <div class="pers__oder-itemnum">
+                                                <div class="pers__order-itemnum">
                                                     12345
                                                 </div>
                                                 <div class="pers__order-itemgetting">
@@ -2612,6 +2626,1703 @@
                             </div>
                             <div class="admin__tab-contentitem js-tab-content" data-tab="3">
 
+                                <!-- Booking -->
+                                <div class="book__container">
+                                    <div class="book__title title">
+                                        Заказы
+                                    </div>
+                                    <div class="book__header">
+                                        <div class="book__header-left">
+                                            <div class="book__header-value">
+                                                В списке <span>47</span> заказов на сумму <span>392 714</span> ₽ (
+                                                <span>3 750</span> ₽ к оплате)
+                                            </div>
+                                        </div>
+                                        <div class="book__header-right">
+                                            <div class="book__header-order">
+                                                <a href="javascript:void(0)">
+                                                    + Новый заказ
+                                                </a>
+                                            </div>
+                                            <div class="clie__header-download book__header-download">
+                                                <a href="javascript:void(0)">
+                                                    <div class="clie__header-icon">
+                                                        <img src="img/client-icon-1.svg" alt="icon">
+                                                    </div>
+                                                    Скачать таблицу
+                                                </a>
+                                            </div>
+                                            <div class="clie__header-search">
+                                                <div class="clie__header-searchwrap">
+                                                    <input type="text" name="" id="" placeholder="Поиск">
+
+                                                    <div class="clie__header-searchicon">
+                                                        <img src="img/gall-icon-search.svg" alt="icon">
+                                                    </div>
+                                                </div>
+                                                <div class="clie__header-hide">
+                                                    <div class="clie__header-hideitem">
+                                                        Корхова Рената
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Хламова Ирина
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Гуркина Наталья
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Чекрыжева Анастасия
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Корхова Рената
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Хламова Ирина
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Гуркина Наталья
+                                                    </div>
+                                                    <div class="clie__header-hideitem">
+                                                        Чекрыжева Анастасия
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="book__tab">
+                                        <div class="book__nav">
+                                            <div class="book__nav-item js-tab-trigger js-trigger-book active"
+                                                data-tab="1">
+                                                <div class="book__nav-radio">
+                                                    <input type="radio" value="1" name="arend" id="book1" checked>
+                                                    <label for="book1">Все заказы</label>
+                                                </div>
+                                            </div>
+                                            <div class="book__nav-item js-tab-trigger js-trigger-book" data-tab="2">
+                                                <div class="book__nav-radio">
+                                                    <input type="radio" value="2" name="arend" id="book2">
+                                                    <label for="book2">Невыполненные</label>
+                                                </div>
+                                            </div>
+                                            <div class="book__nav-item js-tab-trigger js-trigger-book" data-tab="3">
+                                                <div class="book__nav-radio">
+                                                    <input type="radio" value="3" name="arend" id="book3">
+                                                    <label for="book3">Дела</label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="book__content">
+                                            <div class="book__content-item js-tab-bookcontent active" data-tab="1">
+
+                                                <div class="book__table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Заказ
+                                                                </th>
+                                                                <th>
+                                                                    Получение
+                                                                </th>
+                                                                <th>
+                                                                    Возврат
+                                                                </th>
+                                                                <th>
+                                                                    Клиент
+                                                                </th>
+                                                                <th>
+                                                                    Аренда
+                                                                </th>
+                                                                <th>
+                                                                    Доставка
+                                                                </th>
+                                                                <th>
+                                                                    Монтаж
+                                                                </th>
+                                                                <th>
+                                                                    Доставка
+                                                                </th>
+                                                                <th>
+                                                                    Сетап
+                                                                </th>
+                                                                <th>
+                                                                    Комиссия
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполнен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполняется
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Отменен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполнен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполнен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="book__content-item js-tab-bookcontent" data-tab="2">
+                                                <div class="book__table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Заказ
+                                                                </th>
+                                                                <th>
+                                                                    Получение
+                                                                </th>
+                                                                <th>
+                                                                    Возврат
+                                                                </th>
+                                                                <th>
+                                                                    Клиент
+                                                                </th>
+                                                                <th>
+                                                                    Аренда
+                                                                </th>
+                                                                <th>
+                                                                    Доставка
+                                                                </th>
+                                                                <th>
+                                                                    Монтаж
+                                                                </th>
+                                                                <th>
+                                                                    Доставка
+                                                                </th>
+                                                                <th>
+                                                                    Сетап
+                                                                </th>
+                                                                <th>
+                                                                    Комиссия
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполнен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполняется
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Отменен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполнен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                            <div class="book__content-item js-tab-bookcontent" data-tab="3">
+                                                <div class="book__table">
+                                                    <table>
+                                                        <thead>
+                                                            <tr>
+                                                                <th>
+                                                                    Заказ
+                                                                </th>
+                                                                <th>
+                                                                    Получение
+                                                                </th>
+                                                                <th>
+                                                                    Возврат
+                                                                </th>
+                                                                <th>
+                                                                    Клиент
+                                                                </th>
+                                                                <th>
+                                                                    Аренда
+                                                                </th>
+                                                                <th>
+                                                                    Доставка
+                                                                </th>
+                                                                <th>
+                                                                    Монтаж
+                                                                </th>
+                                                                <th>
+                                                                    Доставка
+                                                                </th>
+                                                                <th>
+                                                                    Сетап
+                                                                </th>
+                                                                <th>
+                                                                    Комиссия
+                                                                </th>
+                                                            </tr>
+                                                        </thead>
+                                                        <tbody>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполнен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Выполняется
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+
+                                                            </tr>
+                                                            <tr>
+                                                                <td data-label='Заказ'>
+                                                                    <div class="book__tnumber">
+                                                                        <a href="javascript:void(0)" class="book__tnumber-link">
+                                                                            19-007489
+                                                                        </a>
+                                                                    </div>
+                                                                    <div class="book__tstatus">
+                                                                        Отменен
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Получение'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Возврат'>
+                                                                    <div class="book__tdate">
+                                                                        19.07, пт
+
+
+                                                                    </div>
+                                                                    <div class="book__ttime">
+                                                                        17:00–20:00
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Клиент'>
+                                                                    <div class="book__tname">
+                                                                        Андреева
+                                                                        Юлия
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Аренда'>
+                                                                    <div class="book__tarend">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__tdelivery">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Монтаж'>
+                                                                    <div class="book__tmontage">
+                                                                        7 500 ₽
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Доставка'>
+                                                                    <div class="book__taddress">
+                                                                        Цветной бульвар,
+                                                                        15 с1
+
+                                                                    </div>
+                                                                    <div class="book__tdimen">
+                                                                        0,1 м³
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Сетап'>
+                                                                    <div class="book__tsetup">
+                                                                        1 × 0,5 ч
+
+                                                                    </div>
+                                                                    <div class="book__tparse">
+                                                                        1 × 0,5 ч
+                                                                    </div>
+                                                                </td>
+                                                                <td data-label='Комиссия'>
+                                                                    <div class="book__tcomm">
+                                                                        750 ₽
+                                                                    </div>
+                                                                </td>
+                                                            </tr>
+                                                            
+                                                        </tbody>
+                                                    </table>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- End Booking -->
+
+                                <!-- Indent -->
+                                <div class="indent__container">
+                                    <div class="pers__link">
+                                        <a href="javascript:void(0)">
+                                            <div class="pers__link-icon">
+                                                <img src="img/person-icon-arrow-back.svg" alt="icon">
+                                            </div>
+                                            Назад
+                                        </a>
+                                    </div>
+                                    <div class="indent__title title">
+                                        Заказ 19-008122
+                                    </div>
+                                    <div class="indent__header">
+                                        <div class="indent__period">
+                                            Период аренды: 
+                                            <div class="indent__period-date">
+                                                21.07.19 — 22.07.19
+                                            </div> 
+                                        </div>
+                                        <div class="indent__header-status">
+                                            <div class="indent__header-statusname">
+                                                Статус: 
+                                            </div>
+                                            <div class="indent__header-select">
+                                                <div class="indent__header-selectvalue">
+                                                    Выполнен 
+                                                </div>
+                                                <div class="indent__header-selectarrow">
+                                                    <img src="img/admin-icon-arrowdown.svg" alt="image">
+                                                </div>
+                                            </div>
+                                            <div class="indent__header-tip">
+                                                <div class="indent__header-tipitem">
+                                                    Выполняется
+                                                </div>
+                                                <div class="indent__header-tipitem">
+                                                    Отменен
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="indent__box">
+                                        <div class="indent__item">
+                                            <div class="indent__item-img">
+                                                <img src="img/product-img-1.jpg" alt="image">
+                                            </div>
+                                            <div class="indent__item-box">
+                                                <div class="indent__item-left">
+                                                    <div class="indent__item-title">
+                                                        Ваза с ёлкой, название в две строки
+                                                    </div>
+                                                    <div class="indent__item-dimm">
+                                                        930(H)*450(W)*490(D)*1100(SH) mm
+                                                    </div>
+                                                </div>
+                                                <div class="indent__item-right">
+                                                    <div class="indent__item-price">
+                                                        <div class="indent__price-name">
+                                                            Цена:
+                                                        </div>
+                                                        <div class="indent__price-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-amount">
+                                                        <div class="indent__amount-name">
+                                                            Количество:
+                                                        </div>
+                                                        <div class="indent__amount-value">
+                                                            1 шт
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-total">
+                                                        <div class="indent__tot-name">
+                                                            Итого:
+                                                        </div>
+                                                        <div class="indent__tot-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="indent__item">
+                                            <div class="indent__item-img">
+                                                <img src="img/product-img-1.jpg" alt="image">
+                                            </div>
+                                            <div class="indent__item-box">
+                                                <div class="indent__item-left">
+                                                    <div class="indent__item-title">
+                                                        Ваза с ёлкой, название в две строки
+                                                    </div>
+                                                    <div class="indent__item-dimm">
+                                                        930(H)*450(W)*490(D)*1100(SH) mm
+                                                    </div>
+                                                </div>
+                                                <div class="indent__item-right">
+                                                    <div class="indent__item-price">
+                                                        <div class="indent__price-name">
+                                                            Цена:
+                                                        </div>
+                                                        <div class="indent__price-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-amount">
+                                                        <div class="indent__amount-name">
+                                                            Количество:
+                                                        </div>
+                                                        <div class="indent__amount-value">
+                                                            1 шт
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-total">
+                                                        <div class="indent__tot-name">
+                                                            Итого:
+                                                        </div>
+                                                        <div class="indent__tot-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="indent__item">
+                                            <div class="indent__item-img">
+                                                <img src="img/product-img-1.jpg" alt="image">
+                                            </div>
+                                            <div class="indent__item-box">
+                                                <div class="indent__item-left">
+                                                    <div class="indent__item-title">
+                                                        Ваза с ёлкой, название в две строки
+                                                    </div>
+                                                    <div class="indent__item-dimm">
+                                                        930(H)*450(W)*490(D)*1100(SH) mm
+                                                    </div>
+                                                </div>
+                                                <div class="indent__item-right">
+                                                    <div class="indent__item-price">
+                                                        <div class="indent__price-name">
+                                                            Цена:
+                                                        </div>
+                                                        <div class="indent__price-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-amount">
+                                                        <div class="indent__amount-name">
+                                                            Количество:
+                                                        </div>
+                                                        <div class="indent__amount-value">
+                                                            1 шт
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-total">
+                                                        <div class="indent__tot-name">
+                                                            Итого:
+                                                        </div>
+                                                        <div class="indent__tot-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="indent__deli">
+                                        <div class="indent__deli-box">
+                                            <div class="indent__deli-left">
+                                                <div class="indent__deli-title">
+                                                    Доставка
+                                                </div>
+                                                <div class="indent__deli-place">
+                                                    до площадки, туда и обратно
+    
+                                                </div>
+                                                <div class="indent__deli-status">
+                                                    обязательная
+                                                </div>
+                                            </div>
+                                            <div class="indent__deli-middle">
+                                                <div class="indent__deli-getting">
+                                                    Получение – 21.07.19 10:00–12:00,
+                                                </div>
+                                                <div class="indent__deli-return">
+                                                    Возврат – 22.07.19 1:00–3:00
+                                                </div>
+                                                <div class="indent__deli-address">
+                                                    ЦАО, Большой Дровяной переулок, 6
+                                                </div>
+                                                <div class="indent__deli-contact">
+                                                    Рената Корхова, 8 (926) 616-67-25
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="indent__deli-right">
+                                            <div class="indent__deli-total">
+                                                4 000 ₽
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="indent__setup">
+                                        <div class="indent__setup-box">
+                                            <div class="indent__setup-left">
+                                                <div class="indent__setup-title">
+                                                    Сетап
+                                                </div>
+                                                <div class="indent__setup-load">
+                                                    <div>
+                                                        разгрузка, погрузка,
+                                                    </div>
+                                                    <div>
+                                                        монтаж и демонтаж
+                                                    </div>
+                                                </div>
+                                                <div class="indent__setup-status">
+                                                    обязательная
+                                                </div>
+                                            </div>
+                                            <div class="indent__setup-middle">
+                                                <div class="indent__setup-duration">
+                                                    Продолжительность работ
+    
+    
+                                                </div>
+                                                <div class="indent__setup-montage">
+                                                    Монтаж – 1 ч 0 мин, 
+                                                </div>
+                                                <div class="indent__setup-demontage">
+                                                    Демонтаж – 1 ч 0 мин
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="indent__setup-right">
+                                            <div class="indent__setup-total">
+                                                4 000 ₽
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="indent__total">
+                                        <div class="indent__total-box">
+                                            <div class="indent__total-item">
+                                                <div class="indent__total-name">
+                                                    Стоимость аренды
+                                                </div>
+                                                <div class="indent__total-value">
+                                                    25 000 ₽
+                                                </div>
+                                            </div>
+                                            <div class="indent__total-item">
+                                                <div class="indent__total-name">
+                                                    Профскидка на аренду (10%)
+                                                </div>
+                                                <div class="indent__total-value">
+                                                    - 2 500 ₽
+                                                </div>
+                                            </div>
+                                            <div class="indent__total-item">
+                                                <div class="indent__total-name">
+                                                    Стоимость доставки и оплаты
+                                                </div>
+                                                <div class="indent__total-value">
+                                                    8 000 ₽
+                                                </div>
+                                            </div>
+                                            <div class="indent__total-sum">
+                                                <div class="indent__total-sumname">
+                                                    Итого
+                                                </div>
+                                                <div class="indent__total-sumvalue">
+                                                    8 000 ₽
+                                                </div>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- End Indent -->
+
+                                <!-- New Order -->
+                                <div class="n-order__container">
+                                    <div class="pers__link">
+                                        <a href="javascript:void(0)">
+                                            <div class="pers__link-icon">
+                                                <img src="img/person-icon-arrow-back.svg" alt="icon">
+                                            </div>
+                                            Назад
+                                        </a>
+                                    </div>
+                                    <div class="n-order__title title">
+                                        Новый заказ
+                                    </div>
+                                    <div class="n-order__header">
+                                        <div class="n-order__header-left">
+                                            <div class="n-order__header-name">
+                                                Период аренды:
+                                            </div>
+                                            <div class="n-order__header-dates">
+                                                <div class="n-order__header-date">
+                                                    <input type="date" name="" id="" value="21.12.2020">
+                                                </div>
+                                                <div class="n-order__header-dash">
+                                                    -
+                                                </div>
+                                                <div class="n-order__header-date">
+                                                    <input type="date" name="" id="" value="22.01.2020">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="n-order__header-right">
+                                            <div class="n-order__header-select">
+                                                <select name="" id="n-order-header-select">
+                                                    <option value="Клиент"  disabled selected>Клиент</option>
+                                                    <option value="Рената Корхова"  >Рената Корхова</option>
+                                                    <option value="Рената Порхова"  >Рената Порхова</option>
+                                                    <option value="Рената Дорхова"  >Рената Дорхова</option>
+                                                    <option value="Рената Торхова"  >Рената Торхова</option>
+                                                    <option value="Рената Ьорхова"  >Рената Морхова</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="n-order__search">
+                                        <div class="n-order__search-left">
+                                            <div class="n-order__search-select">
+                                                <select name="" id="n-order-search-select">
+                                                    <option value="Товар" disabled selected>Товар</option>
+                                                    <option value="Ваза" >Ваза</option>
+                                                    <option value="Тарелка" >Тарелка</option>
+                                                    <option value="Стул" >Стул</option>
+                                                    <option value="Стол" >Стол</option>
+                                                    <option value="Салфетка" >Салфетка</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="n-order__search-right">
+                                            <div class="n-order__search-price">
+                                                <div class="n-order__search-pricename">
+                                                    Цена:
+                                                </div>
+                                                <div class="n-order__search-pricevalue">
+                                                    13 000 ₽
+                                                </div>
+                                            </div>
+                                            <div class="n-order__search-amount">
+                                                <div class="n-order__search-input">
+                                                    <input type="number" value="1">
+                                                </div>
+                                                <div class="n-order__search-amountdesc">
+                                                    шт
+                                                </div>
+                                            </div>
+                                            <div class="n-order__search-total">
+                                                <div class="n-order__search-totalname">
+                                                    Итого:
+                                                </div>
+                                                <div class="n-order__search-totalvalue">
+                                                    13 000 ₽
+                                                </div>
+                                            </div>
+                                            <div class="n-order__search-submit button">
+                                                <a href="javascript:void(0)">
+                                                    ОК
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="n-order__box">
+                                        <div class="indent__item">
+                                            <div class="indent__item-img">
+                                                <img src="img/product-img-1.jpg" alt="image">
+                                            </div>
+                                            <div class="indent__item-box">
+                                                <div class="indent__item-left">
+                                                    <div class="indent__item-title">
+                                                        Ваза с ёлкой, название в две строки
+                                                    </div>
+                                                    <div class="indent__item-dimm">
+                                                        930(H)*450(W)*490(D)*1100(SH) mm
+                                                    </div>
+                                                </div>
+                                                <div class="indent__item-right">
+                                                    <div class="indent__item-price">
+                                                        <div class="indent__price-name">
+                                                            Цена:
+                                                        </div>
+                                                        <div class="indent__price-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-amount">
+                                                        <div class="indent__amount-name">
+                                                            Количество:
+                                                        </div>
+                                                        <div class="indent__amount-value">
+                                                            1 шт
+                                                        </div>
+                                                    </div>
+                                                    <div class="indent__item-total">
+                                                        <div class="indent__tot-name">
+                                                            Итого:
+                                                        </div>
+                                                        <div class="indent__tot-value">
+                                                            13 000 ₽
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="n-order__deli">
+                                        <div class="n-order__deli-left">
+                                            <div class="n-order__deli-title title">
+                                                Доставка
+                                            </div>
+                                            <div class="n-order__deli-add">
+                                                <a href="javascript:void(0)">
+                                                    + Добавить доставку
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="n-order__deli-middle">
+                                            <div class="n-order__deli-dimm">
+                                                <div>
+                                                    Объем изделий: 0,1 м³, вес –– 0 кг
+                                                </div>
+                                                <div>
+                                                    (рекомендуется использовать легковой транспорт)
+                                                </div>
+
+
+                                            </div>
+                                            <div class="n-order__deli-address">
+                                                <div>
+                                                    Адрес пункта выдачи: п.Селятино ул.Вокзальная д.8стр4,
+                                                </div>
+                                               <div>
+                                                (каждый день, 10:00 – 19:00)
+                                               </div>
+
+                                            </div>  
+                                        </div>
+                                    </div>
+                                    <div class="n-order__setup">
+                                        <div class="n-order__setup-left">
+                                            <div class="n-order__setup-title">
+                                                Сетап
+                                            </div>
+                                            <div class="n-order__setup-add">
+                                                <a href="javascript:void(0)">
+                                                    + Добавить сетап
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div class="n-order__setup-middle">
+                                            <div class="n-order__setup-dimm">
+                                                Объем работы: 
+
+
+                                            </div>
+                                            <div class="n-order__setup-montage">
+                                                монтаж – 0 человекочасов, 
+                                            </div>
+                                            <div class="n-order__setup-demontage">
+                                                демонтаж – 0 человекочасов
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="n-order__posi">
+                                        <div class="n-order__posi-left">
+                                            <div class="n-order__posi-title title">
+                                                Позиция
+                                            </div>
+                                        </div>
+                                        <div class="n-order__posi-right">
+                                            <div class="n-order__posi-position">
+                                                <input type="text" value="Позиция">
+                                            </div>
+                                            <div class="n-order__posi-amount">
+                                                <div class="n-order__posi-input">
+                                                    <input type="number" value="1">
+                                                </div>
+                                                <div class="n-order__posi-desc">
+                                                    шт
+                                                </div>
+                                            </div>
+                                            <div class="n-order__posi-button button">
+                                                <a href="javascript:void(0)">
+                                                    Добавить
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="n-order__bottom">
+                                        <div class="n-order__bottom-box">
+                                            <div class="n-order__bottom-item">
+                                                <div class="n-order__bottom-name">
+                                                    Стоимость аренды
+                                                </div>
+                                                <div class="n-order__bottom-value">
+                                                    13 000 ₽
+                                                </div>
+                                            </div>
+                                            <div class="n-order__bottom-item">
+                                                <div class="n-order__bottom-name">
+                                                    Профскидка на аренду
+                                                </div>
+                                                <div class="n-order__bottom-value">
+                                                    0 ₽
+                                                </div>
+                                            </div>
+                                            <div class="n-order__bottom-item">
+                                                <div class="n-order__bottom-name">
+                                                    Стоимость доставки и оплаты
+                                                </div>
+                                                <div class="n-order__bottom-value">
+                                                    0 ₽
+                                                </div>
+                                            </div>
+                                            <div class="n-order__bottom-sum">
+                                                <div class="n-order__bottom-sumname">
+                                                    Итого
+                                                </div>
+                                                <div class="n-order__bottom-sumvalue">
+                                                    14 300 ₽
+                                                </div>
+                                            </div>
+                                            <div class="n-order__bottom-button button">
+                                                <a href="javascript:void(0)">
+                                                    Оформить заказ
+                                                </a>
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                                <!-- End New Order -->
                             </div>
                             <div class="admin__tab-contentitem js-tab-content" data-tab="4">
 
@@ -3283,6 +4994,443 @@
         </div>
         <!-- End Popup Gallery -->
 
+        <!-- Popup Gallery -->
+        <div class="popup__book popup passive">
+            <div class="popup__shadow">
+
+            </div>
+            <div class="popup__book-main">
+                <div class="popup__book-left">
+                    <div class="popup__book-title title">
+                        Заказ 19-007489
+                    </div>
+                    <div class="popup__book-nav">
+                        <div class="popup__book-navitem js-tab-trigger active" data-tab="1">
+                            Дела
+                        </div>
+                        <div class="popup__book-navitem js-tab-trigger" data-tab="2">
+                            Клиент
+                        </div>
+                        <div class="popup__book-navitem js-tab-trigger" data-tab="3">
+                            Заказ
+                        </div>
+                    </div>
+                    <div class="popup__book-content">
+                        <div class="popup__book-contentitem js-tab-content active" data-tab="1">
+                            <div class="popup__book-add">
+                                <a href="javascript:void(0)">
+                                    + Добавить дело
+                                </a>
+                            </div>
+                        </div>
+                        <div class="popup__book-contentitem js-tab-content" data-tab="2">
+                            <div class="popup__book-client">
+                                <div class="popup__book-clientitem">
+                                    <div class="popup__book-clientname">
+                                        Имя
+                                    </div>
+                                    <div class="popup__book-clientvalue">
+                                        Рената Корхова
+                                    </div>
+                                </div>
+                                <div class="popup__book-clientitem">
+                                    <div class="popup__book-clientname">
+                                        Компания
+                                    </div>
+                                    <div class="popup__book-clientvalue">
+                                        My blossom
+                                    </div>
+                                </div>
+                                <div class="popup__book-clientitem">
+                                    <div class="popup__book-clientname">
+                                        Профскидка
+                                    </div>
+                                    <div class="popup__book-clientvalue">
+                                        10% на аренду, 0% на сервис
+                                    </div>
+                                </div>
+                                <div class="popup__book-clientitem">
+                                    <div class="popup__book-clientname">
+                                        Контакты
+                                    </div>
+                                    <div class="popup__book-clientvalue">
+                                        8 926 616 67 25
+                                        renata.hasanova@gmail.com
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__book-contentitem js-tab-content" data-tab="3">
+                            <div class="popup__book-order">
+                                <div class="popup__book-ordertitle">
+                                    1. Неоновая надпись "Better together"     1 шт.
+                                </div>
+                                <div class="popup__book-orderitem">
+                                    <div class="popup__book-ordername">
+                                        Получение
+                                    </div>
+                                    <div class="popup__book-ordervalue">
+                                        27.11.19, 10:00–11:00
+                                    </div>
+                                </div>
+                                <div class="popup__book-orderitem">
+                                    <div class="popup__book-ordername">
+                                        Возврат
+                                    </div>
+                                    <div class="popup__book-ordervalue">
+                                        27.11.19, 10:00–11:00
+                                    </div>
+                                </div>
+                                <div class="popup__book-orderitem">
+                                    <div class="popup__book-ordername">
+                                        Контакт
+                                    </div>
+                                    <div class="popup__book-ordervalue">
+                                        <input type="text" value="Юлия Андреева">
+                                        <input type="text" name="" id="" value="8 9257194407">
+                                    </div>
+                                </div>
+                                <div class="popup__book-orderitem">
+                                    <div class="popup__book-ordername">
+                                        Адрес
+                                    </div>
+                                    <div class="popup__book-ordervalue">
+                                        <input type="text" name="" id="" value="Цветной бульвар, 15с1">
+                                    </div>
+                                </div>
+                                <div class="popup__book-orderitem">
+                                    <div class="popup__book-ordername">
+                                        Комментарий
+                                    </div>
+                                    <div class="popup__book-ordervalue">
+                                        <textarea name="" id="">Omega RoofTop Tsvetnoy (в здлании Универмага Цветной)</textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__book-right">
+                    <div class="popup__book-links">
+                        <div class="popup__book-link">
+                            <a href="javascript:void(0)">
+                                Изменить заказ
+                            </a>
+                        </div>
+                        <div class="popup__book-link">
+                            <a href="javascript:void(0)">
+                                Удалить заказ
+                            </a>
+                        </div>
+                        <div class="popup__book-link">
+                            <a href="javascript:void(0)">
+                                Выставить штраф
+                            </a>
+                        </div>
+                        <div class="popup__book-link">
+                            <a href="javascript:void(0)">
+                                Выплатить компенсацию
+                            </a>
+                        </div>
+                        <div class="popup__book-link">
+                            <a href="javascript:void(0)">
+                                Распечатать документы
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup__close">
+                    <img src="img/popup-icon-close.svg" alt="icon">
+                </div>
+            </div>
+
+        </div>
+        <!-- End Popup Gallery -->
+
+        <!-- Popup Basket -->
+    <div class="popup__bask popup passive">
+        <div class="popup__shadow">
+
+        </div>
+        <div class="popup__bask-main">
+            <div class="popup__bask-title">
+                Детали доставки
+            </div>
+            <div class="popup__bask-form">
+                <form action="" id="basketForm">
+                    <div class="popup__bask-box">
+                        <div class="popup__bask-item">
+                            <div class="popup__bask-name">
+                                Получение
+                            </div>
+                            <div class="popup__bask-value popup__bask-getting">
+                                <span>
+                                    С
+                                </span>
+                                <div class="popup__bask-selectwrap">
+                                    <select name="" id="" class="popup__bask-select">
+                                        <option value="1">1:00</option>
+                                        <option value="2">2:00</option>
+                                        <option value="3">3:00</option>
+                                        <option value="4">4:00</option>
+                                        <option value="5">5:00</option>
+                                        <option value="6">6:00</option>
+                                        <option value="7">7:00</option>
+                                        <option value="8">8:00</option>
+                                        <option value="9">9:00</option>
+                                        <option value="10" selected>
+                                            10:00
+                                        </option>
+                                        <option value="11">11:00
+                                        </option>
+                                        <option value="12">12:00
+                                        </option>
+                                        <option value="13">13:00
+                                        </option>
+                                        <option value="14">14:00
+                                        </option>
+                                        <option value="15">15:00
+                                        </option>
+                                        <option value="16">16:00
+                                        </option>
+                                        <option value="17">17:00
+                                        </option>
+                                        <option value="18">18:00
+                                        </option>
+                                        <option value="19">19:00
+                                        </option>
+                                        <option value="20">20:00
+                                        </option>
+                                        <option value="21">21:00
+                                        </option>
+                                        <option value="22">22:00
+                                        </option>
+                                        <option value="23">23:00
+                                        </option>
+                                        <option value="24">24:00
+                                        </option>
+                                    </select>
+                                </div>
+                                <span>
+                                    До
+                                </span>
+                                <div class="popup__bask-selectwrap">
+                                    <select name="" id="" class="popup__bask-select">
+                                        <option value="1">1:00</option>
+                                        <option value="2">2:00</option>
+                                        <option value="3">3:00</option>
+                                        <option value="4">4:00</option>
+                                        <option value="5">5:00</option>
+                                        <option value="6">6:00</option>
+                                        <option value="7">7:00</option>
+                                        <option value="8">8:00</option>
+                                        <option value="9">9:00</option>
+                                        <option value="10">10:00
+                                        </option>
+                                        <option value="11">11:00
+                                        </option>
+                                        <option value="12">12:00
+                                        </option>
+                                        <option value="13">13:00
+                                        </option>
+                                        <option value="14">14:00
+                                        </option>
+                                        <option value="15">15:00
+                                        </option>
+                                        <option value="16">16:00
+                                        </option>
+                                        <option value="17">17:00
+                                        </option>
+                                        <option value="18">18:00
+                                        </option>
+                                        <option value="19">19:00
+                                        </option>
+                                        <option value="20">20:00
+                                        </option>
+                                        <option value="21" selected>
+                                            21:00
+                                        </option>
+                                        <option value="22">22:00
+                                        </option>
+                                        <option value="23">23:00
+                                        </option>
+                                        <option value="24">24:00
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="popup__bask-item">
+                            <div class="popup__bask-name">
+                                Возврат
+                            </div>
+                            <div class="popup__bask-value popup__bask-return">
+                                <span>
+                                    С
+                                </span>
+                                <div class="popup__bask-selectwrap">
+                                    <select name="" id="" class="popup__bask-select">
+                                        <option value="1">1:00</option>
+                                        <option value="2">2:00</option>
+                                        <option value="3">3:00</option>
+                                        <option value="4">4:00</option>
+                                        <option value="5">5:00</option>
+                                        <option value="6">6:00</option>
+                                        <option value="7">7:00</option>
+                                        <option value="8">8:00</option>
+                                        <option value="9">9:00</option>
+                                        <option value="10" selected>
+                                            10:00
+                                        </option>
+                                        <option value="11">11:00
+                                        </option>
+                                        <option value="12">12:00
+                                        </option>
+                                        <option value="13">13:00
+                                        </option>
+                                        <option value="14">14:00
+                                        </option>
+                                        <option value="15">15:00
+                                        </option>
+                                        <option value="16">16:00
+                                        </option>
+                                        <option value="17">17:00
+                                        </option>
+                                        <option value="18">18:00
+                                        </option>
+                                        <option value="19">19:00
+                                        </option>
+                                        <option value="20">20:00
+                                        </option>
+                                        <option value="21">21:00
+                                        </option>
+                                        <option value="22">22:00
+                                        </option>
+                                        <option value="23">23:00
+                                        </option>
+                                        <option value="24">24:00
+                                        </option>
+                                    </select>
+                                </div>
+                                <span>
+                                    До
+                                </span>
+                                <div class="popup__bask-selectwrap">
+                                    <select name="" id="" class="popup__bask-select">
+                                        <option value="1">1:00</option>
+                                        <option value="2">2:00</option>
+                                        <option value="3">3:00</option>
+                                        <option value="4">4:00</option>
+                                        <option value="5">5:00</option>
+                                        <option value="6">6:00</option>
+                                        <option value="7">7:00</option>
+                                        <option value="8">8:00</option>
+                                        <option value="9">9:00</option>
+                                        <option value="10">10:00
+                                        </option>
+                                        <option value="11">11:00
+                                        </option>
+                                        <option value="12">12:00
+                                        </option>
+                                        <option value="13">13:00
+                                        </option>
+                                        <option value="14">14:00
+                                        </option>
+                                        <option value="15">15:00
+                                        </option>
+                                        <option value="16">16:00
+                                        </option>
+                                        <option value="17">17:00
+                                        </option>
+                                        <option value="18">18:00
+                                        </option>
+                                        <option value="19">19:00
+                                        </option>
+                                        <option value="20">20:00
+                                        </option>
+                                        <option value="21" selected>
+                                            21:00
+                                        </option>
+                                        <option value="22">22:00
+                                        </option>
+                                        <option value="23">23:00
+                                        </option>
+                                        <option value="24">24:00
+                                        </option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__bask-address popup__bask-item">
+                        <div class="popup__bask-name">
+                            Адрес
+                        </div>
+                        <div class="popup__bask-value popup__bask-radiowrap">
+                            <div class="popup__bask-radios">
+                                <div class="popup__bask-radio">
+                                    <input type="radio" id="radio1" class="popup__bask-radiobutton" data-radio='mkad' name="radio" />
+                                     <label for="radio1"> в пределах МКАД</label>
+                                </div>
+                                <div class="popup__bask-radio">
+                                    <input type="radio" id="radio2" class="popup__bask-radiobutton" data-radio='after' name="radio" />
+                                     <label for="radio2"> за МКАД</label>
+                                </div>
+                            </div>
+                            <div class="popup__bask-radiohide">
+                                <div class="popup__bask-mkad">
+                                    <input type="text" id="address6" placeholder="Укажите адрес" value="">
+                                </div>
+                                <div class="popup__bask-after">
+                                    <div class="popup__bask-afteritem">
+                                        <input type="number" name="" id="" placeholder="x">
+                                        км от МКАД
+                                    </div>
+                                    <input type="text" id="afterMkad" placeholder="укажите адрес">
+        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="popup__bask-hide">
+                        <div class="popup__bask-item">
+                            <div class="popup__bask-name">
+                                Комментарий
+                            </div>
+                            <div class="popup__bask-value">
+                                <div class="popup__bask-comment">
+                                    <input type="text" placeholder="например, название ресторана">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="popup__bask-item">
+                            <div class="popup__bask-name">
+                                Контактное лицо
+                            </div>
+                            <div class="popup__bask-value popup__bask-contact">
+                                <div class="popup__bask-lastname">
+                                    <input type="text" name='name6' placeholder="имя и фамилия">
+                                </div>
+                                <div class="popup__bask-phone">
+                                    <input type="text" id="bask-phone" name="phone6" class="agcy__item-phone" placeholder="8 XXXXXXXXXX">
+                                </div>
+                                
+                            </div>
+                        </div>
+                        <div class="popup__bask-submit">
+                            <input type="submit" value="Готово">
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="popup__close">
+                <img src="img/popup-icon-close.svg" alt="icon">
+            </div>
+        </div>
+        
+    </div>
+    <!-- End Popup Basket -->
 
 
         <!-- Bootstrap -->

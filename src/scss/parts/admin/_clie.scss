@@ -130,6 +130,10 @@
         letter-spacing: 0.04em;
         color: #ABABAB;
 
+        &-slash {
+            display: none;
+        }
+
         &-client {
             width: 286px;
             flex-shrink: 0;
@@ -196,6 +200,144 @@
 
         &-phone {
             white-space: nowrap;
+        }
+    }
+}
+
+@media all and (max-width: 1199px) {
+    .clie {
+
+        &__head {
+
+            &-client {
+                width: 212px;
+            }
+
+            &-company {
+                width: 180px;
+            }
+
+            &-gain {
+                width: 160px;
+            }
+
+            &-city {
+                width: 210px;
+            }
+        }
+
+        &__item {
+
+            &-client {
+                width: 210px;
+            }
+
+            &-company {
+                width: 180px;
+            }
+
+            &-gain {
+                width: 160px;
+            }
+
+            &-city {
+                width: 210px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+    .clie {
+
+        &__title {
+            margin-bottom: 10px;
+        }
+
+        &__header {
+            margin-top: 0;
+            flex-direction: column;
+            align-items: unset;
+
+            &-value {
+                margin-bottom: 10px;
+            }
+
+            &-right {
+                justify-content: space-between;
+            }
+        }
+
+        &__head {
+
+            &-slash {
+                display: inline-block;
+            }
+
+            &-client,
+            &-company,
+            &-gain,
+            &-city {
+                width: unset;
+            }
+        }
+
+        &__item {
+
+            &-link {
+                flex-direction: column;
+                align-items: unset;
+
+                
+            }
+
+            &-client {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            &-company {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            &-gain {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+
+            &-city {
+                width: 100%;
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 577px) {
+    .clie {
+
+        &__header {
+
+            &-right {
+                flex-direction: column;
+                align-items: unset;
+            }
+
+            &-download {
+                margin-bottom: 10px;
+            }
+
+            &-searchwrap {
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+
+        &__head {
+            padding-left: 0;
         }
     }
 }

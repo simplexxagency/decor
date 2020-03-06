@@ -1593,7 +1593,7 @@ $(document).ready(function () {
     });
 
     // Textarea auto height
-    autosize($('textarea'));
+    autosize($('.cata__container textarea'));
 
     // ----------- Client ---------------
     // Client Tooltip Search
@@ -1609,4 +1609,92 @@ $(document).ready(function () {
             $('.clie__header-hide').removeClass('active'); // скрываем его
         };
     });
+
+    
+    // ------------- Person --------------
+
+    // Change Deposite
+    $('.pers__status-profwrap').on('click', function () {
+        $(this).closest('.pers__status-value').find('.pers__status-tip').addClass('active');
+        $(this).find('.pers__status-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.pers__status-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.pers__status-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.pers__status-tip').removeClass('active'); // скрываем его
+            $('.pers__status-tip').closest('.pers__status-value').find('.pers__status-arrow').removeClass('active');
+        };
+    });
+
+    $('.pers__status-tip').on('click', function () {
+        let $depActive = $(this).closest('.pers__status-value').find('.pers__status-profwrap span').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.pers__status-value').find('.pers__status-profwrap span').text($depChoose);
+        $(this).text($depActive);
+        $('.pers__status-tip').removeClass('active');
+        $(this).closest('.pers__status-value').find('.pers__status-arrow').removeClass('active');
+    });
+
+    // ------------ Booking --------------
+    // Tabs in Book
+    $('.book__nav .js-trigger-book').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.book__content .js-tab-bookcontent[data-tab="' + id + '"]');
+
+        $('.book__nav .js-trigger-book.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.book__content .js-tab-bookcontent.active').removeClass('active');
+        content.addClass('active');
+    });
+
+    // Tab in popup Book
+    $('.popup__book .js-tab-trigger').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.popup__book .js-tab-content[data-tab="' + id + '"]');
+
+        $('.popup__book .js-tab-trigger.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.popup__book .js-tab-content.active').removeClass('active');
+        content.addClass('active');
+    });
+
+    // Popup Book
+    $('.book__header-order').on('click', function () {
+        $('.popup__book').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    // ------------ Indent -----------------------
+    // Change Status
+    $('.indent__header-select').on('click', function () {
+        $('.indent__header-tip').addClass('active');
+        $(this).find('.indent__header-selectarrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.indent__header-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.indent__header-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.indent__header-tip').removeClass('active'); // скрываем его
+            $('.indent__header-tip').closest('.indent__header-status').find('.indent__header-selectarrow').removeClass('active');
+        };
+    });
+
+    $('.indent__header-tipitem').on('click', function () {
+        let $depActive = $(this).closest('.indent__header-status').find('.indent__header-selectvalue').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.indent__header-status').find('.indent__header-selectvalue').text($depChoose);
+        $(this).text($depActive);
+        $('.indent__header-tip').removeClass('active');
+        $(this).closest('.indent__header-status').find('.indent__header-selectarrow').removeClass('active');
+    });
+
+    // ------------ New Order ----------
+    $('#n-order-header-select').selectize();
+    $('#n-order-search-select').selectize();
+
 });

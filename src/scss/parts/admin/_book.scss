@@ -1,0 +1,285 @@
+.book {
+
+    &__container {
+        padding-top: 53px;
+    }
+
+    &__title {
+        font-size: 48px;
+        text-align: left;
+        line-height: 1;
+    }
+
+    &__header {
+        margin-top: -16px;
+        margin-bottom: 64px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+
+        &-value {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &-order {
+            margin-right: 35px;
+
+            a {
+                display: inline-block;
+                font-size: 14px;
+                letter-spacing: 0.04em;
+                color: #56C47C;
+
+                &:hover {
+                    color: #008830;
+                }
+            }
+        } 
+    }
+
+    &__nav {
+        padding-left: 13px;
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+
+        &-item {
+
+            &:not(:last-child) {
+                margin-right: 34px;
+            }
+
+            label {
+                cursor: pointer;
+            }
+        }
+
+        &-radio {
+
+            input[type=radio] {display: none;}
+
+            input[type=radio] + label:before {
+                content: "";
+                border-radius: 50%;
+                display: inline-block;
+                border: 1px solid #DFDFDF;
+                margin: -5px 7px 0 0;
+                height: 20px;
+                width: 20px;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 0;    
+                transition: font-size ease .3s;
+            }
+            input[type=radio]:checked + label:before {
+                background: url('../../img/book-icon-dot.svg') 50% 50% no-repeat;   
+                background-size: 54%;
+                
+            }
+        }
+    }
+
+    &__table {
+        padding-left: 13px;
+
+        table {
+            width: 100%;
+        }
+
+        th {
+            padding-bottom: 16px;
+            font-size: 12px;
+            letter-spacing: 0.04em;
+            color: #ABABAB;
+        }
+
+        td {
+            padding-bottom: 42px;
+            vertical-align: baseline;
+        }
+    }
+
+    &__tnumber {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: #56C37C;
+    }
+
+    &__tstatus {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: #ABABAB;
+    }
+
+    &__tdate {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: #3D3D3D;
+    }
+
+    &__ttime,
+    &__tdimen {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: #ABABAB;
+    }
+
+    &__tname {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: #3D3D3D;
+    }
+
+    &__tarend,
+    &__tdelivery,
+    &__tmontage,
+    &__taddress,
+    &__tsetup,
+    &__tparse,
+    &__tcomm {
+        font-size: 14px;
+        letter-spacing: 0.04em;
+        color: #3D3D3D;
+    }
+
+    &__content {
+
+        &-item {
+            display: none;
+
+            &.active {
+                display: block;
+            }
+        }
+        
+    }
+}
+
+@media all and (max-width: 1199px) {
+    .book {
+
+        &__title {
+            margin-bottom: 20px;
+        }
+
+        &__header {
+            margin-top: 0;
+            flex-direction: column;
+            align-items: unset;
+
+            &-left {
+                margin-bottom: 16px;
+            }
+
+            &-right {
+                justify-content: space-between;
+            }
+        }
+
+
+        &__table {
+
+            table{
+                border: 0;
+            }
+
+            table thead {
+                border: none;
+                clip: rect(0 0 0 0);
+                height: 1px;
+                margin: -1px;
+                overflow: hidden;
+                padding: 0;
+                position: absolute;
+                width: 1px;
+            }
+          
+            table tr {
+                border-bottom: 1px solid #ddd;
+                display: block;
+                margin-bottom: 50px;
+            }
+          
+            table td {
+                display: block;
+                text-align: right;
+                padding-bottom: 0;
+                border-bottom: 1px solid #ababab;
+                min-height: 50px;
+
+                &:not(:last-child) {
+                    margin-bottom: 10px;
+                }
+            }
+          
+            table td::before {
+                content: attr(data-label);
+                float: left;
+                font-weight: bold;
+                text-transform: uppercase;
+                font-size: 14px;
+            }
+          
+            // table td:last-child {
+            //     border-bottom: 0;
+            // }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .book {
+
+        &__header {
+
+            &-right {
+                flex-direction: column;
+                align-items: unset;
+            }
+
+            &-order {
+                margin-bottom: 16px;
+                margin-right: 0;
+            }
+
+            &-download {
+                margin-bottom: 16px;
+                margin-right: 0;
+            }
+        }
+
+        &__container {
+
+            .clie__header-searchwrap {
+
+                input {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+
+@media all and (max-width: 577px) {
+    .book {
+        
+        &__nav {
+            flex-direction: column;
+            align-items: unset;
+
+            &-item {
+
+                &:not(:last-child) {
+                    margin-bottom: 16px;
+                }
+            }
+        }
+    }
+}

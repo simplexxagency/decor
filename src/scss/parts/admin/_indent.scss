@@ -1,0 +1,514 @@
+.indent {
+
+    &__container {
+        padding-top: 53px;
+    }
+
+    &__title {
+        margin-top: 13px;
+        margin-bottom: 18px;
+        font-size: 48px;
+        line-height: 1;
+        text-align: left;
+    }
+
+    &__header {
+        margin-bottom: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &-status {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        &-statusname {
+            margin-right: 5px;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-select {
+            display: flex;
+            cursor: pointer;
+        }
+
+        &-selectvalue {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3d3d3d;
+        }
+
+        &-selectarrow {
+            margin-left: 8px;
+            width: 9px;
+            position: relative;
+            top: -2px;
+            filter: brightness(0) saturate(100%) invert(20%) sepia(7%) saturate(0%) hue-rotate(238deg) brightness(94%) contrast(83%);
+
+            &.active {
+                transform: rotate(180deg);
+                top: 3px;
+            }
+        }
+
+        &-tip {
+            display: none;
+            position: absolute;
+            z-index: 1;
+            top: 30px;
+            left: 0;
+            width: 180px;
+            background: #fff;
+            box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5);
+            cursor: pointer;
+
+            &.active {
+                display: block;
+            }
+        }
+
+        &-tipitem {
+            padding: 16px;
+            font-size: 14px;
+            color: #ababab;
+            cursor: pointer;
+
+            &:hover {
+                color: #008830;
+                background: #dfdfdf;
+            }
+        }
+    }
+
+    &__period {
+        display: flex;
+        font-size: 16px;
+        letter-spacing: 0.01em;
+        color: #ABABAB;
+
+        &-date {
+            margin-left: 7px;
+            color: #3d3d3d;
+        }
+    }
+
+    &__box {
+        margin-bottom: 50px;
+    }
+
+    &__item {
+        display: flex;
+
+        &:not(:last-child) {
+            margin-bottom: 24px;
+        }
+
+        &-img {
+            margin-right: 16px;
+            width: 96px;
+            height: 96px;
+            flex-shrink: 0;
+
+            img {
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+
+        &-box {
+            padding: 17px 30px;
+            display: flex;
+            justify-content: space-between;
+            flex-grow: 1;
+            background: #FFFFFF;
+            border: 1px solid #DFDFDF;
+        }
+
+        &-title {
+            margin-bottom: 8px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-dimm {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-right {
+            display: flex;
+        }
+
+        &-price,
+        &-amount {
+            margin-right: 40px;
+        }
+    }
+
+    &__price {
+
+        &-name {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+            
+
+        &-value {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+    }
+
+    &__amount {
+
+        &-name {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+            
+
+        &-value {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+    }
+
+    &__tot {
+
+        &-name {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+            
+
+        &-value {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+    }
+
+    &__deli {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 48px;
+        margin-bottom: 51px;
+        border-bottom: 1px solid #DFDFDF;
+
+        &-box {
+            display: flex;
+        }
+
+        &-left {
+            width: 352px;
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-place {
+            margin-bottom: 5px;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3D3D3D;
+        }
+
+        &-status {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ababab;
+        }
+
+        &-middle {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3D3D3D;
+        }
+
+        &-getting,
+        &-return,
+        &-address {
+            margin-bottom: 7px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &-total {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+    }
+
+    &__setup {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 48px;
+        margin-bottom: 41px;
+        border-bottom: 1px solid #DFDFDF;
+
+        &-box {
+            display: flex;
+        }
+
+        &-left {
+            width: 352px;
+        }
+
+        &-title {
+            margin-bottom: 16px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-load {
+            margin-bottom: 5px;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3D3D3D;
+
+            div {
+
+                &:not(:last-child) {
+                    margin-bottom: 8px;
+                }
+            }
+        }
+
+        &-status {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ababab;
+        }
+
+        &-middle {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3D3D3D;
+        }
+
+        &-duration,
+        &-montage {
+            margin-bottom: 7px;
+        }
+
+        &-right {
+            display: flex;
+            align-items: center;
+        }
+
+        &-total {
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+    }
+
+    &__total {
+        display: flex;
+        justify-content: flex-end;
+
+        &-item {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            &:not(:last-child) {
+                margin-bottom: 11px;
+            }
+        }
+
+        &-name {
+            margin-right: 98px;
+            text-align: right;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-value {
+            width: 100px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 24px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+
+        &-sum {
+            margin-top: 17px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+        }
+
+        &-sumname {
+            margin-right: 98px;
+            text-align: right;
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #ABABAB;
+        }
+
+        &-sumvalue {
+            width: 100px;
+            font-family: $font-corm;
+            font-style: normal;
+            font-weight: bold;
+            font-size: 28px;
+            letter-spacing: -0.006em;
+            color: #494949;
+        }
+    }
+}
+
+@media all and (max-width: 991px) {
+    .indent {
+
+        &__item {
+            flex-direction: column;
+
+            &:not(:last-child) {
+                margin-bottom: 30px;
+            }
+
+            &-img {
+                margin-bottom: 16px;
+                width: 120px;
+                height: 120px;
+            }
+
+            &-box {
+                flex-direction: column;
+            }
+
+            &-left {
+                margin-bottom: 16px;
+            }
+        }
+
+        &__deli {
+            flex-direction: column;
+
+            &-left {
+                margin-bottom: 16px;
+            }
+        }
+
+        &__setup {
+            flex-direction: column;
+
+            &-left {
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .indent {
+
+        &__deli {
+
+            &-box {
+                flex-direction: column;
+                margin-bottom: 16px;
+            }
+        }
+
+        &__setup {
+
+            &-box {
+                flex-direction: column;
+                margin-bottom: 16px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 577px) {
+    .indent {
+
+        &__header {
+            flex-direction: column;
+            align-items: unset;
+        }
+
+        &__period {
+            margin-bottom: 16px;
+        }
+
+        &__item {
+
+            &-right {
+                flex-direction: column;
+            }
+
+            &-price,
+            &-amount {
+                margin-bottom: 10px;
+                margin-right: 0;
+            }
+        }
+
+        &__total {
+
+            &-item {
+                flex-direction: column;
+                align-items: unset;
+            }
+
+            &-name {
+                text-align: left;
+            }
+
+            &-value {
+                text-align: left;
+            }
+        }
+    }
+}
