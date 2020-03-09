@@ -143,6 +143,14 @@ input[type=number] {
     -moz-appearance:textfield; /* Firefox */
 }
 
+.hideSpan {
+    display: none;
+}
+
+.txtInput {
+    min-width: 10px;
+}
+
 @media all and (max-width: 991px) {
     .padding-top {
         padding-top: 103px;

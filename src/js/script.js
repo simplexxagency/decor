@@ -1697,4 +1697,121 @@ $(document).ready(function () {
     $('#n-order-header-select').selectize();
     $('#n-order-search-select').selectize();
 
+    // -------------- New Products --------
+
+    // Change Color
+    $('.n-prod__desc-color').on('click', function () {
+        $(this).closest('.n-prod__desc-value').find('.n-prod__desc-tip').addClass('active');
+        $(this).find('.n-prod__desc-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.n-prod__desc-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.n-prod__desc-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.n-prod__desc-tip').removeClass('active'); // скрываем его
+            $('.n-prod__desc-tip').closest('.n-prod__desc-value').find('.n-prod__desc-arrow').removeClass('active');
+        };
+    });
+
+    $('.n-prod__desc-tipitem').on('click', function () {
+        let $depActive = $(this).closest('.n-prod__desc-value').find('.n-prod__desc-color span').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.n-prod__desc-value').find('.n-prod__desc-color span').text($depChoose);
+        $(this).text($depActive);
+        $('.n-prod__desc-tip').removeClass('active');
+        $(this).closest('.n-prod__desc-value').find('.n-prod__desc-arrow').removeClass('active');
+    });
+
+    // Change Qualification
+    $('.n-prod__setup-cval').on('click', function () {
+        $(this).closest('.n-prod__setup-value').find('.n-prod__setup-tip').addClass('active');
+        $(this).find('.n-prod__setup-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.n-prod__setup-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.n-prod__setup-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.n-prod__setup-tip').removeClass('active'); // скрываем его
+            $('.n-prod__setup-tip').closest('.n-prod__setup-value').find('.n-prod__setup-arrow').removeClass('active');
+        };
+    });
+
+    $('.n-prod__setup-tipitem').on('click', function () {
+        let $depActive = $(this).closest('.n-prod__setup-value').find('.n-prod__setup-cval span').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.n-prod__setup-value').find('.n-prod__setup-cval span').text($depChoose);
+        $(this).text($depActive);
+        $('.n-prod__setup-tip').removeClass('active');
+        $(this).closest('.n-prod__setup-value').find('.n-prod__setup-arrow').removeClass('active');
+    });
+
+    // Change Delivery
+    $('.n-prod__deli-tran').on('click', function () {
+        $(this).closest('.n-prod__deli-value').find('.n-prod__deli-tip').addClass('active');
+        $(this).find('.n-prod__deli-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.n-prod__deli-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.n-prod__deli-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.n-prod__deli-tip').removeClass('active'); // скрываем его
+            $('.n-prod__deli-tip').closest('.n-prod__deli-value').find('.n-prod__setup-arrow').removeClass('active');
+        };
+    });
+
+    $('.n-prod__deli-tipitem').on('click', function () {
+        let $depActive = $(this).closest('.n-prod__deli-value').find('.n-prod__deli-tran span').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.n-prod__deli-value').find('.n-prod__deli-tran span').text($depChoose);
+        $(this).text($depActive);
+        $('.n-prod__deli-tip').removeClass('active');
+        $(this).closest('.n-prod__deli-value').find('.n-prod__deli-arrow').removeClass('active');
+    });
+
+    // Change Delivery
+    $('.n-prod__settings-cval').on('click', function () {
+        $(this).closest('.n-prod__settings-value').find('.n-prod__settings-tip').addClass('active');
+        $(this).find('.n-prod__settings-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.n-prod__settings-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.n-prod__settings-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.n-prod__settings-tip').removeClass('active'); // скрываем его
+            $('.n-prod__settings-tip').closest('.n-prod__settings-value').find('.n-prod__setup-arrow').removeClass('active');
+        };
+    });
+
+    $('.n-prod__settings-tipitem').on('click', function () {
+        let $depActive = $(this).closest('.n-prod__settings-value').find('.n-prod__settings-cval span').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.n-prod__settings-value').find('.n-prod__settings-cval span').text($depChoose);
+        $(this).text($depActive);
+        $('.n-prod__settings-tip').removeClass('active');
+        $(this).closest('.n-prod__settings-value').find('.n-prod__settings-arrow').removeClass('active');
+    });
+
+    function inputWidth () {
+        $('.txtInput').each(function(){
+            let $txt = $(this).val();
+            let $span = $(this).siblings('.hideSpan');
+            $($span).text($txt);
+            $(this).width($span.width());
+        });
+    };
+
+    $('.txtInput').on('input', function(){
+        inputWidth();
+    });
+
+    inputWidth();
+    
+    jQuery(function ($) {
+        $('.dateInput').mask('99.99.9999', {placeholder: 'дд.мм.гггг'});
+    });
+    // $('#date1').mask('99.99.9999', {placeholder: 'дд.мм.гггг'});
 });
