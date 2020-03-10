@@ -2041,6 +2041,9 @@ input[type=number] {
   .popup__book-ordername {
     margin-bottom: 10px; }
   .popup__book-ordervalue {
+    width: 100%; }
+  .popup__review-main {
+    padding-top: 50px;
     width: 100%; } }
 
 @media all and (max-width: 420px) {
