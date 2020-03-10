@@ -187,7 +187,7 @@
             input[type=checkbox], input[type=radio] {display: none;}
 
             input[type=checkbox] + label:before {
-                content: "\26AB";
+                content: "";
                 border: 1px solid #DFDFDF;
                 display: inline-block;
                 font-size: 15px;
@@ -204,7 +204,7 @@
             }
 
             input[type=checkbox]:checked + label:before {
-                background: url('../../img/main-icon-check.svg') 50% 50% no-repeat;
+                background: url('../img/main-icon-check.svg') 50% 50% no-repeat;
                 background-size: 58%;
             }
         }

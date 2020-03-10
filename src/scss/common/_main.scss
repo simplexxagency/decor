@@ -2,24 +2,24 @@
 // Museo font
 @font-face {
     font-family: 'museo_sans_cyrl500';
-    src: url('../../fonts/museosanscyrl-500-webfont.woff2') format('woff2'),
-         url('../../fonts/museosanscyrl-500-webfont.woff') format('woff');
+    src: url('../fonts/museosanscyrl-500-webfont.woff2') format('woff2'),
+         url('../fonts/museosanscyrl-500-webfont.woff') format('woff');
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo_sans_cyrl700';
-    src: url('../../fonts/museosanscyrl-700-webfont.woff2') format('woff2'),
-         url('../../fonts/museosanscyrl-700-webfont.woff') format('woff');
+    src: url('../fonts/museosanscyrl-700-webfont.woff2') format('woff2'),
+         url('../fonts/museosanscyrl-700-webfont.woff') format('woff');
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'museo_sans_cyrl300';
-    src: url('../../fonts/museosanscyrl-300-webfont.woff2') format('woff2'),
-         url('../../fonts/museosanscyrl-300-webfont.woff') format('woff');
+    src: url('../fonts/museosanscyrl-300-webfont.woff2') format('woff2'),
+         url('../fonts/museosanscyrl-300-webfont.woff') format('woff');
     font-weight: 300;
     font-style: normal;
 
@@ -149,6 +149,22 @@ input[type=number] {
 
 .txtInput {
     min-width: 10px;
+}
+
+// Ruble
+.ruble-sign-green {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px;
+    filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(5015%) hue-rotate(143deg) brightness(94%) contrast(102%);
+}
+
+// Ruble
+.rubl-icon {
+    width: 13px;
+    position: relative;
+    top: -4px;
 }
 
 @media all and (max-width: 991px) {
