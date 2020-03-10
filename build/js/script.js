@@ -1813,5 +1813,48 @@ $(document).ready(function () {
     jQuery(function ($) {
         $('.dateInput').mask('99.99.9999', {placeholder: 'дд.мм.гггг'});
     });
-    // $('#date1').mask('99.99.9999', {placeholder: 'дд.мм.гггг'});
+
+
+    // ----------- Costumer -------------
+    // Tabs in Costumer
+    $('.costumer__container .js-tab-trigger').click(function () {
+        var id = $(this).attr('data-tab'),
+            content = $('.costumer__container .js-tab-content[data-tab="' + id + '"]');
+
+        $('.costumer__container .js-tab-trigger.active').removeClass('active');
+        $(this).addClass('active');
+
+        $('.costumer__container .js-tab-content.active').removeClass('active');
+        content.addClass('active');
+    });
+
+    // Popup Review
+    $('.costumer__testim').on('click', function(){
+        $('.popup__review').removeClass('passive');
+        $('body, html').addClass('active');
+    });
+
+    // Change City
+    $('.costumer__city').on('click', function () {
+        $(this).closest('.costumer__cabinet-value').find('.costumer__city-tip').addClass('active');
+        $(this).find('.costumer__city-arrow').addClass('active');
+    });
+
+    $(document).mouseup(function (e) { // событие клика по веб-документу
+        if (!$('.costumer__city-tip').is(e.target) // если клик был не по нашему блоку
+            && $('.costumer__city-tip').has(e.target).length === 0) { // и не по его дочерним элементам
+            $('.costumer__city-tip').removeClass('active'); // скрываем его
+            $('.costumer__city-tip').closest('.costumer__cabinet-value').find('.costumer__city-arrow').removeClass('active');
+        };
+    });
+
+    $('.costumer__city-tipitem').on('click', function () {
+        let $depActive = $(this).closest('.costumer__cabinet-value').find('.costumer__city span').text();
+        let $depChoose = $(this).text();
+
+        $(this).closest('.costumer__cabinet-value').find('.costumer__city span').text($depChoose);
+        $(this).text($depActive);
+        $('.costumer__city-tip').removeClass('active');
+        $(this).closest('.costumer__cabinet-value').find('.costumer__city-arrow').removeClass('active');
+    });
 });

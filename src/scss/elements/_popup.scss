@@ -1913,6 +1913,131 @@
             }
         }
     }
+
+    // Review
+
+    &__review {
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        z-index: 15;
+
+        &.passive {
+            display: none;
+        }
+
+        &-main {
+            width: 400px;
+            padding: 24px 20px 39px 32px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: #fff;
+            box-shadow: 0px 20px 60px rgba(208, 208, 208, 0.5);
+        }
+
+        &-title {
+            margin-bottom: 24px;
+            font-family: $font-corm;
+            font-weight: bold;
+            font-size: 24px;
+            text-align: center;
+            letter-spacing: -0.006em;
+            color: #3D3D3D;
+        }
+
+        &-subtitle {
+            margin-bottom: 24px;
+            font-size: 16px;
+            line-height: 27px;
+            text-align: center;
+            letter-spacing: 0.01em;
+            color: #3d3d3d;
+        }
+
+        &-textarea {
+            margin-bottom: 24px;
+
+            textarea {
+                width: 100%;
+                height: 96px;
+                padding: 14px 16px;
+                background: #FFFFFF;
+                border: 1px solid #E4E4E4;
+                -webkit-box-sizing: border-box;
+                box-sizing: border-box;
+                -webkit-border-radius: 10px;
+                border-radius: 10px;
+                color: #3d3d3d;
+            }
+        }
+
+        &-rating {
+            margin-bottom: 16px;
+            display: flex;
+            -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+            -webkit-justify-content: space-between;
+            justify-content: space-between;
+        }
+
+        &-name {
+            font-size: 16px;
+            letter-spacing: 0.01em;
+            color: #3d3d3d;
+        }
+
+        &-stars {
+
+            input[type=radio], input[type=checkbox] {
+                box-sizing: border-box;
+                padding: 0;
+            }
+
+            .star {
+                display: none;
+            }
+
+            .star + label {
+                width: 16px;
+                height: 16px;
+                background: url('../img/cabinet-icon-starempty.svg') center no-repeat;
+                -webkit-background-size: contain;
+                background-size: contain;
+                display: inline-block;
+                float: right;
+                cursor: pointer;
+                margin-right: 2px;
+            }
+
+            .stars:not(:hover) .star:checked + label, :not(:hover) .star:checked + label ~ label, .star + label:hover, .star + label:hover ~ label {
+                background: url('../img/cabinet-icon-starfull.svg') center no-repeat;
+                -webkit-background-size: contain;
+                background-size: contain;
+            }
+        }
+
+        &-submit {
+
+            input {
+                width: 100%;
+                padding: 22px 0;
+                background: #FD9590;
+                text-align: center;
+                letter-spacing: 0.04em;
+                text-transform: uppercase;
+                color: #FFFFFF;
+
+                &:hover {
+                    background: #E96963;
+                }
+            }
+        }
+    }
 }
 
 @media all and (max-width: 767px) {
