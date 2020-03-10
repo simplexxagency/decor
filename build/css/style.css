@@ -3228,6 +3228,11 @@ input[type=number] {
 .cards {
   margin-bottom: 144px;
   padding-top: 55px; }
+  .cards .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
   .cards__header {
     margin-bottom: 55px;
     display: -webkit-box;
@@ -4542,6 +4547,11 @@ input[type=number] {
 
 .rent {
   margin-bottom: 144px; }
+  .rent .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
   .rent .container-fluid {
     padding: 0; }
   .rent__header {
@@ -5205,6 +5215,11 @@ input[type=number] {
 
 .decor {
   margin-bottom: 144px; }
+  .decor .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
   .decor .container-fluid {
     padding: 0; }
   .decor__banner {
@@ -5790,6 +5805,16 @@ input[type=number] {
 
 .prod {
   margin-bottom: 144px; }
+  .prod .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
+  .prod .ruble-sign-big {
+    display: inline-block;
+    width: 21px;
+    position: relative;
+    top: -4px; }
   .prod .container-fluid {
     padding: 0; }
   .prod__container {
@@ -6231,6 +6256,16 @@ input[type=number] {
 
 .bask {
   margin-bottom: 144px; }
+  .bask .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
+  .bask .ruble-sign-semibig {
+    display: inline-block;
+    width: 21px;
+    position: relative;
+    top: -4px; }
   .bask .container-fluid {
     padding: 0; }
   .bask__wrapper {
@@ -6792,6 +6827,11 @@ input[type=number] {
 .order {
   margin-bottom: 144px;
   height: 100vh; }
+  .order .ruble-sign {
+    display: inline-block;
+    width: 14px;
+    position: relative;
+    top: -4px; }
   .order .container-fluid {
     padding: 0; }
   .order__container {
@@ -6974,6 +7014,11 @@ input[type=number] {
 
 .site {
   margin-bottom: 144px; }
+  .site .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
   .site .container-fluid {
     padding: 0; }
   .site__container {
@@ -7874,6 +7919,14 @@ input[type=number] {
     width: 100%; }
   .agcy__close {
     padding: 20px 15px; } }
+
+.offi__container .ruble-sign-green {
+  display: inline-block;
+  width: 12px;
+  position: relative;
+  top: -4px;
+  -webkit-filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(5015%) hue-rotate(143deg) brightness(94%) contrast(102%);
+  filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(5015%) hue-rotate(143deg) brightness(94%) contrast(102%); }
 
 .offi__prof {
   margin-bottom: 16px;
@@ -8958,6 +9011,11 @@ input[type=number] {
 
 .clie__container {
   padding-top: 53px; }
+  .clie__container .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
 
 .clie__title {
   font-size: 48px;
@@ -9215,6 +9273,11 @@ input[type=number] {
 
 .pers__container {
   padding-top: 53px; }
+  .pers__container .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
 
 .pers__link {
   margin-bottom: 8px; }
@@ -9723,6 +9786,11 @@ input[type=number] {
 
 .book__container {
   padding-top: 53px; }
+  .book__container .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
 
 .book__title {
   font-size: 48px;
@@ -9922,6 +9990,11 @@ input[type=number] {
 
 .indent__container {
   padding-top: 53px; }
+  .indent__container .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -1px; }
 
 .indent__title {
   margin-top: 13px;
@@ -10348,6 +10421,11 @@ input[type=number] {
 
 .n-order__container {
   padding-top: 53px; }
+  .n-order__container .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -1px; }
 
 .n-order__title {
   margin-top: 11px;
@@ -11035,6 +11113,18 @@ input[type=number] {
   padding-top: 53px; }
   .n-prod__container input[type=number] {
     margin-right: 4px; }
+  .n-prod__container .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
+  .n-prod__container .ruble-sign-green {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px;
+    -webkit-filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(5015%) hue-rotate(143deg) brightness(94%) contrast(102%);
+    filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(5015%) hue-rotate(143deg) brightness(94%) contrast(102%); }
 
 .n-prod__title {
   margin-top: 13px;
@@ -11716,6 +11806,13 @@ input[type=number] {
 
 .costumer {
   margin-bottom: 144px; }
+  .costumer .ruble-sign {
+    display: inline-block;
+    width: 12px;
+    position: relative;
+    top: -4px; }
+  .costumer .container-fluid {
+    padding: 0; }
   .costumer__container {
     padding-top: 68px; }
   .costumer__tab-nav {

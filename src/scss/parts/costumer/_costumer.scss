@@ -1,6 +1,18 @@
 .costumer {
     margin-bottom: 144px;
 
+    // Ruble
+    .ruble-sign {
+        display: inline-block;
+        width: 12px;
+        position: relative;
+        top: -4px;
+    }
+
+    .container-fluid {
+        padding: 0;
+    }
+
     &__container {
         padding-top: 68px;
     }

@@ -2,6 +2,14 @@
     margin-bottom: 144px;
     height: 100vh;
 
+    // Ruble
+    .ruble-sign {
+        display: inline-block;
+        width: 14px;
+        position: relative;
+        top: -4px;
+    }
+
     .container-fluid {
         padding: 0;
     }

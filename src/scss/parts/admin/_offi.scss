@@ -1,4 +1,18 @@
 .offi {
+    
+
+    &__container {
+
+        // Ruble
+        .ruble-sign-green {
+            display: inline-block;
+            width: 12px;
+            position: relative;
+            top: -4px;
+            filter: brightness(0) saturate(100%) invert(23%) sepia(55%) saturate(5015%) hue-rotate(143deg) brightness(94%) contrast(102%);
+        }
+    }
+    
 
     &__prof {
         margin-bottom: 16px;

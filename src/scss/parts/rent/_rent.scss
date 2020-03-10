@@ -1,6 +1,14 @@
 .rent {
     margin-bottom: 144px;
 
+    // Ruble
+    .ruble-sign {
+        display: inline-block;
+        width: 12px;
+        position: relative;
+        top: -4px;
+    }
+
     .container-fluid {
         padding: 0;
     }
